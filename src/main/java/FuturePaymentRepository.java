@@ -1,5 +1,3 @@
-package Logic;
-
 import java.util.ArrayList;
 
 public class FuturePaymentRepository {
