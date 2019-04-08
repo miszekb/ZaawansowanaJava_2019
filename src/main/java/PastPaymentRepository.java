@@ -4,7 +4,7 @@ import java.util.Vector;
 
 public class PastPaymentRepository {
 	
-	private ArrayList<PastPayment> repo;
+	private ArrayList<PastPayment> repo = new ArrayList<PastPayment>();
 
 	@Override
 	public String toString()
