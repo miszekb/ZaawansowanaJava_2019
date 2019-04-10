@@ -19,10 +19,10 @@ public class FuturePayment implements Payment{
 	public String toString() 
 	{
 		String info;
-		info = Integer.toString(ID) + " " +
-		name + " " +
-		Float.toString(price) + " " +
-		Short.toString(type) + " " +
+		info = Integer.toString(ID) + "," +
+		name + "," +
+		Float.toString(price) + "," +
+		Short.toString(type) + "," +
 		description;
 		
 		return info;

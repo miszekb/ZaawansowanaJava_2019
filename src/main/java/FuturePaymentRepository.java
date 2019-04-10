@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
 public class FuturePaymentRepository {
-	private ArrayList<FuturePayment> repo;
+	private ArrayList<FuturePayment> repo = new ArrayList<FuturePayment>();
 
 	@Override
 	public String toString()
 	{
-		String temp = null;
+		String temp = "";
 		
 		for(int i=0;i<repo.size();i++)
 		{
@@ -15,18 +15,18 @@ public class FuturePaymentRepository {
 		
 		return temp;
 	}
-	
+
 	public String AddToRepo(FuturePayment payment)
 	{	
 		boolean result = repo.add(payment);
 		String info;
-		
+		//TODO LOOK FOR ANY ID REDUNDANCY
 		if (result == true) info = "Dodano wydatek do planu.";
 		else info = "Dodanie wydatku nie powiodlo sie.";
 			
 		return info;
 	}
-	
+
 	public String DeletePayment(int ID)
 	{
 		boolean result = false;

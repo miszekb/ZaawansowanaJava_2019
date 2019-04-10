@@ -9,7 +9,7 @@ public class PastPaymentRepository {
 	@Override
 	public String toString()
 	{
-		String temp = null;
+		String temp = "";
 		
 		for(int i=0;i<repo.size();i++)
 		{
@@ -23,7 +23,7 @@ public class PastPaymentRepository {
 	{	
 		boolean result = repo.add(payment);
 		String info;
-		
+		//TODO LOOK FOR ANY ID REDUNDANCY
 		if (result == true) info = "Dodano wydatek do archiwum.";
 		else info = "Dodanie wydatku nie powiodlo sie.";
 			
