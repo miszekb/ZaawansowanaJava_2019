@@ -1,6 +1,10 @@
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.*;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+import java.util.ArrayList;
+
 
 public class Serializer {
 
@@ -11,30 +15,22 @@ public class Serializer {
 
     public void SerializePast(PastPaymentRepository pastRepo)
     {
-        try
-        {
-            encoder=new XMLEncoder(new BufferedOutputStream(new FileOutputStream("PAST.xml")));
+        try {
+            FileOutputStream outStream = new FileOutputStream("PAST.xml");
+            XStream xStream = new XStream(new DomDriver());
+            xStream.toXML(pastRepo.getRepo(), outStream);
         }
-        catch(FileNotFoundException fileNotFound)
-        {
-            System.out.println("ERROR: While Creating or Opening the File f.xml");
-        }
-        encoder.writeObject(pastRepo);
-        encoder.close();
+        catch(IOException ex) {}
     }
 
     public void SerializeFuture(FuturePaymentRepository futureRepo)
     {
-        try
-        {
-            encoder=new XMLEncoder(new BufferedOutputStream(new FileOutputStream("FUTURE.xml")));
+        try {
+            FileOutputStream outStream = new FileOutputStream("FUTURE.xml");
+            XStream xStream = new XStream(new DomDriver());
+            xStream.toXML(futureRepo.getRepo(), outStream);
         }
-        catch(FileNotFoundException fileNotFound)
-        {
-            System.out.println("ERROR: While Creating or Opening the File f.xml");
-        }
-        encoder.writeObject(futureRepo);
-        encoder.close();
+        catch(IOException ex) {}
     }
 
     public void SerializeAll(PastPaymentRepository pastRepo, FuturePaymentRepository futureRepo)
@@ -47,25 +43,34 @@ public class Serializer {
 
     public PastPaymentRepository DeserializePast()
     {
+        PastPaymentRepository pastRepo = new PastPaymentRepository();
+
         try {
-            decoder=new XMLDecoder(new BufferedInputStream(new FileInputStream("PAST.xml")));
-        } catch (FileNotFoundException e) {
-            System.out.println("ERROR: File dvd.xml not found");
+            File xmlFile = new File("PAST.xml");
+            XStream xStream = new XStream(new DomDriver());
+
+            for (PastPayment e : (ArrayList<PastPayment>) xStream.fromXML(new FileInputStream(xmlFile))) {
+                pastRepo.AddToRepo(e);
+            }
         }
-        PastPaymentRepository pastRepo=(PastPaymentRepository) decoder.readObject();
-        System.out.println(pastRepo);
+
+        catch(IOException ex) {}
         return pastRepo;
     }
 
     public FuturePaymentRepository DeserializeFuture()
     {
+        FuturePaymentRepository futureRepo = new FuturePaymentRepository();
+
         try {
-            decoder=new XMLDecoder(new BufferedInputStream(new FileInputStream("FUTURE.xml")));
-        } catch (FileNotFoundException e) {
-            System.out.println("ERROR: File dvd.xml not found");
+            File xmlFile = new File("FUTURE.xml");
+            XStream xStream = new XStream(new DomDriver());
+
+            for (FuturePayment e : (ArrayList<FuturePayment>) xStream.fromXML(new FileInputStream(xmlFile))) {
+                futureRepo.AddToRepo(e);
+            }
         }
-        FuturePaymentRepository futureRepo=(FuturePaymentRepository) decoder.readObject();
-        System.out.println(futureRepo);
+        catch(IOException ex) {}
         return futureRepo;
     }
 }

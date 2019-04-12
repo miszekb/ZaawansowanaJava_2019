@@ -5,8 +5,6 @@ public class MainClass {
     //tiny example to test Travis continuous integration
 
 
-
-
     public static void main(String[] args)
     {
         Date date = new Date(2019,3,12);
