@@ -40,7 +40,7 @@ public class SerializerTest {
         serializer.SerializeFuture(futureRepo);
 
         FuturePaymentRepository futureRepo2 = serializer.DeserializeFuture();
-        System.out.println(futureRepo2.toString());
+        //System.out.println(futureRepo2.toString());
         assertEquals(futureRepo.toString(), futureRepo2.toString());
 
     }

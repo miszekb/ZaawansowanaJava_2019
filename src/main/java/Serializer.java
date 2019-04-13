@@ -8,9 +8,6 @@ import java.util.ArrayList;
 
 public class Serializer {
 
-    private XMLEncoder encoder;
-    private XMLDecoder decoder;
-
     //SERIALIZATION METHODS
 
     public void SerializePast(PastPaymentRepository pastRepo)
