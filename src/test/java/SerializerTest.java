@@ -1,3 +1,4 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Date;
@@ -5,6 +6,7 @@ import java.util.Date;
 import static org.junit.Assert.*;
 
 public class SerializerTest {
+
 
     @Test
     public void serializePast() {
@@ -21,7 +23,6 @@ public class SerializerTest {
         serializer.SerializePast(pastRepo);
 
         PastPaymentRepository pastRepo2 = serializer.DeserializePast();
-        // System.out.println(pastRepo2.toString());
         assertEquals(pastRepo.toString(), pastRepo2.toString());
 
     }
@@ -40,7 +41,6 @@ public class SerializerTest {
         serializer.SerializeFuture(futureRepo);
 
         FuturePaymentRepository futureRepo2 = serializer.DeserializeFuture();
-        //System.out.println(futureRepo2.toString());
         assertEquals(futureRepo.toString(), futureRepo2.toString());
 
     }
