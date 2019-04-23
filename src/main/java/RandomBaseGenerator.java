@@ -61,9 +61,6 @@ public class RandomBaseGenerator {
             System.out.println(pastPayment.toString());
         }
 
-        Serializer serializer = new Serializer();
-        serializer.SerializePast(pastPayments);
-
     }
 
 }
