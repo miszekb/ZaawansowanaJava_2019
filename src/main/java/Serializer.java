@@ -1,5 +1,3 @@
-import java.beans.XMLDecoder;
-import java.beans.XMLEncoder;
 import java.io.*;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
