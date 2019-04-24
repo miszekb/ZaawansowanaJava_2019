@@ -8,7 +8,7 @@ public class MainClass {
     public static void main(String[] args)
     {
         Date date = new Date(2019,3,12);
-        PastPayment pastPayment = new PastPayment(1,"pszne obiad",21.37f,(short)2, "bardzo pszne", date);
+        PastPayment pastPayment = new PastPayment(1,"pszne obiad",21.37f,"Transport", "bardzo pszne", date);
         PastPaymentRepository pastPaymentRepository = new PastPaymentRepository();
         pastPaymentRepository.AddToRepo(pastPayment);
         DrawingClass drawingClass = new DrawingClass(pastPaymentRepository.getRepo());

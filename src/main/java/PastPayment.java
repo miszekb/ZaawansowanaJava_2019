@@ -9,11 +9,11 @@ public class PastPayment implements Payment{
 	private int ID;
 	private String name;
 	private float price;
-	private short type;
+	private Categories type;
 	private String description;
 	private Date date;
 	
-	PastPayment(int ID, String name, float price, short type, String description, Date date)
+	PastPayment(int ID, String name, float price, Categories type, String description, Date date)
 	{
 		this.ID = ID;
 		this.name = name;
@@ -33,7 +33,7 @@ public class PastPayment implements Payment{
 		info = Integer.toString(ID) + "," +
 		name + "," +
 		Float.toString(price) + "," +
-		Short.toString(type) + "," +
+		type.key + "," +
 		description +"," + reportDate;
 		
 		return info;
@@ -60,8 +60,8 @@ public class PastPayment implements Payment{
 	}
 	
 	@Override
-	public short getPaymentType() {
-		return type;
+	public String getPaymentType() {
+		return type.key;
 	}
 	
 	@Override
@@ -88,7 +88,7 @@ public class PastPayment implements Payment{
 	}
 
 	@Override
-	public void setPaymentType(short type) {
+	public void setPaymentType(Categories type) {
 		this.type = type;
 		
 	}

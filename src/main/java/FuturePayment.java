@@ -3,10 +3,10 @@ public class FuturePayment implements Payment{
 	private int ID;
 	private String name;
 	private float price;
-	private short type;
+	private Categories type;
 	private String description;
 	
-	FuturePayment(int ID, String name, float price, short type, String description)
+	FuturePayment(int ID, String name, float price, Categories type, String description)
 	{
 		this.ID = ID;
 		this.name = name;
@@ -22,7 +22,7 @@ public class FuturePayment implements Payment{
 		info = Integer.toString(ID) + "," +
 		name + "," +
 		Float.toString(price) + "," +
-		Short.toString(type) + "," +
+		type.key + "," +
 		description;
 		
 		return info;
@@ -54,9 +54,9 @@ public class FuturePayment implements Payment{
 	}
 	
 	@Override
-	public short getPaymentType() 
+	public String getPaymentType()
 	{
-		return type;
+		return type.key;
 	}
 	
 	@Override
@@ -87,7 +87,7 @@ public class FuturePayment implements Payment{
 	}
 
 	@Override
-	public void setPaymentType(short type) 
+	public void setPaymentType(Categories type)
 	{
 		this.type = type;
 		

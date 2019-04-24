@@ -1,18 +1,6 @@
 import java.math.BigDecimal;
 import java.util.*;
 
-enum Categories {               //number equivalent
-    Ubrania_Obuwie,             //1
-    Rachunki,                   //2
-    Zywnosc,                    //3
-    Uzywki,                     //4
-    Chemia_SrodkiCzystosci,     //5
-    Transport,                  //6
-    Rozrywka,                   //7
-    Sprzet,                     //8
-    Kosmetyki                   //9
-}
-
 public class RandomBaseGenerator {
 
     protected Categories[] categories = Categories.values();
@@ -53,7 +41,7 @@ public class RandomBaseGenerator {
         for(int i=0; i<50; i++) {
 
             category = (short)(random.nextInt( 9)+1);
-            pastPayments.AddToRepo(new PastPayment(i + 1, "payment" + String.valueOf(i + 1), round((float) Math.random() * 100, 2), category, "...", new Date(currentDate.getYear(),currentDate.getMonth(),random.nextInt( 7)+1)));
+           // pastPayments.AddToRepo(new PastPayment(i + 1, "payment" + String.valueOf(i + 1), round((float) Math.random() * 100, 2), category, "...", new Date(currentDate.getYear(),currentDate.getMonth(),random.nextInt( 7)+1)));
         }
 
         for(PastPayment pastPayment : pastPayments.getRepo())
