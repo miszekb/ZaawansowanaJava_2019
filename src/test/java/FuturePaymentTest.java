@@ -12,12 +12,12 @@ public class FuturePaymentTest {
     @Before
     public void setUp() {
         Date date = new Date(2019,3,12);
-        this.futurePayment = new FuturePayment(1,"pszne obiad",21.37f,(short)2, "bardzo pszne");
+        this.futurePayment = new FuturePayment(1,"pszne obiad",21.37f,Categories.Rachunki, "bardzo pszne");
     }
 
     @Test
     public void toString_TEST() {
-        assertEquals("1,pszne obiad,21.37,2,bardzo pszne", futurePayment.toString());
+        assertEquals("1,pszne obiad,21.37,Rachunki,bardzo pszne", futurePayment.toString());
     }
 
     @Test
@@ -37,7 +37,7 @@ public class FuturePaymentTest {
 
     @Test
     public void getPaymentType() {
-        assertEquals((short)2, futurePayment.getPaymentType());
+        assertEquals("Rachunki", futurePayment.getPaymentType());
     }
 
     @Test
@@ -65,8 +65,8 @@ public class FuturePaymentTest {
 
     @Test
     public void setPaymentType() {
-        futurePayment.setPaymentType((short)3);
-        assertEquals((short)3, futurePayment.getPaymentType());
+        futurePayment.setPaymentType(Categories.Chemia_SrodkiCzystosci);
+        assertEquals("Chemia_SrodkiCzystosci", futurePayment.getPaymentType());
     }
 
     @Test

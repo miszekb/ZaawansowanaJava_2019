@@ -12,12 +12,12 @@ public class PastPaymentTest {
     @Before
     public void setUp() {
         Date date = new Date(2019,3,12);
-        this.pastPayment = new PastPayment(1,"pszne obiad",21.37f,(short)2, "bardzo pszne", date);
+        this.pastPayment = new PastPayment(1,"pszne obiad",21.37f,Categories.Transport, "bardzo pszne", date);
     }
 
     @Test
     public void toString_TEST() {
-        assertEquals("1,pszne obiad,21.37,2,bardzo pszne,04/12/3919 00:00:00", pastPayment.toString());
+        assertEquals("1,pszne obiad,21.37,Transport,bardzo pszne,04/12/3919 00:00:00", pastPayment.toString());
     }
 
     @Test
@@ -37,7 +37,7 @@ public class PastPaymentTest {
 
     @Test
     public void getPaymentType() {
-        assertEquals(2, pastPayment.getPaymentType());
+        assertEquals("Transport", pastPayment.getPaymentType());
     }
 
     @Test
@@ -65,8 +65,8 @@ public class PastPaymentTest {
 
     @Test
     public void setPaymentType() {
-        pastPayment.setPaymentType((short)3);
-        assertEquals((short)3, pastPayment.getPaymentType());
+        pastPayment.setPaymentType(Categories.Sprzet);
+        assertEquals("Sprzet", pastPayment.getPaymentType());
     }
 
     @Test

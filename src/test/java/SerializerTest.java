@@ -12,8 +12,8 @@ public class SerializerTest {
     public void serializePast() {
         Date date = new Date(2019, 3, 12);
         Date date2 = new Date(2018, 4, 10);
-        PastPayment pastPayment = new PastPayment(1, "pszne obiad", 21.37f, (short) 2, "bardzo pszne", date);
-        PastPayment pastPayment2 = new PastPayment(2, "pszne obiad2", 14.10f, (short) 1, "bardzo pszne2", date2);
+        PastPayment pastPayment = new PastPayment(1, "pszne obiad", 21.37f, Categories.Transport, "bardzo pszne", date);
+        PastPayment pastPayment2 = new PastPayment(2, "pszne obiad2", 14.10f, Categories.Kosmetyki, "bardzo pszne2", date2);
 
         PastPaymentRepository pastRepo = new PastPaymentRepository();
         pastRepo.AddToRepo(pastPayment);
@@ -29,8 +29,8 @@ public class SerializerTest {
 
     @Test
     public void serializeFuture() {
-        FuturePayment futurePayment = new FuturePayment(1, "pszne obiad", 21.37f, (short) 2, "bardzo pszne");
-        FuturePayment futurePayment2 = new FuturePayment(2, "pszne obiad2", 14.10f, (short) 3, "bardzo pszne2");
+        FuturePayment futurePayment = new FuturePayment(1, "pszne obiad", 21.37f, Categories.Transport, "bardzo pszne");
+        FuturePayment futurePayment2 = new FuturePayment(2, "pszne obiad2", 14.10f, Categories.Kosmetyki, "bardzo pszne2");
 
         FuturePaymentRepository futureRepo = new FuturePaymentRepository();
 
