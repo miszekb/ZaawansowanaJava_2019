@@ -105,6 +105,12 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>1.2.1</version>
         </dependency>
+		
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>org.json</artifactId>
+			<version>chargebee-1.0</version>
+		</dependency>	
     </dependencies>
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
