@@ -12,7 +12,7 @@ public class PastPayment implements Payment{
 	private Categories type;
 	private String description;
 	private Date date;
-	
+
 	PastPayment(int ID, String name, float price, Categories type, String description, Date date)
 	{
 		this.ID = ID;

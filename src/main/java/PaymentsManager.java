@@ -1,18 +1,35 @@
 public class PaymentsManager {
 
-    public float getSavings() {
-        return savings;
+    private PastPaymentRepository pastRepo;
+    private FuturePaymentRepository futureRepo;
+
+    public PaymentsManager(PastPaymentRepository pastRepo, FuturePaymentRepository futureRepo) {
+        this.pastRepo = pastRepo;
+        this.futureRepo = futureRepo;
     }
 
-    public void setSavings(float savings) {
-        this.savings = savings;
+    public PastPaymentRepository getPastRepo() {
+        return pastRepo;
     }
 
-    public void addToSavings(float cash) {
-        savings += cash;
+    public void setPastRepo(PastPaymentRepository pastRepo) {
+        this.pastRepo = pastRepo;
     }
 
-    private float savings;
+    public FuturePaymentRepository getFutureRepo() {
+        return futureRepo;
+    }
 
+    public void setFutureRepo(FuturePaymentRepository futureRepo) {
+        this.futureRepo = futureRepo;
+    }
+
+    public PastPayment getSpecificPastPayment(int ID) {
+        return null;
+    }
+
+    public FuturePayment getSpecificFuturePayment(int ID) {
+        return null;
+    }
 
 }
