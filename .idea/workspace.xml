@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/RandomBaseGenerator.java" line="69" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/DrawingClass.java" line="16" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ec98e02-b5fa-4a05-8834-87f5881272c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RandomBaseGenerator.java" afterDir="false" />
+    <list default="true" id="52e8deae-9e88-439f-837c-ab2ec60e2cb9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/zpj.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FUTURE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FUTURE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PAST.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PAST.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Serializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Serializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Serializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SerializerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SerializerTest.class" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,114 +21,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="zpj" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/CurrencyExchangerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/RandomBaseGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="56" column="223" selection-start-line="56" selection-start-column="223" selection-end-line="56" selection-end-column="223" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#461#462#0" expanded="true" />
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#966#967#0" expanded="true" />
-                <element signature="e#1043#1044#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PastPayment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Serializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/PastPaymentTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/JsonReaderTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="16" />
+              <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
               <folding>
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-                <element signature="e#664#665#0" expanded="true" />
-                <element signature="e#737#738#0" expanded="true" />
-                <element signature="e#784#785#0" expanded="true" />
-                <element signature="e#856#857#0" expanded="true" />
-                <element signature="e#902#903#0" expanded="true" />
-                <element signature="e#963#964#0" expanded="true" />
-                <element signature="e#1016#1017#0" expanded="true" />
-                <element signature="e#1097#1098#0" expanded="true" />
-                <element signature="e#1968#1969#0" expanded="true" />
-                <element signature="e#2048#2049#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/FuturePaymentTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/PastPaymentRepositoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/FuturePaymentRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PastPaymentRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PaymentsManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#62#63#0" expanded="true" />
-                <element signature="e#92#93#0" expanded="true" />
-                <element signature="e#137#138#0" expanded="true" />
-                <element signature="e#175#176#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,15 +52,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Xst</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -155,109 +62,102 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/FuturePayment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/FuturePaymentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Payment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PastPaymentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PastPayment.java" />
-        <option value="$PROJECT_DIR$/src/test/java/MainClassTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JsonReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CurrencyExchanger.java" />
         <option value="$PROJECT_DIR$/src/main/java/MainClass.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/PaymentsManager.java" />
-        <option value="$PROJECT_DIR$/src/test/java/PastPaymentTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/FuturePaymentTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/PastPaymentRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/FuturePaymentRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SerializerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Serializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/LambdaClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/RandomBaseGenerator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/JsonReaderTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CurrencyExchangerTest.java" />
       </list>
     </option>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="zpj" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="zpj" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="975" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+      <pane id="ProjectPane">
+        <subPane>
           <expand>
             <path>
-              <item name="ZaawansowanaJava_2019" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="zpj" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="zpj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZaawansowanaJava_2019" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ZaawansowanaJava_2019" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="zpj" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="zpj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZaawansowanaJava_2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ZaawansowanaJava_2019" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="zpj" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="zpj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZaawansowanaJava_2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ZaawansowanaJava_2019" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="zpj" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="zpj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZaawansowanaJava_2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ZaawansowanaJava_2019" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="zpj" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="zpj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZaawansowanaJava_2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ZaawansowanaJava_2019" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="zpj" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="zpj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZaawansowanaJava_2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="zpj" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556042553925" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556984633739" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.31264368" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -271,27 +171,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RandomBaseGenerator">
-    <configuration name="RandomBaseGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RandomBaseGenerator" />
+  <component name="RunManager" selected="JUnit.PastPaymentRepositoryTest">
+    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainClass" />
       <module name="zpj" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FuturePaymentRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in zpj" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="zpj" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FuturePaymentRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FuturePaymentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PastPaymentRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="zpj" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FuturePaymentTest" />
+      <option name="MAIN_CLASS_NAME" value="PastPaymentRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -306,10 +205,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SerializerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentsManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="zpj" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SerializerTest" />
+      <option name="MAIN_CLASS_NAME" value="PaymentsManagerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -317,11 +216,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RandomBaseGenerator" />
-        <item itemvalue="JUnit.SerializerTest" />
-        <item itemvalue="JUnit.FuturePaymentRepositoryTest" />
-        <item itemvalue="JUnit.FuturePaymentTest" />
+        <item itemvalue="JUnit.PastPaymentRepositoryTest" />
         <item itemvalue="JUnit.PastPaymentTest" />
+        <item itemvalue="JUnit.PaymentsManagerTest" />
+        <item itemvalue="JUnit.All in zpj" />
+        <item itemvalue="Application.MainClass" />
       </list>
     </recent_temporary>
   </component>
@@ -330,292 +229,214 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9ec98e02-b5fa-4a05-8834-87f5881272c7" name="Default Changelist" comment="" />
-      <created>1552252460811</created>
+      <changelist id="52e8deae-9e88-439f-837c-ab2ec60e2cb9" name="Default Changelist" comment="" />
+      <created>1556379007103</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1552252460811</updated>
-      <workItem from="1552252470914" duration="676000" />
-      <workItem from="1552380100531" duration="2596000" />
-      <workItem from="1552930361543" duration="5533000" />
-      <workItem from="1553590701083" duration="403000" />
-      <workItem from="1554659266079" duration="1433000" />
-      <workItem from="1554750786888" duration="1432000" />
-      <workItem from="1555097005006" duration="5275000" />
-      <workItem from="1555431713656" duration="2190000" />
-      <workItem from="1555434693930" duration="3960000" />
-      <workItem from="1556035799357" duration="5899000" />
+      <updated>1556379007103</updated>
+      <workItem from="1556379008492" duration="684000" />
+      <workItem from="1556379997600" duration="1375000" />
+      <workItem from="1556382342161" duration="3680000" />
+      <workItem from="1556468408607" duration="7328000" />
+      <workItem from="1556982873631" duration="1733000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SerializerTest_serializePast - 2019.04.12 at 21h 58m 42s.xml">
-      <configuration name="SerializerTest.serializePast" configurationId="JUnit" />
+    <history-entry file="JsonReaderTest - 2019.05.04 at 17h 33m 33s.xml">
+      <configuration name="JsonReaderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SerializerTest_serializePast - 2019.04.12 at 22h 04m 09s.xml">
-      <configuration name="SerializerTest.serializePast" configurationId="JUnit" />
+    <history-entry file="CurrencyExchangerTest - 2019.05.04 at 17h 37m 40s.xml">
+      <configuration name="CurrencyExchangerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PastPaymentTest - 2019.04.16 at 18h 27m 55s.xml">
-      <configuration name="PastPaymentTest" configurationId="JUnit" />
+    <history-entry file="CurrencyExchangerTest - 2019.05.04 at 17h 37m 56s.xml">
+      <configuration name="CurrencyExchangerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PastPaymentTest_toString_TEST - 2019.04.16 at 18h 29m 43s.xml">
-      <configuration name="PastPaymentTest.toString_TEST" configurationId="JUnit" />
+    <history-entry file="CurrencyExchangerTest - 2019.05.04 at 17h 38m 54s.xml">
+      <configuration name="CurrencyExchangerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PastPaymentTest_toString_TEST - 2019.04.16 at 18h 30m 24s.xml">
-      <configuration name="PastPaymentTest.toString_TEST" configurationId="JUnit" />
+    <history-entry file="CurrencyExchangerTest - 2019.05.04 at 17h 39m 05s.xml">
+      <configuration name="CurrencyExchangerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PastPaymentTest - 2019.04.16 at 18h 33m 02s.xml">
-      <configuration name="PastPaymentTest" configurationId="JUnit" />
+    <history-entry file="CurrencyExchangerTest - 2019.05.04 at 17h 39m 14s.xml">
+      <configuration name="CurrencyExchangerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FuturePaymentTest - 2019.04.16 at 18h 34m 58s.xml">
-      <configuration name="FuturePaymentTest" configurationId="JUnit" />
+    <history-entry file="All_in_zpj - 2019.05.04 at 17h 42m 33s.xml">
+      <configuration name="All in zpj" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FuturePaymentRepositoryTest - 2019.04.16 at 18h 44m 11s.xml">
-      <configuration name="FuturePaymentRepositoryTest" configurationId="JUnit" />
+    <history-entry file="All_in_zpj - 2019.05.04 at 17h 42m 43s.xml">
+      <configuration name="All in zpj" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SerializerTest - 2019.04.16 at 18h 45m 05s.xml">
-      <configuration name="SerializerTest" configurationId="JUnit" />
+    <history-entry file="PaymentsManagerTest - 2019.05.04 at 17h 42m 54s.xml">
+      <configuration name="PaymentsManagerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SerializerTest - 2019.04.23 at 18h 57m 35s.xml">
-      <configuration name="SerializerTest" configurationId="JUnit" />
+    <history-entry file="All_in_zpj - 2019.05.04 at 17h 43m 39s.xml">
+      <configuration name="All in zpj" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29397000" />
+    <option name="totallyTimeSpent" value="14800000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22100656" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Structure" order="0" sideWeight="0.15611814" side_tool="true" visible="true" weight="0.26308724" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.5021097" side_tool="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.84388185" visible="true" weight="0.26308724" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48880598" visible="true" weight="0.24466892" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955106" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989059" weight="0.32932165" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.51119405" side_tool="true" weight="0.24803591" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.48720682" weight="0.32659933" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.10805369" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5741127" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48880598" weight="0.24555555" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989059" weight="0.32932165" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.51119405" side_tool="true" weight="0.24803591" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.48720682" weight="0.32777777" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/FuturePayment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DrawingClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FuturePayment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Payment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MainClassTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="41" />
+        <state relative-caret-position="136">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FuturePaymentRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PastPaymentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="16" />
+        <state>
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding>
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
-            <element signature="e#902#903#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1968#1969#0" expanded="true" />
-            <element signature="e#2048#2049#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FuturePaymentTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/MainClassTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="34">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PastPaymentRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FuturePaymentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PastPaymentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="18" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PaymentsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#62#63#0" expanded="true" />
-            <element signature="e#92#93#0" expanded="true" />
-            <element signature="e#137#138#0" expanded="true" />
-            <element signature="e#175#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PastPayment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Serializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <caret selection-end-line="3" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FuturePaymentRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FuturePaymentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SerializerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="42" />
+        <state relative-caret-position="-200">
+          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JsonReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret column="19" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CurrencyExchanger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RandomBaseGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/CurrencyExchangerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="56" column="223" selection-start-line="56" selection-start-column="223" selection-end-line="56" selection-end-column="223" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/PastPaymentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/PaymentsManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/JsonReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -629,7 +450,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31264368" />
               </list>
             </option>
           </splitter-proportions>
@@ -641,7 +462,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31264368" />
               </list>
             </option>
           </splitter-proportions>
@@ -649,11 +470,10 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>javafx-swt</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31264368" />
               </list>
             </option>
           </splitter-proportions>
@@ -665,7 +485,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31264368" />
               </list>
             </option>
           </splitter-proportions>
@@ -677,7 +497,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31264368" />
               </list>
             </option>
           </splitter-proportions>
@@ -689,7 +509,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31264368" />
               </list>
             </option>
           </splitter-proportions>
