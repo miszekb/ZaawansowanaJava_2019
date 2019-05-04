@@ -90,7 +90,6 @@ public class PastPayment implements Payment{
 	@Override
 	public void setPaymentType(Categories type) {
 		this.type = type;
-		
 	}
 
 	@Override
