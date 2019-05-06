@@ -1,0 +1,16 @@
+<list>
+  <logic.FuturePayment>
+    <ID>1</ID>
+    <name>pszne obiad</name>
+    <price>21.37</price>
+    <type>Transport</type>
+    <description>bardzo pszne</description>
+  </logic.FuturePayment>
+  <logic.FuturePayment>
+    <ID>2</ID>
+    <name>pszne obiad2</name>
+    <price>14.1</price>
+    <type>Kosmetyki</type>
+    <description>bardzo pszne2</description>
+  </logic.FuturePayment>
+</list>

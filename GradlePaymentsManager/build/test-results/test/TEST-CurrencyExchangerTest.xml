@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CurrencyExchangerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-05-05T19:44:02" hostname="DESKTOP-D9TLLAO" time="0.301">
+  <properties/>
+  <testcase name="GetCurrencyRateOnDate" classname="CurrencyExchangerTest" time="0.151"/>
+  <testcase name="GetCurrencyRate" classname="CurrencyExchangerTest" time="0.149"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

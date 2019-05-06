@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FuturePaymentRepositoryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-05-05T19:44:02" hostname="DESKTOP-D9TLLAO" time="0.025">
+  <properties/>
+  <testcase name="deletePayment" classname="FuturePaymentRepositoryTest" time="0.001"/>
+  <testcase name="getRepo" classname="FuturePaymentRepositoryTest" time="0.0"/>
+  <testcase name="addToRepo" classname="FuturePaymentRepositoryTest" time="0.024"/>
+  <testcase name="toString_TEST" classname="FuturePaymentRepositoryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
