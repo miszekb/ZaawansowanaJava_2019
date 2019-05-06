@@ -1,5 +1,7 @@
 package logic;
 
+import java.util.*;
+
 public class MonthlyPayment implements Payment {
 
     private int ID;
@@ -7,20 +9,37 @@ public class MonthlyPayment implements Payment {
     private float price;
     private Categories type;
     private String description;
-    private int dayOfMonth;
+    private Short paidCounter;
+    private HashMap<Integer, Boolean> monthList = new HashMap<>();
 
-    public int getDayOfMonth() {
-        return dayOfMonth;
+    public MonthlyPayment(int ID, String name, float price, Categories type, String description) {
+        this.paidCounter = 0;
+        this.ID = ID;
+        this.name = name;
+        this.price = price;
+        this.type = type;
+        this.description = description;
+        for(int i=1;i<13;i++)
+        {
+            monthList.put(new Integer(i), Boolean.FALSE);
+        }
     }
 
-    public void setDayOfMonth(int dayOfMonth) {
-        this.dayOfMonth = dayOfMonth;
+    public void payThisMonth() {
+        this.monthList.replace(new Integer(new Date().getMonth() + 1), Boolean.TRUE);
     }
+
+    public HashMap<Integer, Boolean> getMonthList() {
+        return monthList;
+    }
+
+    public void setMonthList(HashMap<Integer, Boolean> monthList) {
+        this.monthList = monthList;
+    }
+
 
     @Override
-    public int getPaymentID() {
-        return ID;
-    }
+    public int getPaymentID() { return ID; }
 
     @Override
     public String getPaymentName() {

@@ -1,6 +1,7 @@
 package logic;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MonthlyPaymentRepository {
 
@@ -20,5 +21,11 @@ public class MonthlyPaymentRepository {
 
     public ArrayList<MonthlyPayment> getRepo() {
         return monthlyRepo;
+    }
+
+    public void update() {
+        for (MonthlyPayment m_payment : monthlyRepo){
+
+        }
     }
 }
