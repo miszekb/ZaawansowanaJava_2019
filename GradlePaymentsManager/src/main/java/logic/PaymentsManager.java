@@ -9,13 +9,20 @@ public class PaymentsManager {
     private MonthlyPaymentRepository monthlyRepo;
     private Serializer serializer;
     private CurrencyExchanger currencyExchanger;
+
     private String myCurrency = "PLN";
 
-    public PaymentsManager(PastPaymentRepository pastRepo, FuturePaymentRepository futureRepo) {
-        this.pastRepo = pastRepo;
-        this.futureRepo = futureRepo;
+    public PaymentsManager() {
+        pastRepo = new PastPaymentRepository();
+        futureRepo = new FuturePaymentRepository();
+        monthlyRepo = new MonthlyPaymentRepository();
         serializer = new Serializer();
         currencyExchanger = new CurrencyExchanger();
+    }
+
+    public String getMyCurrency()
+    {
+        return myCurrency;
     }
 
     //---------------------- PAST PAYMENTS METHODS ----------------------
@@ -53,9 +60,9 @@ public class PaymentsManager {
     }
 
     //---------------------- FUTURE PAYMENTS METHODS ----------------------
-    public void addToFutureRepo(PastPayment pastPayment)
+    public void addToFutureRepo(FuturePayment futurePayment)
     {
-        pastRepo.AddToRepo(pastPayment);
+        futureRepo.AddToRepo(futurePayment);
     }
 
     public FuturePaymentRepository getFutureRepo()
@@ -153,8 +160,8 @@ public class PaymentsManager {
         float currentRate = 0.0f;
         try
         {
-            currentRate = currencyExchanger.GetCurrencyRate(myCurrency)/
-                          currencyExchanger.GetCurrencyRate(currencyCode);
+            currentRate = currencyExchanger.GetCurrencyRate(currencyCode)/
+                          currencyExchanger.GetCurrencyRate(myCurrency);
         }
         catch(IOException exception)
         {
@@ -184,17 +191,19 @@ public class PaymentsManager {
     public float getChosenCurrencyRate(String currencyCode)
     {
         float rate= 0.0f;
+        float current = 0.0f;
 
         try
         {
             rate = CurrencyExchanger.GetCurrencyRate(currencyCode);
+            current = CurrencyExchanger.GetCurrencyRate(myCurrency);
         }
         catch (Exception exception)
         {
            System.out.println(exception.getMessage());
         }
 
-        return rate;
+        return rate/current;
     }
 
 

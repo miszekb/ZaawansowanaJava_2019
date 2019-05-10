@@ -3,7 +3,7 @@
     <ID>1</ID>
     <name>pszne obiad</name>
     <price>21.37</price>
-    <type>Transport</type>
+    <type>Kosmetyki</type>
     <description>bardzo pszne</description>
     <date>3919-04-11 22:00:00.0 UTC</date>
   </logic.PastPayment>
@@ -11,7 +11,7 @@
     <ID>2</ID>
     <name>pszne obiad2</name>
     <price>14.1</price>
-    <type>Kosmetyki</type>
+    <type>Sprzet</type>
     <description>bardzo pszne2</description>
     <date>3918-05-09 22:00:00.0 UTC</date>
   </logic.PastPayment>
