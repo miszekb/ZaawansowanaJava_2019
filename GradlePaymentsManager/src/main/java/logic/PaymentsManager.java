@@ -1,6 +1,7 @@
 package logic;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class PaymentsManager {
 
@@ -122,6 +123,19 @@ public class PaymentsManager {
         return monthlyPayment;
     }
 
+    public void update() {
+        for(MonthlyPayment payment: monthlyRepo.getRepo()) {
+            if (!payment.getMonthList().get(new Date().getMonth() + 1).booleanValue()) {
+                futureRepo.AddToRepo(new FuturePayment(futureRepo.getRepo().size() + 1,
+                        payment.getPaymentName(), payment.getPaymentPrice(),
+                        Categories.valueOf(payment.getPaymentType()),
+                        payment.getPaymentDescription()));
+            }
+
+        }
+    }
+
+
     //---------------------- XML SERIALIZING METHODS ----------------------
 
     public void serializePast(PastPaymentRepository repo)
@@ -144,9 +158,9 @@ public class PaymentsManager {
         this.futureRepo = serializer.DeserializeFuture();
     }
 
-    public void serializeAll(PastPaymentRepository repoPast, FuturePaymentRepository repoFuture)
+    public void serializeAll()
     {
-        serializer.SerializeAll(repoPast, repoFuture);
+        serializer.SerializeAll(pastRepo, futureRepo, monthlyRepo);
     }
 
     // ----------------------SQL DATABASE METHODS ----------------------

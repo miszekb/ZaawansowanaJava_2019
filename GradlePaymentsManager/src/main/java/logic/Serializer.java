@@ -34,10 +34,25 @@ public class Serializer {
         catch(IOException ex) {}
     }
 
-    public void SerializeAll(PastPaymentRepository pastRepo, FuturePaymentRepository futureRepo)
+
+    public void SerializeMonth(MonthlyPaymentRepository monthrepo)
+    {
+        try {
+            FileOutputStream outStream = new FileOutputStream("MONTHLY.xml");
+            XStream xStream = new XStream(new DomDriver());
+            xStream.toXML(monthrepo.getRepo(), outStream);
+        }
+        catch(IOException ex) {}
+    }
+
+
+    public void SerializeAll(PastPaymentRepository pastRepo,
+                             FuturePaymentRepository futureRepo,
+                             MonthlyPaymentRepository monthlyRepo)
     {
         SerializePast(pastRepo);
         SerializeFuture(futureRepo);
+        SerializeMonth(monthlyRepo);
     }
 
     //DESERIALIZATION METHODS
@@ -73,5 +88,23 @@ public class Serializer {
         }
         catch(IOException ex) {}
         return futureRepo;
+    }
+
+
+    public MonthlyPaymentRepository DeserializeMonth()
+    {
+        MonthlyPaymentRepository monthRepo = new MonthlyPaymentRepository();
+
+        try {
+            File xmlFile = new File("MONTHLY.xml");
+            XStream xStream = new XStream(new DomDriver());
+
+            for (MonthlyPayment e : (ArrayList<MonthlyPayment>) xStream.fromXML(new FileInputStream(xmlFile))) {
+                monthRepo.AddToRepo(e);
+            }
+        }
+
+        catch(IOException ex) {}
+        return monthRepo;
     }
 }
