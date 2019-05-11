@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d10b0284-f578-46f8-8d74-8cb343d6e3f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/logic/PaymentsManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MonthlyPaymentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PAST.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PAST.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/PaymentsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/PaymentsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/MonthlyPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/MonthlyPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/MonthlyPaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/MonthlyPaymentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PaymentsManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PaymentsManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/logic/MonthlyPaymentTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/logic/PaymentsManagerTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -48,14 +51,14 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.40938166">
+    <splitter split-orientation="horizontal" split-proportion="0.48774928">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/SerializerTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="31" column="21" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="21" />
+                <state relative-caret-position="204">
+                  <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -63,7 +66,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/MainClassTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
+                <state relative-caret-position="119">
                   <caret line="9" column="46" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="46" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -81,38 +84,34 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/logic/MonthlyPaymentRepository.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="12" selection-start-line="12" selection-end-line="12" />
+                <state relative-caret-position="391">
+                  <caret line="41" column="59" lean-forward="true" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#245#246#0" expanded="true" />
+                    <element signature="e#285#286#0" expanded="true" />
+                    <element signature="e#550#551#0" expanded="true" />
+                    <element signature="e#584#585#0" expanded="true" />
+                    <element signature="e#916#917#0" expanded="true" />
+                    <element signature="e#952#953#0" expanded="true" />
+                    <element signature="e#947#963#0" expanded="true" />
+                    <element signature="e#1292#1308#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/logic/MonthlyPayment.java">
+            <entry file="file://$PROJECT_DIR$/src/test/java/MonthlyPaymentTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+                <state>
+                  <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
                   <folding>
-                    <element signature="e#734#735#0" expanded="true" />
-                    <element signature="e#826#827#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/logic/MonthlyPaymentTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
+                    <element signature="e#419#420#0" expanded="true" />
+                    <element signature="e#478#479#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -121,38 +120,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/logic/PaymentsManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-                  <folding>
-                    <element signature="e#654#655#0" expanded="true" />
-                    <element signature="e#686#687#0" expanded="true" />
-                    <element signature="e#380#381#0" expanded="true" />
-                    <element signature="e#403#404#0" expanded="true" />
-                    <element signature="e#368#369#0" expanded="true" />
-                    <element signature="e#399#400#0" expanded="true" />
-                    <element signature="e#466#467#0" expanded="true" />
-                    <element signature="e#506#507#0" expanded="true" />
-                    <element signature="e#1206#1207#0" expanded="true" />
-                    <element signature="e#1253#1254#0" expanded="true" />
-                    <element signature="e#1175#1176#0" expanded="true" />
-                    <element signature="e#1208#1209#0" expanded="true" />
-                    <element signature="e#1281#1282#0" expanded="true" />
-                    <element signature="e#1325#1326#0" expanded="true" />
-                    <element signature="e#1957#1958#0" expanded="true" />
-                    <element signature="e#2004#2005#0" expanded="true" />
-                    <element signature="e#2062#2063#0" expanded="true" />
-                    <element signature="e#2095#2096#0" expanded="true" />
-                    <element signature="e#2168#2169#0" expanded="true" />
-                    <element signature="e#2212#2213#0" expanded="true" />
-                    <element signature="e#1821#1822#0" expanded="true" />
-                    <element signature="e#1866#1867#0" expanded="true" />
-                    <element signature="e#1935#1936#0" expanded="true" />
-                    <element signature="e#1980#1981#0" expanded="true" />
-                    <element signature="e#2015#2016#0" expanded="true" />
-                    <element signature="e#2075#2076#0" expanded="true" />
-                    <element signature="e#2144#2145#0" expanded="true" />
-                    <element signature="e#2204#2205#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="221">
+                  <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
                 </state>
               </provider>
             </entry>
@@ -189,10 +158,33 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/logic/MonthlyPaymentTest.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/logic/MonthlyPayment.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="27" selection-start-line="27" selection-end-line="27" />
+                <state relative-caret-position="19">
+                  <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#1113#1114#0" expanded="true" />
+                    <element signature="e#1224#1225#0" expanded="true" />
+                    <element signature="e#1363#1364#0" expanded="true" />
+                    <element signature="e#1443#1444#0" expanded="true" />
+                    <element signature="e#1526#1527#0" expanded="true" />
+                    <element signature="e#1619#1620#0" expanded="true" />
+                    <element signature="e#1701#1702#0" expanded="true" />
+                    <element signature="e#1794#1795#0" expanded="true" />
+                    <element signature="e#1890#1891#0" expanded="true" />
+                    <element signature="e#1987#1988#0" expanded="true" />
+                    <element signature="e#2108#2109#0" expanded="true" />
+                    <element signature="e#2180#2181#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/MonthlyPaymentTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="374">
+                  <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -215,16 +207,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/PaymentsManagerTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-595">
-                  <caret line="34" column="48" lean-forward="true" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+                <state relative-caret-position="306">
+                  <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1150#1151#0" expanded="true" />
-                    <element signature="e#1172#1173#0" expanded="true" />
-                    <element signature="e#1385#1386#0" expanded="true" />
-                    <element signature="e#1464#1465#0" expanded="true" />
-                    <element signature="e#2842#2843#0" expanded="true" />
-                    <element signature="e#2923#2924#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -294,19 +280,19 @@
         <option value="$PROJECT_DIR$/src/test/java/PastPaymentTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/SerializerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/JavaFX/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/logic/MonthlyPaymentRepository.java" />
-        <option value="$PROJECT_DIR$/src/test/java/logic/MonthlyPaymentTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/logic/MonthlyPayment.java" />
         <option value="$PROJECT_DIR$/src/test/java/logic/PaymentsManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/PaymentsManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/logic/MonthlyPaymentTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MonthlyPaymentTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/MonthlyPayment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/logic/MonthlyPaymentRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/PaymentsManagerTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="271" />
-    <option name="y" value="-9" />
-    <option name="width" value="974" />
+    <option name="x" value="763" />
+    <option name="width" value="1164" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -316,7 +302,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -357,15 +342,6 @@
               <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="JavaFX" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="logic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -383,50 +359,17 @@
               <item name="test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="out" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="out" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="out" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="classes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557522313585" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557583454612" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -441,10 +384,7 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="logic" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\EditionBOOTCAMP2019\Documents\GitHub\GradlePaymentsManager\src\main\resources\JavaFX" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -452,6 +392,12 @@
       <recent name="C:\Users\EditionBOOTCAMP2019\Documents\GitHub\GradlePaymentsManager\src\test\java" />
       <recent name="C:\Users\EditionBOOTCAMP2019\Documents\GitHub\GradlePaymentsManager\src\main\resources" />
       <recent name="C:\Users\EditionBOOTCAMP2019\Documents\GitHub\GradlePaymentsManager\src\main\java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\EditionBOOTCAMP2019\Documents\GitHub\GradlePaymentsManager\src\main\resources\JavaFX" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -466,7 +412,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PaymentsManagerTest">
+  <component name="RunManager" selected="JUnit.MonthlyPaymentTest.payThisMonth">
     <configuration name="GradlePaymentsManager [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -486,36 +432,33 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GradlePaymentsManager [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="MonthlyPaymentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="org.openjfx.hellofx.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="logic.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="logic" />
-      <option name="MAIN_CLASS_NAME" value="logic.MonthlyPaymentTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MonthlyPaymentTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonthlyPaymentTest.payThisMonth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="org.openjfx.hellofx.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MonthlyPaymentTest" />
+      <option name="METHOD_NAME" value="payThisMonth" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -541,11 +484,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MonthlyPaymentTest.payThisMonth" />
         <item itemvalue="JUnit.PaymentsManagerTest" />
         <item itemvalue="JUnit.PaymentsManagerTest.getPastRepo" />
         <item itemvalue="JUnit.MonthlyPaymentTest" />
         <item itemvalue="Gradle.GradlePaymentsManager [run]" />
-        <item itemvalue="Gradle.GradlePaymentsManager [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -566,17 +509,12 @@
       <workItem from="1557084768735" duration="824000" />
       <workItem from="1557086988883" duration="969000" />
       <workItem from="1557159542349" duration="4090000" />
-      <workItem from="1557511748588" duration="9794000" />
+      <workItem from="1557511748588" duration="10002000" />
+      <workItem from="1557580878236" duration="2569000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MonthlyPaymentTest - 2019.05.06 at 19h 05m 20s.xml">
-      <configuration name="MonthlyPaymentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MonthlyPaymentTest - 2019.05.06 at 19h 18m 00s.xml">
-      <configuration name="MonthlyPaymentTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MonthlyPaymentTest - 2019.05.06 at 19h 20m 29s.xml">
       <configuration name="MonthlyPaymentTest" configurationId="JUnit" />
     </history-entry>
@@ -601,15 +539,21 @@
     <history-entry file="PaymentsManagerTest - 2019.05.10 at 23h 02m 13s.xml">
       <configuration name="PaymentsManagerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PaymentsManagerTest - 2019.05.10 at 23h 05m 16s.xml">
+      <configuration name="PaymentsManagerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MonthlyPaymentTest_payThisMonth - 2019.05.11 at 15h 28m 36s.xml">
+      <configuration name="MonthlyPaymentTest.payThisMonth" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22632000" />
+    <option name="totallyTimeSpent" value="25409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06396589" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1705757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -619,7 +563,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297055" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38666666" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22666667" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -731,8 +675,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/JavaFX/sample.fxml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic/Payment.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -772,95 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FuturePaymentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MainClassTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/JsonReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PastPaymentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/MonthlyPayment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding>
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#826#827#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/MonthlyPaymentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/logic/MonthlyPaymentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/CurrencyExchanger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="70" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CurrencyExchangerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/logic/PaymentsManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logic/PastPayment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
@@ -878,47 +733,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MainClassTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/FuturePaymentRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/PaymentsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-          <folding>
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
-            <element signature="e#1208#1209#0" expanded="true" />
-            <element signature="e#1281#1282#0" expanded="true" />
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1957#1958#0" expanded="true" />
-            <element signature="e#2004#2005#0" expanded="true" />
-            <element signature="e#2062#2063#0" expanded="true" />
-            <element signature="e#2095#2096#0" expanded="true" />
-            <element signature="e#2168#2169#0" expanded="true" />
-            <element signature="e#2212#2213#0" expanded="true" />
-            <element signature="e#1821#1822#0" expanded="true" />
-            <element signature="e#1866#1867#0" expanded="true" />
-            <element signature="e#1935#1936#0" expanded="true" />
-            <element signature="e#1980#1981#0" expanded="true" />
-            <element signature="e#2015#2016#0" expanded="true" />
-            <element signature="e#2075#2076#0" expanded="true" />
-            <element signature="e#2144#2145#0" expanded="true" />
-            <element signature="e#2204#2205#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -929,25 +757,124 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FuturePaymentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/CurrencyExchanger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="70" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/JsonReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SerializerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="204">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/logic/PaymentsManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CurrencyExchangerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/PastPaymentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/PaymentsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MonthlyPaymentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
+          <folding>
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/MonthlyPayment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1363#1364#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1526#1527#0" expanded="true" />
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1701#1702#0" expanded="true" />
+            <element signature="e#1794#1795#0" expanded="true" />
+            <element signature="e#1890#1891#0" expanded="true" />
+            <element signature="e#1987#1988#0" expanded="true" />
+            <element signature="e#2108#2109#0" expanded="true" />
+            <element signature="e#2180#2181#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PaymentsManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-595">
-          <caret line="34" column="48" lean-forward="true" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+        <state relative-caret-position="306">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1150#1151#0" expanded="true" />
-            <element signature="e#1172#1173#0" expanded="true" />
-            <element signature="e#1385#1386#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
-            <element signature="e#2842#2843#0" expanded="true" />
-            <element signature="e#2923#2924#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/MonthlyPaymentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="41" column="59" lean-forward="true" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#947#963#0" expanded="true" />
+            <element signature="e#1292#1308#0" expanded="true" />
           </folding>
         </state>
       </provider>

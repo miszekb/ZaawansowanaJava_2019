@@ -9,24 +9,30 @@ public class MonthlyPayment implements Payment {
     private float price;
     private Categories type;
     private String description;
-    private Short paidCounter;
     private HashMap<Integer, Boolean> monthList = new HashMap<>();
+    private int firstMonth;
 
     public MonthlyPayment(int ID, String name, float price, Categories type, String description) {
-        this.paidCounter = 0;
+        this.firstMonth = new Date().getMonth() + 1;
         this.ID = ID;
         this.name = name;
         this.price = price;
         this.type = type;
         this.description = description;
-        for(int i=1;i<13;i++)
+
+        for(int i = this.firstMonth; i<13; i++)
         {
             monthList.put(new Integer(i), Boolean.FALSE);
+            if(i == 12) { i = 0;}
         }
     }
 
-    public void payThisMonth() {
-        this.monthList.replace(new Integer(new Date().getMonth() + 1), Boolean.TRUE);
+    public boolean payThisMonth() {
+        if(!monthList.get(new Integer(new Date().getMonth() +1))) {
+            monthList.replace(new Integer(new Date().getMonth() + 1), Boolean.TRUE);
+            return true;
+        }
+        return false;
     }
 
     public HashMap<Integer, Boolean> getMonthList() {
@@ -36,7 +42,6 @@ public class MonthlyPayment implements Payment {
     public void setMonthList(HashMap<Integer, Boolean> monthList) {
         this.monthList = monthList;
     }
-
 
     @Override
     public int getPaymentID() { return ID; }
