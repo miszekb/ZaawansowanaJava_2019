@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PaymentsManagerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-05-05T19:44:02" hostname="DESKTOP-D9TLLAO" time="0.004">
+<testsuite name="PaymentsManagerTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2019-05-11T12:33:27" hostname="DESKTOP-1EDAEAT" time="0.566">
   <properties/>
-  <testcase name="setPastRepo" classname="PaymentsManagerTest" time="0.001"/>
+  <testcase name="deserializeFuture" classname="PaymentsManagerTest" time="0.311"/>
+  <testcase name="getSpecificMonthlyPayment" classname="PaymentsManagerTest" time="0.0"/>
+  <testcase name="setPastRepo" classname="PaymentsManagerTest" time="0.0"/>
   <testcase name="getPastRepo" classname="PaymentsManagerTest" time="0.0"/>
+  <testcase name="setMonthlyRepo" classname="PaymentsManagerTest" time="0.001"/>
+  <testcase name="serializerFuture" classname="PaymentsManagerTest" time="0.015"/>
+  <testcase name="getChosenCurrencyRate" classname="PaymentsManagerTest" time="0.084"/>
   <testcase name="getFutureRepo" classname="PaymentsManagerTest" time="0.0"/>
-  <testcase name="setFutureRepo" classname="PaymentsManagerTest" time="0.0"/>
-  <testcase name="getSpecificPastPayment" classname="PaymentsManagerTest" time="0.0"/>
-  <testcase name="getSpecificFuturePayment" classname="PaymentsManagerTest" time="0.0"/>
+  <testcase name="addToFutureRepo" classname="PaymentsManagerTest" time="0.001"/>
+  <testcase name="addToMonthlyRepo" classname="PaymentsManagerTest" time="0.0"/>
+  <testcase name="getMyCurrency" classname="PaymentsManagerTest" time="0.001"/>
+  <testcase name="getMonthlyRepo" classname="PaymentsManagerTest" time="0.0"/>
+  <testcase name="serializeAll" classname="PaymentsManagerTest" time="0.0"/>
+  <testcase name="serializePast" classname="PaymentsManagerTest" time="0.08"/>
+  <testcase name="setFutureRepo" classname="PaymentsManagerTest" time="0.001"/>
+  <testcase name="deserializerPast" classname="PaymentsManagerTest" time="0.018"/>
+  <testcase name="convertEveryPrice" classname="PaymentsManagerTest" time="0.003"/>
+  <testcase name="addToPastRepo" classname="PaymentsManagerTest" time="0.001"/>
+  <testcase name="getSpecificPastPayment" classname="PaymentsManagerTest" time="0.02"/>
+  <testcase name="getSpecificFuturePayment" classname="PaymentsManagerTest" time="0.017"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

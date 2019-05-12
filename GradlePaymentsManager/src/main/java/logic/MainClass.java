@@ -2,6 +2,9 @@ package logic;
 
 import org.json.JSONException;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.io.IOException;
 import java.util.Date;
 
@@ -21,6 +24,20 @@ public class MainClass {
         float rate2 = CurrencyExchanger.GetCurrencyRateOnDate("USD", "2016-01-15");
         System.out.println(rate);
         System.out.println(rate2);
+
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("org.hibernate.tutorial.jpa");
+        Client client = new Client();
+        client.setId(2);
+        client.setName("johan");
+
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+
+        entityManager.persist(client);
+
+        entityManager.getTransaction().commit();
+
+        entityManagerFactory.close();
     }
 
 

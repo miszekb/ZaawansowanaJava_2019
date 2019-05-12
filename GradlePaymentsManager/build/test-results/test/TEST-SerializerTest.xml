@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SerializerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-05-05T19:44:02" hostname="DESKTOP-D9TLLAO" time="0.701">
-  <properties/>
-  <testcase name="serializeFuture" classname="SerializerTest" time="0.641"/>
-  <testcase name="serializePast" classname="SerializerTest" time="0.06"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

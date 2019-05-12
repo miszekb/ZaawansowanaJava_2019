@@ -1,10 +1,20 @@
 package logic;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.util.*;
 
+@Entity
+@Table(name = "monthly_payment_table")
 public class MonthlyPayment implements Payment {
 
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(generator = "incrementor")
+    @GenericGenerator(name = "incrementor", strategy = "increment")
     private int ID;
+    @Column(name = "name")
     private String name;
     private float price;
     private Categories type;
@@ -23,6 +33,9 @@ public class MonthlyPayment implements Payment {
         {
             monthList.put(new Integer(i), Boolean.FALSE);
         }
+    }
+    public MonthlyPayment() {
+
     }
 
     public void payThisMonth() {
