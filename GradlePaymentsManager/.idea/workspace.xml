@@ -2,8 +2,122 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d10b0284-f578-46f8-8d74-8cb343d6e3f6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/JavaFX/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaFX/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/JavaFX/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/JavaFX/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FUTURE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PAST.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/JavaFX/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/JavaFX/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/Categories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/CurrencyExchanger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/DrawingClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/FuturePayment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/FuturePaymentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/JsonReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/MainClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/MonthlyPayment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/MonthlyPaymentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/PastPayment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/PastPaymentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/Payment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/PaymentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/PaymentsManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/RandomBaseGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/logic/Serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/CurrencyExchangerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/FuturePaymentRepositoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/FuturePaymentTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/JsonReaderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/MainClassTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/PastPaymentRepositoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/PastPaymentTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/PaymentsManagerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/SerializerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/CurrencyExchangerTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/FuturePaymentRepositoryTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/FuturePaymentTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/JsonReaderTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/PastPaymentRepositoryTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/PastPaymentTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/PaymentsManagerTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/SerializerTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/JavaFX/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-CurrencyExchangerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-FuturePaymentRepositoryTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-FuturePaymentTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-JsonReaderTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-PastPaymentRepositoryTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-PastPaymentTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-PaymentsManagerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-SerializerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JavaFX/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JavaFX/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Categories.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/CurrencyExchanger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/DrawingClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/FuturePayment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/FuturePaymentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/JsonReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/MainClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/MonthlyPayment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/MonthlyPaymentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/PastPayment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/PastPaymentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Payment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/PaymentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/PaymentsManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/RandomBaseGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Serializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/JavaFX/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CurrencyExchangerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FuturePaymentRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FuturePaymentTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/JsonReaderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainClassTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MonthlyPaymentTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PastPaymentRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PastPaymentTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PaymentsManagerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SerializerTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -45,32 +159,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/JavaFX/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="368" column="35" selection-start-line="368" selection-start-column="35" selection-end-line="368" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/JavaFX/sample.fxml">
-          <provider editor-type-id="text-editor" />
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/JavaFX/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -126,7 +215,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -137,6 +226,7 @@
     </navigator>
     <panes>
       <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -149,82 +239,10 @@
               <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="JavaFX" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="logic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="JavaFX" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="hellofx" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="org" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="openjfx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="hellofx" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,7 +251,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557583461887" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -245,13 +263,7 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="logic" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\EditionBOOTCAMP2019\Documents\GitHub\GradlePaymentsManager\src\main\resources\JavaFX" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -259,6 +271,13 @@
       <recent name="C:\Users\EditionBOOTCAMP2019\Documents\GitHub\GradlePaymentsManager\src\test\java" />
       <recent name="C:\Users\EditionBOOTCAMP2019\Documents\GitHub\GradlePaymentsManager\src\main\resources" />
       <recent name="C:\Users\EditionBOOTCAMP2019\Documents\GitHub\GradlePaymentsManager\src\main\java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MB\Documents\GitHub\GAME_TEAROOM\ZaawansowanaJava_2019\GradlePaymentsManager\src\main\resources" />
+      <recent name="C:\Users\EditionBOOTCAMP2019\Documents\GitHub\GradlePaymentsManager\src\main\resources\JavaFX" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -372,7 +391,8 @@
       <workItem from="1557159542349" duration="4090000" />
       <workItem from="1557511748588" duration="10002000" />
       <workItem from="1557580878236" duration="2835000" />
-      <workItem from="1557600614695" duration="4970000" />
+      <workItem from="1557600614695" duration="5041000" />
+      <workItem from="1557776840423" duration="1462000" />
     </task>
     <servers />
   </component>
@@ -409,12 +429,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30645000" />
+    <option name="totallyTimeSpent" value="32178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15884861" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.078891255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -424,7 +444,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297055" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22666667" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22666667" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -722,13 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JavaFX/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JavaFX/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -736,9 +749,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JavaFX/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/JavaFX/sample.fxml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
