@@ -1,5 +1,11 @@
 package logic;
 
+import javax.persistence.*;
+
+import static logic.PaymentsManager.getEntityManager;
+
+@Entity
+@Table(name = "future_payment_table")
 public class FuturePayment implements Payment{
 	public int getID() {
 		return ID;
@@ -41,10 +47,16 @@ public class FuturePayment implements Payment{
 		this.description = description;
 	}
 
+	@Id
+	@Column(name = "id")
 	private int ID;
+	@Column(name = "name")
 	private String name;
+	@Column(name = "price")
 	private float price;
+	@Column(name = "type")
 	private Categories type;
+	@Column(name = "description")
 	private String description;
 	
 	public FuturePayment(int ID, String name, float price, Categories type, String description)
@@ -68,7 +80,23 @@ public class FuturePayment implements Payment{
 		
 		return info;
 	}
-	
+
+	public void saveFuturePayment(FuturePayment fp) {
+		EntityManager em = getEntityManager();
+
+		em.getTransaction().begin();
+
+		em.persist(fp);
+		em.getTransaction().commit();
+	}
+
+	public FuturePayment FuturePayment(int id) {
+		EntityManager em = getEntityManager();
+		FuturePayment futurePayment = em.find(FuturePayment.class,  id);
+		em.detach(futurePayment);
+		return futurePayment;
+	}
+
 	@Override
 	public String archive() 
 	{

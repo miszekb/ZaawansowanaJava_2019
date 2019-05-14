@@ -1,5 +1,8 @@
 package logic;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.io.IOException;
 import java.util.Date;
 
@@ -13,12 +16,18 @@ public class PaymentsManager {
 
     private String myCurrency = "PLN";
 
+    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("org.hibernate.tutorial.jpa");
+
     public PaymentsManager() {
         pastRepo = new PastPaymentRepository();
         futureRepo = new FuturePaymentRepository();
         monthlyRepo = new MonthlyPaymentRepository();
         serializer = new Serializer();
         currencyExchanger = new CurrencyExchanger();
+    }
+
+    public static EntityManager getEntityManager() {
+        return emf.createEntityManager();
     }
 
     public String getMyCurrency()

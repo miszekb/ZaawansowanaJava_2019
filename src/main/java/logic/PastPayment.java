@@ -1,18 +1,29 @@
 package logic;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+@Entity
+@Table(name = "past_payment_table")
 public class PastPayment implements Payment{
 
-
-
+	@Id
+	@Column(name = "id")
 	private int ID;
+	@Column(name = "name")
 	private String name;
+	@Column(name = "price")
 	private float price;
+	@Column(name = "type")
 	private Categories type;
+	@Column(name = "description")
 	private String description;
+	@Column(name = "date")
 	private Date date;
 
 	public PastPayment(int ID, String name, float price, Categories type, String description, Date date)
