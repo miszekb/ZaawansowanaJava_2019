@@ -83,6 +83,7 @@
                         <MotionBlur radius="0.0" />
                      </effect>
                   </ImageView>
+                  <ChoiceBox fx:id="choiceBox1" layoutX="360.0" layoutY="205.0" onAction="#changeCurrency" prefWidth="150.0" />
                </children>
             </AnchorPane>
         </content>

@@ -16,14 +16,17 @@ import java.time.ZoneId;
 import java.util.Date;
 
 public class Controller {
-    private FuturePaymentRepository futurePaymentRepository = new FuturePaymentRepository();
-    private PastPaymentRepository pastPaymentRepository = new PastPaymentRepository();
+    private PaymentsManager paymentsManager = new PaymentsManager();
+    private FuturePaymentRepository futurePaymentRepository = paymentsManager.getFutureRepo();
+    private PastPaymentRepository pastPaymentRepository = paymentsManager.getPastRepo();
     ObservableList<String> typeOptions = FXCollections.observableArrayList(Categories.Ubrania_Obuwie.toString(),
             Categories.Rachunki.toString(),Categories.Zywnosc.toString(),Categories.Uzywki.toString(),Categories.Chemia_SrodkiCzystosci.toString(),
             Categories.Transport.toString(),Categories.Rozrywka.toString(),Categories.Sprzet.toString(),Categories.Kosmetyki.toString());
+    ObservableList<String> currencyOptions = FXCollections.observableArrayList("PLN","USD","EUR","CHF","JPY","MXN","RUB");
     private DrawingClass drawingClass = new DrawingClass(pastPaymentRepository.getRepo(),futurePaymentRepository.getRepo());
     private int ID =0,pastID=0;
     private ObservableList<PieChart.Data> pieChartData;
+    private ObservableList<FuturePayment> futurePaymentsList;
 
     @FXML
     private TableView<FuturePayment> mainPaymentsTable;
@@ -58,7 +61,7 @@ public class Controller {
     @FXML
     private TextField priceTextField;
     @FXML
-    private ChoiceBox choiceBox;
+    private ChoiceBox choiceBox,choiceBox1;
     @FXML
     private TextField descTextField;
     @FXML
@@ -405,7 +408,7 @@ public class Controller {
     @FXML
     void openMainTabEvent() {
         if (mainTab.isSelected()) {
-            ObservableList<FuturePayment> futurePaymentsList = FXCollections.observableArrayList(futurePaymentRepository.getRepo());
+            futurePaymentsList = FXCollections.observableArrayList(futurePaymentRepository.getRepo());
             mainPaymentsTable.setItems(futurePaymentsList);
             idCol.setCellValueFactory(new PropertyValueFactory<>("ID"));
             nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -418,6 +421,20 @@ public class Controller {
     @FXML
     void initialize(){
         choiceBox.setItems((typeOptions));
+        choiceBox1.setItems(currencyOptions);
+        choiceBox1.setValue(paymentsManager.getMyCurrency());
+    }
+    @FXML
+    void changeCurrency(){
+                if(choiceBox1.getValue().toString() == "USD") paymentsManager.convertEveryPrice("USD");
+                if(choiceBox1.getValue().toString() == "EUR") paymentsManager.convertEveryPrice("EUR");
+                if(choiceBox1.getValue().toString() == "CHF") paymentsManager.convertEveryPrice("CHF");
+                if(choiceBox1.getValue().toString() == "JPY") paymentsManager.convertEveryPrice("JPY");
+                if(choiceBox1.getValue().toString() == "MXN") paymentsManager.convertEveryPrice("MXN");
+                if(choiceBox1.getValue().toString() == "RUB") paymentsManager.convertEveryPrice("RUB");
+                if(choiceBox1.getValue().toString() == "PLN") paymentsManager.convertEveryPrice("PLN");
+                futurePaymentsList.removeAll(futurePaymentsList);
+        openMainTabEvent();
     }
 
     @FXML
