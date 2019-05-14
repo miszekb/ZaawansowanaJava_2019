@@ -14,8 +14,10 @@ public class FuturePaymentRepositoryTest {
 
     @Before
     public void setUp() {
-        this.futurePayment = new FuturePayment(1,"pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne");
-        this.futurePayment2 = new FuturePayment(2,"pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2");
+        this.futurePayment = new FuturePayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne");
+        this.futurePayment2 = new FuturePayment("pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2");
+        futurePayment.setID(1);
+        futurePayment2.setID(2);
         this.futureRepo = new FuturePaymentRepository();
         futureRepo.AddToRepo(futurePayment);
         futureRepo.AddToRepo(futurePayment2);

@@ -54,24 +54,25 @@
                   <Label layoutX="494.0" layoutY="93.0" text="Typ" />
                   <Label layoutX="669.0" layoutY="93.0" text="Opis" />
                   <ChoiceBox fx:id="choiceBox" layoutX="434.0" layoutY="120.0" prefWidth="150.0" />
-                  <TableView fx:id="mainPaymentsTable" layoutX="79.0" layoutY="253.0" prefHeight="256.0" prefWidth="531.0">
+                  <TableView fx:id="mainPaymentsTable" layoutX="72.0" layoutY="259.0" prefHeight="256.0" prefWidth="606.0">
                     <columns>
-                      <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
-                      <TableColumn fx:id="nameCol" prefWidth="112.0" text="Name" />
-                        <TableColumn fx:id="priceCol" prefWidth="92.0" text="Price" />
-                        <TableColumn fx:id="typeCol" prefWidth="102.0" text="Type" />
-                        <TableColumn fx:id="descCol" minWidth="0.0" prefWidth="148.0" text="Description" />
+                      <TableColumn fx:id="idCol" prefWidth="67.0" text="ID" />
+                      <TableColumn fx:id="nameCol" prefWidth="97.0" text="Name" />
+                        <TableColumn fx:id="priceCol" prefWidth="68.0" text="Price" />
+                        <TableColumn fx:id="typeCol" prefWidth="78.0" text="Type" />
+                        <TableColumn fx:id="descCol" minWidth="0.0" prefWidth="160.0" text="Description" />
+                        <TableColumn fx:id="foreignCurrencyCol" minWidth="0.0" prefWidth="135.0" text="Konwersja" />
                     </columns>
                   </TableView>
-                  <Label layoutX="79.0" layoutY="200.0" text="Zaksięguj płatność">
+                  <Label layoutX="79.0" layoutY="207.0" text="Zaksięguj płatność">
                      <font>
                         <Font name="Ebrima" size="28.0" />
                      </font>
                   </Label>
-                  <DatePicker fx:id="datePicker" layoutX="656.0" layoutY="253.0" prefHeight="51.0" prefWidth="228.0" />
-                  <Button layoutX="655.0" layoutY="459.0" mnemonicParsing="false" onAction="#finishPaymentClick" prefHeight="50.0" prefWidth="228.0" text="Zaksięguj płatność" />
-                  <Label layoutX="686.0" layoutY="220.0" text="Wybierz datę zapłaty" />
-                  <TextField fx:id="finalDescTextField" layoutX="657.0" layoutY="340.0" prefHeight="95.0" prefWidth="224.0" />
+                  <DatePicker fx:id="datePicker" layoutX="690.0" layoutY="258.0" prefHeight="51.0" prefWidth="228.0" />
+                  <Button layoutX="689.0" layoutY="465.0" mnemonicParsing="false" onAction="#finishPaymentClick" prefHeight="50.0" prefWidth="228.0" text="Zaksięguj płatność" />
+                  <Label layoutX="720.0" layoutY="226.0" text="Wybierz datę zapłaty" />
+                  <TextField fx:id="finalDescTextField" layoutX="691.0" layoutY="346.0" prefHeight="95.0" prefWidth="224.0" />
                   <Label layoutX="725.0" layoutY="313.0" text="Edytuj opis" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc994" height="5.0" layoutX="71.0" layoutY="181.0" stroke="#edb90e" strokeType="INSIDE" width="847.0" />
                   <Canvas height="83.0" layoutX="883.0" layoutY="19.0" width="92.0" />
@@ -83,7 +84,7 @@
                         <MotionBlur radius="0.0" />
                      </effect>
                   </ImageView>
-                  <ChoiceBox fx:id="choiceBox1" layoutX="360.0" layoutY="205.0" onAction="#changeCurrency" prefWidth="150.0" />
+                  <ChoiceBox fx:id="choiceBox1" layoutX="542.0" layoutY="214.0" onAction="#changeCurrency" prefHeight="16.0" prefWidth="136.0" />
                </children>
             </AnchorPane>
         </content>
@@ -92,16 +93,19 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <TableView fx:id="pastPaymentsTable" layoutX="3.0" layoutY="-3.0" prefHeight="564.0" prefWidth="1000.0">
+                  <TableView fx:id="pastPaymentsTable" layoutX="3.0" layoutY="-3.0" prefHeight="517.0" prefWidth="1000.0">
                     <columns>
-                      <TableColumn fx:id="idColumn" prefWidth="113.0" text="ID" />
-                      <TableColumn fx:id="nameColumn" prefWidth="265.0" text="Name" />
-                        <TableColumn fx:id="priceColumn" prefWidth="175.0" text="Price" />
-                        <TableColumn fx:id="typeColumn" prefWidth="116.0" text="Type" />
-                        <TableColumn fx:id="descColumn" prefWidth="182.0" text="Description" />
-                        <TableColumn fx:id="dateColumn" prefWidth="144.0" text="Payment date" />
+                      <TableColumn fx:id="idColumn" prefWidth="69.0" text="ID" />
+                      <TableColumn fx:id="nameColumn" prefWidth="130.0" text="Name" />
+                        <TableColumn fx:id="priceColumn" prefWidth="129.0" text="Price" />
+                        <TableColumn fx:id="typeColumn" prefWidth="162.0" text="Type" />
+                        <TableColumn fx:id="descColumn" prefWidth="149.0" text="Description" />
+                        <TableColumn fx:id="dateColumn" prefWidth="165.0" text="Payment date" />
+                        <TableColumn fx:id="foreignCurrencyCol2" prefWidth="194.0" text="Konwersja" />
                     </columns>
                   </TableView>
+                  <ChoiceBox fx:id="choiceBox2" layoutX="817.0" layoutY="516.0" onAction="#changeCurrency2" prefHeight="24.0" prefWidth="183.0" />
+                  <Label layoutX="684.0" layoutY="522.0" text="Wybierz walutę" />
                </children></AnchorPane>
       </content>
     </Tab>

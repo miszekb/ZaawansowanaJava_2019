@@ -1,8 +1,9 @@
 package logic;
 
 import javax.persistence.*;
-
+import java.util.UUID;
 import static logic.PaymentsManager.getEntityManager;
+
 
 @Entity
 @Table(name = "future_payment_table")
@@ -46,6 +47,8 @@ public class FuturePayment implements Payment{
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	//TEGO NIE SERIALIZUJEMY !!!
+	private float priceInDifferentCurrency;
 
 	@Id
 	@Column(name = "id")
@@ -58,16 +61,22 @@ public class FuturePayment implements Payment{
 	private Categories type;
 	@Column(name = "description")
 	private String description;
-	
-	public FuturePayment(int ID, String name, float price, Categories type, String description)
+
+
+	public FuturePayment(String name, float price, Categories type, String description)
 	{
-		this.ID = ID;
+		this.ID = Integer.parseInt((UUID.randomUUID().toString().replaceAll("[^0-9]", "")).substring(0,5));
+		System.out.println(ID);
 		this.name = name;
 		this.price = price;
 		this.type = type;
 		this.description = description;
 	}
-	
+
+	public void setPriceInDifferentCurrency(float currency){
+		priceInDifferentCurrency = price/currency;
+	}
+
 	@Override
 	public String toString() 
 	{
@@ -166,5 +175,9 @@ public class FuturePayment implements Payment{
 	public void setPaymentDescription(String description) 
 	{
 		this.description = description;
+	}
+
+	public float getPriceInDifferentCurrency() {
+		return priceInDifferentCurrency;
 	}
 }

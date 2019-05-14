@@ -4,6 +4,7 @@ import org.json.JSONException;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.UUID;
 
 public class MainClass {
 
@@ -13,7 +14,7 @@ public class MainClass {
     public static void main(String[] args) throws IOException, JSONException
     {
         Date date = new Date(2019,3,12);
-        PastPayment pastPayment = new PastPayment(1,"pszne obiad",21.37f,Categories.Transport, "bardzo pszne", date);
+        PastPayment pastPayment = new PastPayment("pszne obiad",21.37f,Categories.Transport, "bardzo pszne", date);
         PastPaymentRepository pastPaymentRepository = new PastPaymentRepository();
         pastPaymentRepository.AddToRepo(pastPayment);
 

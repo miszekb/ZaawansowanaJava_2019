@@ -11,7 +11,8 @@ public class MonthlyPaymentTest {
 
     @Before
     public void setUp() throws Exception {
-        payment1 = new MonthlyPayment(1, "payment1", (float) 21.37, Categories.Sprzet, "halo");
+        payment1 = new MonthlyPayment( "payment1", (float) 21.37, Categories.Sprzet, "halo");
+        payment1.setPaymentID(1);
         //System.out.println(payment1.getMonthList());
     }
 

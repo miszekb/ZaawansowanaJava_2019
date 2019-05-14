@@ -18,8 +18,10 @@ public class PastPaymentRepositoryTest {
     public void setUp() {
         Date date = new Date(2019,3,12);
         Date date2 = new Date(2018, 4, 10);
-        pastPayment = new PastPayment(1,"pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne", date);
-        pastPayment2 = new PastPayment(2,"pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2", date2);
+        pastPayment = new PastPayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne", date);
+        pastPayment2 = new PastPayment("pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2", date2);
+        pastPayment.setID(1);
+        pastPayment.setID(2);
         this.pastRepo = new PastPaymentRepository();
         pastRepo.AddToRepo(pastPayment);
         pastRepo.AddToRepo(pastPayment2);

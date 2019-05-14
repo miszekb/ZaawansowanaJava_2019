@@ -22,11 +22,16 @@ public class FuturePaymentRepository {
 	{	
 		boolean result = repo.add(payment);
 		String info;
-		//TODO LOOK FOR ANY ID REDUNDANCY
 		if (result == true) info = "Dodano wydatek do planu.";
 		else info = "Dodanie wydatku nie powiodlo sie.";
 			
 		return info;
+	}
+
+	private void reloadID(){
+		for(FuturePayment fp:repo){
+			fp.setID(repo.indexOf(fp)+1);
+		}
 	}
 
 	public String DeletePayment(int ID)
@@ -46,7 +51,6 @@ public class FuturePaymentRepository {
 		{
 			info = "Usunieto wydatek";
 		}
-		
 		return info;
 		
 	}

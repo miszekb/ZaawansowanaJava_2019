@@ -16,7 +16,7 @@ public class PaymentsManager {
     private Serializer serializer;
     private CurrencyExchanger currencyExchanger;
 
-    private String myCurrency = "PLN";
+    private static String myCurrency = "PLN";
 
     private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("org.hibernate.tutorial.jpa");
 
@@ -137,8 +137,7 @@ public class PaymentsManager {
     public void update() {
         for(MonthlyPayment payment: monthlyRepo.getRepo()) {
             if (!payment.getMonthList().get(new Date().getMonth() + 1).booleanValue()) {
-                futureRepo.AddToRepo(new FuturePayment(futureRepo.getRepo().size() + 1,
-                        payment.getPaymentName(), payment.getPaymentPrice(),
+                futureRepo.AddToRepo(new FuturePayment(payment.getPaymentName(), payment.getPaymentPrice(),
                         Categories.valueOf(payment.getPaymentType()),
                         payment.getPaymentDescription()));
             }
@@ -186,7 +185,7 @@ public class PaymentsManager {
         try
         {
             currentRate = currencyExchanger.GetCurrencyRate(currencyCode)/
-                          currencyExchanger.GetCurrencyRate(myCurrency);
+                          currencyExchanger.GetCurrencyRate("PLN");
         }
         catch(IOException exception)
         {
@@ -195,17 +194,17 @@ public class PaymentsManager {
 
         for(PastPayment payment: pastRepo.getRepo())
         {
-            payment.setPrice(roundFloat((payment.getPaymentPrice()/currentRate), 2));
+            payment.setPriceInDifferentCurrency(roundFloat((currentRate), 2));
         }
 
         for(FuturePayment payment: futureRepo.getRepo())
         {
-            payment.setPaymentPrice(roundFloat((payment.getPaymentPrice()/currentRate), 2));
+            payment.setPriceInDifferentCurrency(roundFloat((currentRate), 2));
         }
 
         for(MonthlyPayment payment: monthlyRepo.getRepo())
         {
-            payment.setPaymentPrice(roundFloat((payment.getPaymentPrice()/currentRate), 2));
+            payment.setPriceInDifferentCurrency(roundFloat((currentRate), 2));
         }
 
         this.myCurrency = currencyCode;

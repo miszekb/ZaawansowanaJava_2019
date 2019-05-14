@@ -22,11 +22,11 @@ public class Controller {
     ObservableList<String> typeOptions = FXCollections.observableArrayList(Categories.Ubrania_Obuwie.toString(),
             Categories.Rachunki.toString(),Categories.Zywnosc.toString(),Categories.Uzywki.toString(),Categories.Chemia_SrodkiCzystosci.toString(),
             Categories.Transport.toString(),Categories.Rozrywka.toString(),Categories.Sprzet.toString(),Categories.Kosmetyki.toString());
-    ObservableList<String> currencyOptions = FXCollections.observableArrayList("PLN","USD","EUR","CHF","JPY","MXN","RUB");
+    ObservableList<String> currencyOptions = FXCollections.observableArrayList("USD","EUR","CHF","JPY","MXN","RUB");
     private DrawingClass drawingClass = new DrawingClass(pastPaymentRepository.getRepo(),futurePaymentRepository.getRepo());
-    private int ID =0,pastID=0;
     private ObservableList<PieChart.Data> pieChartData;
     private ObservableList<FuturePayment> futurePaymentsList;
+    private ObservableList<PastPayment> pastPaymentList;
 
     @FXML
     private TableView<FuturePayment> mainPaymentsTable;
@@ -40,6 +40,8 @@ public class Controller {
     private TableColumn<FuturePayment, Categories> typeCol;
     @FXML
     private TableColumn<FuturePayment, String> descCol;
+    @FXML
+    private TableColumn<FuturePayment, String> foreignCurrencyCol;
 
     @FXML
     private TableView<PastPayment> pastPaymentsTable;
@@ -55,13 +57,15 @@ public class Controller {
     private TableColumn<PastPayment, String> descColumn;
     @FXML
     private TableColumn<PastPayment, Date> dateColumn;
+    @FXML
+    private TableColumn<FuturePayment, String> foreignCurrencyCol2;
 
     @FXML
     private TextField nameTextField;
     @FXML
     private TextField priceTextField;
     @FXML
-    private ChoiceBox choiceBox,choiceBox1;
+    private ChoiceBox choiceBox,choiceBox1, choiceBox2;
     @FXML
     private TextField descTextField;
     @FXML
@@ -303,7 +307,6 @@ public class Controller {
    @FXML
        //PERCENT
    void drawPastPaymentsChart2(){
-       Short one = 1,two=2,three=3;
        if(percentCheckBox.isSelected()){
             from.setDisable(false);to.setDisable(false);
             numberCheckBox.setSelected(false);
@@ -394,7 +397,7 @@ public class Controller {
     @FXML
     void openTabEvent() {
         if (tableTab.isSelected()) {
-            ObservableList<PastPayment> pastPaymentList = FXCollections.observableArrayList(pastPaymentRepository.getRepo());
+            pastPaymentList = FXCollections.observableArrayList(pastPaymentRepository.getRepo());
             pastPaymentsTable.setItems(pastPaymentList);
             idColumn.setCellValueFactory(new PropertyValueFactory<>("ID"));
             nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -402,6 +405,7 @@ public class Controller {
             typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
             descColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
             dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+            foreignCurrencyCol2.setCellValueFactory(new PropertyValueFactory<>("priceInDifferentCurrency"));
         }
     }
 
@@ -415,6 +419,7 @@ public class Controller {
             priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
             typeCol.setCellValueFactory(new PropertyValueFactory<>("type"));
             descCol.setCellValueFactory(new PropertyValueFactory<>("description"));
+            foreignCurrencyCol.setCellValueFactory(new PropertyValueFactory<>("priceInDifferentCurrency"));
         }
     }
 
@@ -422,7 +427,7 @@ public class Controller {
     void initialize(){
         choiceBox.setItems((typeOptions));
         choiceBox1.setItems(currencyOptions);
-        choiceBox1.setValue(paymentsManager.getMyCurrency());
+        choiceBox2.setItems(currencyOptions);
     }
     @FXML
     void changeCurrency(){
@@ -432,9 +437,20 @@ public class Controller {
                 if(choiceBox1.getValue().toString() == "JPY") paymentsManager.convertEveryPrice("JPY");
                 if(choiceBox1.getValue().toString() == "MXN") paymentsManager.convertEveryPrice("MXN");
                 if(choiceBox1.getValue().toString() == "RUB") paymentsManager.convertEveryPrice("RUB");
-                if(choiceBox1.getValue().toString() == "PLN") paymentsManager.convertEveryPrice("PLN");
                 futurePaymentsList.removeAll(futurePaymentsList);
-        openMainTabEvent();
+                openMainTabEvent();
+    }
+
+    @FXML
+    void changeCurrency2(){
+                if(choiceBox2.getValue().toString() == "USD") paymentsManager.convertEveryPrice("USD");
+                if(choiceBox2.getValue().toString() == "EUR") paymentsManager.convertEveryPrice("EUR");
+                if(choiceBox2.getValue().toString() == "CHF") paymentsManager.convertEveryPrice("CHF");
+                if(choiceBox2.getValue().toString() == "JPY") paymentsManager.convertEveryPrice("JPY");
+                if(choiceBox2.getValue().toString() == "MXN") paymentsManager.convertEveryPrice("MXN");
+                if(choiceBox2.getValue().toString() == "RUB") paymentsManager.convertEveryPrice("RUB");
+                pastPaymentList.removeAll(pastPaymentList);
+                openTabEvent();
     }
 
     @FXML
@@ -450,15 +466,15 @@ public class Controller {
         if(choiceBox.getValue().toString() == "Sprzet") choiceBoxResult = Categories.Sprzet;
         if(choiceBox.getValue().toString() == "Kosmetyki") choiceBoxResult = Categories.Kosmetyki;
 
-        if(/*choiceBoxResult != null &&*/ nameTextField.getText() != null && priceTextField.getText() != null && descTextField.getText() != null){
-        FuturePayment futurePayment = new FuturePayment(ID,nameTextField.getText(), Float.parseFloat(priceTextField.getText()),
+        if(choiceBoxResult != null && nameTextField.getText() != null && priceTextField.getText() != null && descTextField.getText() != null){
+        FuturePayment futurePayment = new FuturePayment(nameTextField.getText(), Float.parseFloat(priceTextField.getText()),
                 choiceBoxResult,descTextField.getText());
         futurePaymentRepository.AddToRepo(futurePayment);
         nameTextField.clear();priceTextField.clear();descTextField.clear();choiceBox.setValue(null);
-        ID++;
         chartsTab.setDisable(false);
-        }
         openMainTabEvent();
+        }
+        else{}
     }
 
     @FXML
@@ -468,17 +484,16 @@ public class Controller {
         Date date = Date.from(datePicker.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
         PastPayment pastPayment;
             if(finalDescTextField.getText() != null){
-                pastPayment = new PastPayment(pastID,temp.getName(), temp.getPrice(),temp.getType(),finalDescTextField.getText(),date);
+                pastPayment = new PastPayment(temp.getName(), temp.getPrice(),temp.getType(),finalDescTextField.getText(),date);
             }
             else{
-                pastPayment = new PastPayment(pastID,temp.getName(), temp.getPrice(),temp.getType(),temp.getDescription(),date);
+                pastPayment = new PastPayment(temp.getName(), temp.getPrice(),temp.getType(),temp.getDescription(),date);
             }
             pastPaymentRepository.AddToRepo(pastPayment);
             futurePaymentRepository.DeletePayment(temp.getID());
             openMainTabEvent();
             finalDescTextField.clear();
             datePicker.getEditor().clear();
-            pastID++;
             chartsTab.setDisable(false);
         }
     }

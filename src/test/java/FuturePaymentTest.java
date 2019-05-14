@@ -14,11 +14,13 @@ public class FuturePaymentTest {
     @Before
     public void setUp() {
         Date date = new Date(2019,3,12);
-        this.futurePayment = new FuturePayment(1,"pszne obiad",21.37f, Categories.Rachunki, "bardzo pszne");
+        this.futurePayment = new FuturePayment("pszne obiad",21.37f, Categories.Rachunki, "bardzo pszne");
+        futurePayment.setID(1);
     }
 
     @Test
     public void toString_TEST() {
+
         assertEquals("1,pszne obiad,21.37,Rachunki,bardzo pszne", futurePayment.toString());
     }
 

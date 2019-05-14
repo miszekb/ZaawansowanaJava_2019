@@ -10,11 +10,13 @@ public class MonthlyPayment implements Payment {
     private Categories type;
     private String description;
     private HashMap<Integer, Boolean> monthList = new HashMap<>();
+    //TEGO NIE SERIALIZUJEMY !!!
+    private float priceInDifferentCurrency;
     private int firstMonth;
 
-    public MonthlyPayment(int ID, String name, float price, Categories type, String description) {
+    public MonthlyPayment(String name, float price, Categories type, String description) {
+        this.ID = Integer.parseInt((UUID.randomUUID().toString().replaceAll("[^0-9]", "")).substring(0,5));
         this.firstMonth = new Date().getMonth() + 1;
-        this.ID = ID;
         this.name = name;
         this.price = price;
         this.type = type;
@@ -41,6 +43,10 @@ public class MonthlyPayment implements Payment {
 
     public void setMonthList(HashMap<Integer, Boolean> monthList) {
         this.monthList = monthList;
+    }
+
+    public void setPriceInDifferentCurrency(float currency){
+        priceInDifferentCurrency = price/currency;
     }
 
     @Override
@@ -94,5 +100,9 @@ public class MonthlyPayment implements Payment {
     @Override
     public String archive() {
         return null;
+    }
+
+    public float getPriceInDifferentCurrency() {
+        return priceInDifferentCurrency;
     }
 }

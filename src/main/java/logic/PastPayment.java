@@ -7,6 +7,7 @@ import javax.persistence.Table;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Table(name = "past_payment_table")
@@ -26,16 +27,22 @@ public class PastPayment implements Payment{
 	@Column(name = "date")
 	private Date date;
 
-	public PastPayment(int ID, String name, float price, Categories type, String description, Date date)
+	//TEGO NIE SERIALIZUJEMY !!!
+	private float priceInDifferentCurrency;
+
+	public PastPayment(String name, float price, Categories type, String description, Date date)
 	{
-		this.ID = ID;
+		this.ID = Integer.parseInt((UUID.randomUUID().toString().replaceAll("[^0-9]", "")).substring(0,5));
 		this.name = name;
 		this.price = price;
 		this.type = type;
 		this.description = description;
 		this.setPaymentDate(date);
 	}
-	
+	public void setPriceInDifferentCurrency(float currency){
+		priceInDifferentCurrency = price/currency;
+	}
+
 	@Override
 	public String toString() {
 		String info;
@@ -165,6 +172,10 @@ public class PastPayment implements Payment{
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	public float getPriceInDifferentCurrency() {
+		return priceInDifferentCurrency;
 	}
 }
 	

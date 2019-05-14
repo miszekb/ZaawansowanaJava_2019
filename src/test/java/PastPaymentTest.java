@@ -14,7 +14,8 @@ public class PastPaymentTest {
     @Before
     public void setUp() {
         Date date = new Date(2019,3,12);
-        this.pastPayment = new PastPayment(1,"pszne obiad",21.37f, Categories.Transport, "bardzo pszne", date);
+        this.pastPayment = new PastPayment("pszne obiad",21.37f, Categories.Transport, "bardzo pszne", date);
+        this.pastPayment.setID(1);
     }
 
     @Test

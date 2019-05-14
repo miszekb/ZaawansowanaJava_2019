@@ -18,13 +18,17 @@ public class PaymentsManagerTest {
 
         date = new Date(2019,3,12);
         Date date2 = new Date(2018, 4, 10);
-        PastPayment pastPayment = new PastPayment(1,"pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne", date);
-        PastPayment pastPayment2 = new PastPayment(2,"pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2", date2);
+        PastPayment pastPayment = new PastPayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne", date);
+        PastPayment pastPayment2 = new PastPayment("pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2", date2);
+        pastPayment.setID(1);
+        pastPayment2.setID(2);
         paymentsManager.addToPastRepo(pastPayment);
         paymentsManager.addToPastRepo(pastPayment2);
 
-        FuturePayment futurePayment = new FuturePayment(1,"pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne");
-        FuturePayment futurePayment1 = new FuturePayment(2,"pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2");
+        FuturePayment futurePayment = new FuturePayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne");
+        FuturePayment futurePayment1 = new FuturePayment("pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2");
+        futurePayment.setID(1);
+        futurePayment.setID(2);
         paymentsManager.addToFutureRepo(futurePayment);
         paymentsManager.addToFutureRepo(futurePayment1);
 
@@ -37,7 +41,10 @@ public class PaymentsManagerTest {
 
     @Test
     public void addToPastRepo() {
-        paymentsManager.addToPastRepo(new PastPayment(3,"pszne obiad3",14.10f,Categories.Sprzet, "bardzo pszne2", new Date()));
+        PastPayment pp = new PastPayment("pszne obiad3",14.10f,Categories.Sprzet, "bardzo pszne2", new Date());
+        pp.setID(3);
+        paymentsManager.addToPastRepo(pp);
+
         assertEquals(3, paymentsManager.getPastRepo().getRepo().size());
     }
 
@@ -49,7 +56,8 @@ public class PaymentsManagerTest {
     @Test
     public void setPastRepo() {
         PastPaymentRepository pastPaymentRepository = new PastPaymentRepository();
-        PastPayment pastPayment = new PastPayment(1,"pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne", new Date());
+        PastPayment pastPayment = new PastPayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne", new Date());
+        pastPayment.setID(1);
         pastPaymentRepository.AddToRepo(pastPayment);
 
         paymentsManager.setPastRepo(pastPaymentRepository);
@@ -58,13 +66,15 @@ public class PaymentsManagerTest {
 
     @Test
     public void getSpecificPastPayment() {
-        PastPayment pastPayment = new PastPayment(1,"pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne", this.date);
+        PastPayment pastPayment = new PastPayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne", this.date);
+        pastPayment.setID(1);
         assertEquals(pastPayment.toString(), paymentsManager.getSpecificPastPayment(1).toString());
     }
 
     @Test
     public void addToFutureRepo() {
-        FuturePayment futurePayment = new FuturePayment(3,"pszne obiad3",21.37f, Categories.Kosmetyki, "bardzo pszne");
+        FuturePayment futurePayment = new FuturePayment("pszne obiad3",21.37f, Categories.Kosmetyki, "bardzo pszne");
+        futurePayment.setID(3);
         paymentsManager.addToFutureRepo(futurePayment);
         assertEquals(3, paymentsManager.getFutureRepo().getRepo().size());
     }
@@ -77,8 +87,10 @@ public class PaymentsManagerTest {
     @Test
     public void setFutureRepo() {
         FuturePaymentRepository futurePaymentRepository = new FuturePaymentRepository();
-        FuturePayment futurePayment = new FuturePayment(1,"pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne");
-        FuturePayment futurePayment1 = new FuturePayment(2,"pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2");
+        FuturePayment futurePayment = new FuturePayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne");
+        futurePayment.setID(1);
+        FuturePayment futurePayment1 = new FuturePayment("pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2");
+        futurePayment1.setID(2);
         futurePaymentRepository.AddToRepo(futurePayment);
         futurePaymentRepository.AddToRepo(futurePayment1);
 
@@ -88,7 +100,8 @@ public class PaymentsManagerTest {
 
     @Test
     public void getSpecificFuturePayment() {
-        FuturePayment futurePayment = new FuturePayment(1,"pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne");
+        FuturePayment futurePayment = new FuturePayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne");
+        futurePayment.setID(1);
         assertEquals(futurePayment.toString(), paymentsManager.getSpecificFuturePayment(1).toString());
     }
 
