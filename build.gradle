@@ -18,9 +18,9 @@ dependencies {
     compile group: 'org.json', name: 'json', version: '20180813'
     compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.2.Final'
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
-    compile ('com.thoughtworks.xstream:xstream:1.4.7') {
-        exclude group: 'xmlpull', module: 'xmlpull'
-    }
+    compile ('com.thoughtworks.xstream:xstream:1.4.11.1') {
+        exclude group: 'xmlpull', module: 'xmlpull'}
+
 }
 
 javafx {

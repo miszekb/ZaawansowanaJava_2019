@@ -1,18 +1,18 @@
 <list>
   <logic.FuturePayment>
     <priceInDifferentCurrency>0.0</priceInDifferentCurrency>
-    <ID>2</ID>
-    <name>pszne obiad</name>
-    <price>21.37</price>
-    <type>Transport</type>
-    <description>bardzo pszne</description>
+    <ID>51516</ID>
+    <name>Siemanko</name>
+    <price>69.69</price>
+    <type>Uzywki</type>
+    <description>Witam w mojej kuchni</description>
   </logic.FuturePayment>
   <logic.FuturePayment>
     <priceInDifferentCurrency>0.0</priceInDifferentCurrency>
-    <ID>44906</ID>
-    <name>pszne obiad2</name>
-    <price>14.1</price>
-    <type>Kosmetyki</type>
-    <description>bardzo pszne2</description>
+    <ID>80069</ID>
+    <name>Chlebicek z serkiem</name>
+    <price>1910.0</price>
+    <type>Chemia_SrodkiCzystosci</type>
+    <description>WIDZEW</description>
   </logic.FuturePayment>
 </list>

@@ -165,7 +165,6 @@ public class Controller {
 
     @FXML
     void drawFuturePaymentsChart(){
-        Short one = 1,two=2,three=3;
         if(percentCheckBox2.isSelected()){
             numberCheckBox2.setSelected(false);
             DecimalFormat df = new DecimalFormat("##.##");
@@ -208,7 +207,6 @@ public class Controller {
 
     @FXML
     void drawFuturePaymentsChart2(){
-        Short one = 1,two=2,three=3;
         if(numberCheckBox2.isSelected()){
 
             percentCheckBox2.setSelected(false);
@@ -237,7 +235,6 @@ public class Controller {
     @FXML
         //AMMOUNT
     void drawPastPaymentsChart(){
-        Short one = 1,two=2,three=3;
         if(numberCheckBox.isSelected()){
             from.setDisable(false);to.setDisable(false);
             percentCheckBox.setSelected(false);
@@ -474,7 +471,6 @@ public class Controller {
         chartsTab.setDisable(false);
         openMainTabEvent();
         }
-        else{}
     }
 
     @FXML
@@ -496,6 +492,27 @@ public class Controller {
             datePicker.getEditor().clear();
             chartsTab.setDisable(false);
         }
+    }
+
+    @FXML void serialize(){
+        paymentsManager.serializeAll();
+    }
+    @FXML void deserializeFuture(){
+        paymentsManager.deserializeFuture();
+        futurePaymentRepository = paymentsManager.getFutureRepo();
+        futurePaymentsList.removeAll(futurePaymentsList);
+        openMainTabEvent();
+        chartsTab.setDisable(false);
+        drawingClass = new DrawingClass(pastPaymentRepository.getRepo(),futurePaymentRepository.getRepo());
+    }
+
+    @FXML void deserializePast(){
+        paymentsManager.deserializerPast();
+        pastPaymentRepository = paymentsManager.getPastRepo();
+        pastPaymentList.removeAll(pastPaymentList);
+        openTabEvent();
+        chartsTab.setDisable(false);
+        drawingClass = new DrawingClass(pastPaymentRepository.getRepo(),futurePaymentRepository.getRepo());
     }
 
      public Controller() { }

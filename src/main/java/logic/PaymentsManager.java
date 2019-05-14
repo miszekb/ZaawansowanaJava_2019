@@ -148,9 +148,9 @@ public class PaymentsManager {
 
     //---------------------- XML SERIALIZING METHODS ----------------------
 
-    public void serializePast(PastPaymentRepository repo)
+    public void serializePast()
     {
-       serializer.SerializePast(repo);
+       serializer.SerializePast(pastRepo);
     }
 
     public void deserializerPast()
@@ -158,10 +158,7 @@ public class PaymentsManager {
         this.pastRepo = serializer.DeserializePast();
     }
 
-    public void serializerFuture(FuturePaymentRepository repo)
-    {
-        this.futureRepo = serializer.DeserializeFuture();
-    }
+    public void serializerFuture(){ serializer.SerializeFuture(futureRepo); }
 
     public void deserializeFuture()
     {

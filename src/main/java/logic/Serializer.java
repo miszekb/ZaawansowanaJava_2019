@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 
 
 public class Serializer {
@@ -81,6 +82,7 @@ public class Serializer {
         try {
             File xmlFile = new File("FUTURE.xml");
             XStream xStream = new XStream(new DomDriver());
+            xStream.allowTypeHierarchy(Collection.class);
 
             for (FuturePayment e : (ArrayList<FuturePayment>) xStream.fromXML(new FileInputStream(xmlFile))) {
                 futureRepo.AddToRepo(e);
