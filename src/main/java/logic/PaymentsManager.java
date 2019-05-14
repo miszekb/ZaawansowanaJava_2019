@@ -5,6 +5,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.io.IOException;
 import java.util.Date;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class PaymentsManager {
 
@@ -193,19 +195,17 @@ public class PaymentsManager {
 
         for(PastPayment payment: pastRepo.getRepo())
         {
-            payment.setPrice(payment.getPaymentPrice()*currentRate);
+            payment.setPrice(roundFloat((payment.getPaymentPrice()/currentRate), 2));
         }
 
         for(FuturePayment payment: futureRepo.getRepo())
         {
-            payment.setPaymentPrice(payment.getPaymentPrice()*currentRate);
-
+            payment.setPaymentPrice(roundFloat((payment.getPaymentPrice()/currentRate), 2));
         }
 
         for(MonthlyPayment payment: monthlyRepo.getRepo())
         {
-            payment.setPaymentPrice(payment.getPaymentPrice()*currentRate);
-
+            payment.setPaymentPrice(roundFloat((payment.getPaymentPrice()/currentRate), 2));
         }
 
         this.myCurrency = currencyCode;
@@ -227,6 +227,14 @@ public class PaymentsManager {
         }
 
         return rate/current;
+    }
+
+    private static float roundFloat(float value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        BigDecimal bd = new BigDecimal(Float.toString(value));
+        bd = bd.setScale(places, RoundingMode.HALF_EVEN);
+        return bd.floatValue();
     }
 
 
