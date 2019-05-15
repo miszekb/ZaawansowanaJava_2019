@@ -18,7 +18,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.shape.Sphere?>
 <?import javafx.scene.text.Font?>
 
@@ -26,57 +25,75 @@
   <tabs>
       <Tab fx:id="mainTab" onSelectionChanged="#openMainTabEvent" text="Zaksięgowanie">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="686.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="686.0" styleClass="background" stylesheets="@style.css">
                <children>
-                  <Button layoutX="802.0" layoutY="120.0" mnemonicParsing="false" onAction="#addFuturePaymentClick" text="DODAJ" />
-                  <TextField fx:id="nameTextField" layoutX="79.0" layoutY="122.0" prefHeight="34.0" prefWidth="159.0">
+                  <Button layoutX="785.0" layoutY="120.0" mnemonicParsing="false" onAction="#addFuturePaymentClick" prefWidth="130.0" stylesheets="@style.css" text="DODAJ">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font></Button>
+                  <TextField fx:id="nameTextField" layoutX="79.0" layoutY="122.0" prefHeight="34.0" prefWidth="159.0" styleClass="textfieldstyle" stylesheets="@style.css">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </TextField>
-                  <Label layoutX="79.0" layoutY="34.0" text="Dodaj zaplanowaną płatność">
-                     <font>
-                        <Font name="Ebrima" size="28.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="priceTextField" layoutX="257.0" layoutY="122.0" prefHeight="34.0" prefWidth="159.0">
+                  <TextField fx:id="priceTextField" layoutX="257.0" layoutY="122.0" prefHeight="34.0" prefWidth="159.0" styleClass="textfieldstyle">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="descTextField" layoutX="610.0" layoutY="122.0" prefHeight="34.0" prefWidth="159.0">
+                  <TextField fx:id="descTextField" layoutX="610.0" layoutY="122.0" prefHeight="34.0" prefWidth="159.0" styleClass="textfieldstyle">
                      <font>
                         <Font name="Bell MT" size="18.0" />
                      </font>
                   </TextField>
-                  <Label layoutX="132.0" layoutY="93.0" text="Nazwa" />
-                  <Label layoutX="316.0" layoutY="93.0" text="Kwota" />
-                  <Label layoutX="494.0" layoutY="93.0" text="Typ" />
-                  <Label layoutX="669.0" layoutY="93.0" text="Opis" />
-                  <ChoiceBox fx:id="choiceBox" layoutX="434.0" layoutY="120.0" prefWidth="150.0" />
-                  <TableView fx:id="mainPaymentsTable" layoutX="72.0" layoutY="259.0" prefHeight="256.0" prefWidth="606.0">
+                  <Label layoutX="124.0" layoutY="96.0" text="NAZWA" textFill="#ead460">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font></Label>
+                  <Label layoutX="302.0" layoutY="96.0" text="KWOTA" textFill="#ead460">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font></Label>
+                  <Label layoutX="498.0" layoutY="96.0" text="TYP" textFill="#ead460">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font></Label>
+                  <Label layoutX="671.0" layoutY="96.0" text="OPIS" textFill="#ead460">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font></Label>
+                  <ChoiceBox fx:id="choiceBox" layoutX="434.0" layoutY="122.0" prefHeight="34.0" prefWidth="159.0" stylesheets="@style.css" />
+                  <TableView fx:id="mainPaymentsTable" layoutX="72.0" layoutY="259.0" prefHeight="256.0" prefWidth="606.0" styleClass="root" stylesheets="@style.css">
                     <columns>
                       <TableColumn fx:id="idCol" prefWidth="67.0" text="ID" />
-                      <TableColumn fx:id="nameCol" prefWidth="97.0" text="Name" />
-                        <TableColumn fx:id="priceCol" prefWidth="68.0" text="Price" />
-                        <TableColumn fx:id="typeCol" prefWidth="78.0" text="Type" />
-                        <TableColumn fx:id="descCol" minWidth="0.0" prefWidth="160.0" text="Description" />
+                      <TableColumn fx:id="nameCol" prefWidth="97.0" text="Nazwa" />
+                        <TableColumn fx:id="priceCol" prefWidth="68.0" text="Cena" />
+                        <TableColumn fx:id="typeCol" prefWidth="78.0" text="Typ" />
+                        <TableColumn fx:id="descCol" minWidth="0.0" prefWidth="160.0" text="Opis" />
                         <TableColumn fx:id="foreignCurrencyCol" minWidth="0.0" prefWidth="135.0" text="Konwersja" />
                     </columns>
                   </TableView>
-                  <Label layoutX="79.0" layoutY="207.0" text="Zaksięguj płatność">
+                  <Label layoutX="79.0" layoutY="217.0" text="ZAKSIĘGUJ PŁATNOŚĆ" textFill="#c1c1c1">
                      <font>
-                        <Font name="Ebrima" size="28.0" />
+                        <Font name="Gill Sans MT" size="28.0" />
                      </font>
                   </Label>
-                  <DatePicker fx:id="datePicker" layoutX="690.0" layoutY="258.0" prefHeight="51.0" prefWidth="228.0" />
-                  <Button layoutX="689.0" layoutY="465.0" mnemonicParsing="false" onAction="#finishPaymentClick" prefHeight="50.0" prefWidth="228.0" text="Zaksięguj płatność" />
-                  <Label layoutX="720.0" layoutY="226.0" text="Wybierz datę zapłaty" />
-                  <TextField fx:id="finalDescTextField" layoutX="691.0" layoutY="346.0" prefHeight="95.0" prefWidth="224.0" />
-                  <Label layoutX="725.0" layoutY="313.0" text="Edytuj opis" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc994" height="5.0" layoutX="71.0" layoutY="181.0" stroke="#edb90e" strokeType="INSIDE" width="847.0" />
+                  <DatePicker fx:id="datePicker" layoutX="690.0" layoutY="259.0" prefHeight="51.0" prefWidth="228.0" styleClass="textfieldstyle" stylesheets="@style.css" />
+                  <Button layoutX="689.0" layoutY="465.0" mnemonicParsing="false" onAction="#finishPaymentClick" prefHeight="50.0" prefWidth="228.0" text="ZAKSIĘGUJ PŁATNOŚĆ">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font></Button>
+                  <Label layoutX="700.0" layoutY="234.0" text="WYBIERZ DATĘ ZAPŁATY" textFill="#ead460">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font></Label>
+                  <TextField fx:id="finalDescTextField" layoutX="691.0" layoutY="346.0" prefHeight="95.0" prefWidth="224.0" styleClass="textfieldstyle" stylesheets="@style.css" />
+                  <Label layoutX="751.0" layoutY="319.0" text="EDYTUJ OPIS" textFill="#ead460">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font></Label>
                   <Canvas height="83.0" layoutX="883.0" layoutY="19.0" width="92.0" />
-                  <ImageView fitHeight="102.0" fitWidth="208.0" layoutX="769.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="102.0" fitWidth="208.0" layoutX="770.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../logo.PNG" />
                      </image>
@@ -91,7 +108,7 @@
       </Tab>
     <Tab fx:id="tableTab" onSelectionChanged="#openTabEvent" text="Wykonane opłaty">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@style.css">
                <children>
                   <TableView fx:id="pastPaymentsTable" layoutX="3.0" layoutY="-3.0" prefHeight="517.0" prefWidth="1000.0">
                     <columns>
@@ -104,82 +121,82 @@
                         <TableColumn fx:id="foreignCurrencyCol2" prefWidth="194.0" text="Konwersja" />
                     </columns>
                   </TableView>
-                  <ChoiceBox fx:id="choiceBox2" layoutX="817.0" layoutY="516.0" onAction="#changeCurrency2" prefHeight="24.0" prefWidth="183.0" />
+                  <ChoiceBox fx:id="choiceBox2" layoutX="817.0" layoutY="516.0" onAction="#changeCurrency2" prefHeight="24.0" prefWidth="183.0" stylesheets="@style.css" />
                   <Label layoutX="684.0" layoutY="522.0" text="Wybierz walutę" />
                </children></AnchorPane>
       </content>
     </Tab>
     <Tab fx:id="chartsTab" disable="true" onSelectionChanged="#deslectCheckBoxes" text="Statystyki">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background2" stylesheets="@style.css">
                <children>
-                  <PieChart fx:id="pieChart" layoutX="378.0" layoutY="44.0" prefHeight="467.0" prefWidth="571.0" />
+                  <PieChart fx:id="pieChart" layoutX="378.0" layoutY="44.0" prefHeight="467.0" prefWidth="571.0" stylesheets="@style.css" />
                   <DatePicker fx:id="from" disable="true" layoutX="55.0" layoutY="257.0" onAction="#Update" prefHeight="12.0" prefWidth="194.0" />
                   <DatePicker fx:id="to" disable="true" layoutX="55.0" layoutY="335.0" onAction="#Update" prefHeight="12.0" prefWidth="194.0" />
                   <Label fx:id="Od" layoutX="55.0" layoutY="222.0" text="Od" />
                   <CheckBox fx:id="numberCheckBox" layoutX="55.0" layoutY="158.0" mnemonicParsing="false" onAction="#drawPastPaymentsChart" text="Wykres liczbowy" />
                   <Label fx:id="Do" layoutX="55.0" layoutY="308.0" text="Do" />
                   <CheckBox fx:id="percentCheckBox" layoutX="55.0" layoutY="106.0" mnemonicParsing="false" onAction="#drawPastPaymentsChart2" text="Wykres procentowy" />
-                  <ToggleButton fx:id="toggleChartsMode" layoutX="55.0" layoutY="31.0" mnemonicParsing="false" onAction="#initializeFuturePaymentsChartWindow" prefHeight="39.0" prefWidth="191.0" text="Zaplanowane płatności">
+                  <ToggleButton fx:id="toggleChartsMode" layoutX="55.0" layoutY="31.0" mnemonicParsing="false" onAction="#initializeFuturePaymentsChartWindow" prefHeight="39.0" prefWidth="191.0" styleClass="button" stylesheets="@style.css" text="Zaplanowane płatności">
                      <font>
                         <Font size="13.0" />
                      </font></ToggleButton>
-                  <CheckBox fx:id="percentCheckBox2" disable="true" layoutX="55.0" layoutY="106.0" mnemonicParsing="false" onAction="#drawFuturePaymentsChart" text="Wykres procentowy" />
+                  <CheckBox fx:id="percentCheckBox2" disable="true" layoutX="55.0" layoutY="106.0" mnemonicParsing="false" onAction="#drawFuturePaymentsChart" stylesheets="@style.css" text="Wykres procentowy" />
                   <CheckBox fx:id="numberCheckBox2" disable="true" layoutX="55.0" layoutY="158.0" mnemonicParsing="false" onAction="#drawFuturePaymentsChart2" text="Wykres liczbowy" />
                </children></AnchorPane>
       </content>
     </Tab>
       <Tab text="O programie">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background2" stylesheets="@style.css">
                <children>
                   <ImageView fitHeight="41.0" fitWidth="218.0" layoutX="285.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../logo.PNG" />
                      </image>
                   </ImageView>
-                  <Label layoutX="440.0" layoutY="30.0" prefHeight="126.0" prefWidth="132.0" text="PayMan 1.0">
+                  <Label layoutX="434.0" layoutY="33.0" prefHeight="126.0" prefWidth="132.0" text="1.0" textFill="#ead460">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <Label layoutX="285.0" layoutY="127.0" prefHeight="58.0" prefWidth="367.0" text="Aplikacja służąca do zarządzania osobistymi finansami.">
+                  <Label layoutX="285.0" layoutY="127.0" prefHeight="58.0" prefWidth="367.0" text="Aplikacja służąca do zarządzania osobistymi finansami." textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="285.0" layoutY="185.0" prefHeight="28.0" prefWidth="211.0" text="Autorzy:">
+                  <Label layoutX="285.0" layoutY="185.0" prefHeight="28.0" prefWidth="211.0" text="Autorzy:" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="314.0" layoutY="232.0" prefHeight="17.0" prefWidth="137.0" text="Łukasz Darul">
+                  <Label layoutX="314.0" layoutY="232.0" prefHeight="17.0" prefWidth="137.0" text="Łukasz Darul" textFill="#f5f5f5">
                      <font>
                         <Font size="16.0" />
                      </font></Label>
                   <Sphere layoutX="355.0" layoutY="286.0" radius="0.77" />
                   <Circle layoutX="290.0" layoutY="274.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="314.0" layoutY="261.0" prefHeight="25.0" prefWidth="141.0" text="Marcin Kacprowicz">
+                  <Label layoutX="314.0" layoutY="261.0" prefHeight="25.0" prefWidth="141.0" text="Marcin Kacprowicz" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
                   <Circle layoutX="290.0" layoutY="244.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="314.0" layoutY="293.0" prefHeight="25.0" prefWidth="141.0" text="Michał Białecki">
+                  <Label layoutX="314.0" layoutY="293.0" prefHeight="25.0" prefWidth="141.0" text="Michał Białecki" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
                   <Circle layoutX="290.0" layoutY="306.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="314.0" layoutY="324.0" prefHeight="25.0" prefWidth="141.0" text="Jędrzej Skoczylas">
+                  <Label layoutX="314.0" layoutY="324.0" prefHeight="25.0" prefWidth="141.0" text="Jędrzej Skoczylas" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
                   <Circle layoutX="290.0" layoutY="337.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Button layoutX="285.0" layoutY="391.0" mnemonicParsing="false" onAction="#serialize" prefHeight="96.0" prefWidth="148.0" text="Serializuj dane" />
-                  <Button layoutX="451.0" layoutY="391.0" mnemonicParsing="false" onAction="#deserializeFuture" prefHeight="16.0" prefWidth="302.0" text="Deserializuj opłaty zaplanowane" />
-                  <Button layoutX="451.0" layoutY="447.0" mnemonicParsing="false" onAction="#deserializePast" prefHeight="16.0" prefWidth="302.0" text="Deserializuj zrealizowane opłaty" />
+                  <Button layoutX="285.0" layoutY="388.0" mnemonicParsing="false" onAction="#serialize" prefHeight="108.0" prefWidth="168.0" text="Serializuj dane" />
+                  <Button layoutX="469.0" layoutY="388.0" mnemonicParsing="false" onAction="#deserializeFuture" prefHeight="15.0" prefWidth="303.0" text="Deserializuj opłaty zaplanowane" />
+                  <Button layoutX="470.0" layoutY="455.0" mnemonicParsing="false" onAction="#deserializePast" prefHeight="16.0" prefWidth="302.0" text="Deserializuj zrealizowane opłaty" />
                </children>
             </AnchorPane>
         </content>
