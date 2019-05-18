@@ -17,13 +17,13 @@ import java.util.Date;
 
 public class Controller {
     private PaymentsManager paymentsManager = new PaymentsManager();
-    private FuturePaymentRepository futurePaymentRepository = paymentsManager.getFutureRepo();
-    private PastPaymentRepository pastPaymentRepository = paymentsManager.getPastRepo();
+    private FuturePaymentRepository futurePaymentRepository = paymentsManager.getFuturePaymentRepository();
+    private PastPaymentRepository pastPaymentRepository = paymentsManager.getPastPaymentRepository();
     ObservableList<String> typeOptions = FXCollections.observableArrayList(Categories.Ubrania_Obuwie.toString(),
             Categories.Rachunki.toString(),Categories.Zywnosc.toString(),Categories.Uzywki.toString(),Categories.Chemia_SrodkiCzystosci.toString(),
             Categories.Transport.toString(),Categories.Rozrywka.toString(),Categories.Sprzet.toString(),Categories.Kosmetyki.toString());
     ObservableList<String> currencyOptions = FXCollections.observableArrayList("USD","EUR","CHF","JPY","MXN","RUB");
-    private DrawingClass drawingClass = new DrawingClass(pastPaymentRepository.getRepo(),futurePaymentRepository.getRepo());
+    private DrawingClass drawingClass = new DrawingClass(pastPaymentRepository.getPastPayments(),futurePaymentRepository.getFuturePayments());
     private ObservableList<PieChart.Data> pieChartData;
     private ObservableList<FuturePayment> futurePaymentsList;
     private ObservableList<PastPayment> pastPaymentList;
@@ -169,24 +169,24 @@ public class Controller {
             numberCheckBox2.setSelected(false);
             DecimalFormat df = new DecimalFormat("##.##");
             df.setRoundingMode(RoundingMode.DOWN);
-                float sum = drawingClass.ReturnTypeFuturePayments(Categories.Ubrania_Obuwie)+
-                        drawingClass.ReturnTypeFuturePayments(Categories.Rachunki)+
-                        drawingClass.ReturnTypeFuturePayments(Categories.Zywnosc)+
-                        drawingClass.ReturnTypeFuturePayments(Categories.Uzywki)+
-                        drawingClass.ReturnTypeFuturePayments(Categories.Chemia_SrodkiCzystosci)+
-                        drawingClass.ReturnTypeFuturePayments(Categories.Transport)+
-                        drawingClass.ReturnTypeFuturePayments(Categories.Rozrywka)+
-                        drawingClass.ReturnTypeFuturePayments(Categories.Sprzet)+
-                        drawingClass.ReturnTypeFuturePayments(Categories.Kosmetyki);
-                float percentOne = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypeFuturePayments(Categories.Ubrania_Obuwie)))/sum)*100;
-                float percentTwo = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypeFuturePayments(Categories.Rachunki)))/sum)*100;
-                float percentThree = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypeFuturePayments(Categories.Zywnosc)))/sum)*100;
-                float percentFour = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypeFuturePayments(Categories.Uzywki)))/sum)*100;
-                float percentFive = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypeFuturePayments(Categories.Chemia_SrodkiCzystosci)))/sum)*100;
-                float percentSix = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypeFuturePayments(Categories.Transport)))/sum)*100;
-                float percentSeven = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypeFuturePayments(Categories.Rozrywka)))/sum)*100;
-                float percentEight = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypeFuturePayments(Categories.Sprzet)))/sum)*100;
-                float percentNine = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypeFuturePayments(Categories.Kosmetyki)))/sum)*100;
+                float sum = drawingClass.returnTypeFuturePayments(Categories.Ubrania_Obuwie)+
+                        drawingClass.returnTypeFuturePayments(Categories.Rachunki)+
+                        drawingClass.returnTypeFuturePayments(Categories.Zywnosc)+
+                        drawingClass.returnTypeFuturePayments(Categories.Uzywki)+
+                        drawingClass.returnTypeFuturePayments(Categories.Chemia_SrodkiCzystosci)+
+                        drawingClass.returnTypeFuturePayments(Categories.Transport)+
+                        drawingClass.returnTypeFuturePayments(Categories.Rozrywka)+
+                        drawingClass.returnTypeFuturePayments(Categories.Sprzet)+
+                        drawingClass.returnTypeFuturePayments(Categories.Kosmetyki);
+                float percentOne = (Float.parseFloat(Integer.toString(drawingClass.returnTypeFuturePayments(Categories.Ubrania_Obuwie)))/sum)*100;
+                float percentTwo = (Float.parseFloat(Integer.toString(drawingClass.returnTypeFuturePayments(Categories.Rachunki)))/sum)*100;
+                float percentThree = (Float.parseFloat(Integer.toString(drawingClass.returnTypeFuturePayments(Categories.Zywnosc)))/sum)*100;
+                float percentFour = (Float.parseFloat(Integer.toString(drawingClass.returnTypeFuturePayments(Categories.Uzywki)))/sum)*100;
+                float percentFive = (Float.parseFloat(Integer.toString(drawingClass.returnTypeFuturePayments(Categories.Chemia_SrodkiCzystosci)))/sum)*100;
+                float percentSix = (Float.parseFloat(Integer.toString(drawingClass.returnTypeFuturePayments(Categories.Transport)))/sum)*100;
+                float percentSeven = (Float.parseFloat(Integer.toString(drawingClass.returnTypeFuturePayments(Categories.Rozrywka)))/sum)*100;
+                float percentEight = (Float.parseFloat(Integer.toString(drawingClass.returnTypeFuturePayments(Categories.Sprzet)))/sum)*100;
+                float percentNine = (Float.parseFloat(Integer.toString(drawingClass.returnTypeFuturePayments(Categories.Kosmetyki)))/sum)*100;
                 pieChartData = FXCollections.observableArrayList(
                         new PieChart.Data("Ubrania_Obuwie" + df.format(percentOne) + "%",percentOne),
                         new PieChart.Data("Rachunki " + df.format(percentTwo) + "%",percentTwo),
@@ -313,21 +313,21 @@ public class Controller {
            if((from.getEditor().getText().length() == 0 && to.getEditor().getText().length() == 0) || (from.getEditor().getText().length() != 0 && to.getEditor().getText().length() == 0)
            || (from.getEditor().getText().length() == 0 && to.getEditor().getText().length() != 0)){
 
-               float sum = drawingClass.ReturnTypePastPayments(Categories.Ubrania_Obuwie)+
-                       drawingClass.ReturnTypePastPayments(Categories.Rachunki)+drawingClass.ReturnTypePastPayments(Categories.Zywnosc)
-                       +drawingClass.ReturnTypePastPayments(Categories.Uzywki)+drawingClass.ReturnTypePastPayments(Categories.Chemia_SrodkiCzystosci)+
-                       drawingClass.ReturnTypePastPayments(Categories.Transport)+drawingClass.ReturnTypePastPayments(Categories.Rozrywka)+
-                       drawingClass.ReturnTypePastPayments(Categories.Sprzet)+drawingClass.ReturnTypePastPayments(Categories.Kosmetyki);
+               float sum = drawingClass.returnTypePastPayments(Categories.Ubrania_Obuwie)+
+                       drawingClass.returnTypePastPayments(Categories.Rachunki)+drawingClass.returnTypePastPayments(Categories.Zywnosc)
+                       +drawingClass.returnTypePastPayments(Categories.Uzywki)+drawingClass.returnTypePastPayments(Categories.Chemia_SrodkiCzystosci)+
+                       drawingClass.returnTypePastPayments(Categories.Transport)+drawingClass.returnTypePastPayments(Categories.Rozrywka)+
+                       drawingClass.returnTypePastPayments(Categories.Sprzet)+drawingClass.returnTypePastPayments(Categories.Kosmetyki);
 
-               float percentOne = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypePastPayments(Categories.Ubrania_Obuwie)))/sum)*100;
-               float percentTwo = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypePastPayments(Categories.Rachunki)))/sum)*100;
-               float percentThree = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypePastPayments(Categories.Zywnosc)))/sum)*100;
-               float percentFour = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypePastPayments(Categories.Uzywki)))/sum)*100;
-               float percentFive = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypePastPayments(Categories.Chemia_SrodkiCzystosci)))/sum)*100;
-               float percentSix = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypePastPayments(Categories.Transport)))/sum)*100;
-               float percentSeven = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypePastPayments(Categories.Rozrywka)))/sum)*100;
-               float percentEight = (Float.parseFloat(Integer.toString(drawingClass.ReturnTypePastPayments(Categories.Sprzet)))/sum)*100;
-               float percentNine= (Float.parseFloat(Integer.toString(drawingClass.ReturnTypePastPayments(Categories.Kosmetyki)))/sum)*100;
+               float percentOne = (Float.parseFloat(Integer.toString(drawingClass.returnTypePastPayments(Categories.Ubrania_Obuwie)))/sum)*100;
+               float percentTwo = (Float.parseFloat(Integer.toString(drawingClass.returnTypePastPayments(Categories.Rachunki)))/sum)*100;
+               float percentThree = (Float.parseFloat(Integer.toString(drawingClass.returnTypePastPayments(Categories.Zywnosc)))/sum)*100;
+               float percentFour = (Float.parseFloat(Integer.toString(drawingClass.returnTypePastPayments(Categories.Uzywki)))/sum)*100;
+               float percentFive = (Float.parseFloat(Integer.toString(drawingClass.returnTypePastPayments(Categories.Chemia_SrodkiCzystosci)))/sum)*100;
+               float percentSix = (Float.parseFloat(Integer.toString(drawingClass.returnTypePastPayments(Categories.Transport)))/sum)*100;
+               float percentSeven = (Float.parseFloat(Integer.toString(drawingClass.returnTypePastPayments(Categories.Rozrywka)))/sum)*100;
+               float percentEight = (Float.parseFloat(Integer.toString(drawingClass.returnTypePastPayments(Categories.Sprzet)))/sum)*100;
+               float percentNine= (Float.parseFloat(Integer.toString(drawingClass.returnTypePastPayments(Categories.Kosmetyki)))/sum)*100;
 
            pieChartData = FXCollections.observableArrayList(
                    new PieChart.Data("Ubrania_Obuwie " + df.format(percentOne) + "%",percentOne),
@@ -394,7 +394,7 @@ public class Controller {
     @FXML
     void openTabEvent() {
         if (tableTab.isSelected()) {
-            pastPaymentList = FXCollections.observableArrayList(pastPaymentRepository.getRepo());
+            pastPaymentList = FXCollections.observableArrayList(pastPaymentRepository.getPastPayments());
             pastPaymentsTable.setItems(pastPaymentList);
             idColumn.setCellValueFactory(new PropertyValueFactory<>("ID"));
             nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -409,7 +409,7 @@ public class Controller {
     @FXML
     void openMainTabEvent() {
         if (mainTab.isSelected()) {
-            futurePaymentsList = FXCollections.observableArrayList(futurePaymentRepository.getRepo());
+            futurePaymentsList = FXCollections.observableArrayList(futurePaymentRepository.getFuturePayments());
             mainPaymentsTable.setItems(futurePaymentsList);
             idCol.setCellValueFactory(new PropertyValueFactory<>("ID"));
             nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -466,7 +466,7 @@ public class Controller {
         if(choiceBoxResult != null && nameTextField.getText() != null && priceTextField.getText() != null && descTextField.getText() != null){
         FuturePayment futurePayment = new FuturePayment(nameTextField.getText(), Float.parseFloat(priceTextField.getText()),
                 choiceBoxResult,descTextField.getText());
-        futurePaymentRepository.AddToRepo(futurePayment);
+        futurePaymentRepository.addToRepository(futurePayment);
         nameTextField.clear();priceTextField.clear();descTextField.clear();choiceBox.setValue(null);
         chartsTab.setDisable(false);
         openMainTabEvent();
@@ -485,8 +485,8 @@ public class Controller {
             else{
                 pastPayment = new PastPayment(temp.getName(), temp.getPrice(),temp.getType(),temp.getDescription(),date);
             }
-            pastPaymentRepository.AddToRepo(pastPayment);
-            futurePaymentRepository.DeletePayment(temp.getID());
+            pastPaymentRepository.addToRepository(pastPayment);
+            futurePaymentRepository.deletePayment(temp.getID());
             openMainTabEvent();
             finalDescTextField.clear();
             datePicker.getEditor().clear();
@@ -498,21 +498,21 @@ public class Controller {
         paymentsManager.serializeAll();
     }
     @FXML void deserializeFuture(){
-        paymentsManager.deserializeFuture();
-        futurePaymentRepository = paymentsManager.getFutureRepo();
+        paymentsManager.deserializeFuturePaymentRepository();
+        futurePaymentRepository = paymentsManager.getFuturePaymentRepository();
         futurePaymentsList.removeAll(futurePaymentsList);
         openMainTabEvent();
         chartsTab.setDisable(false);
-        drawingClass = new DrawingClass(pastPaymentRepository.getRepo(),futurePaymentRepository.getRepo());
+        drawingClass = new DrawingClass(pastPaymentRepository.getPastPayments(),futurePaymentRepository.getFuturePayments());
     }
 
     @FXML void deserializePast(){
-        paymentsManager.deserializerPast();
-        pastPaymentRepository = paymentsManager.getPastRepo();
+        paymentsManager.deserializeFuturePaymentRepository();
+        pastPaymentRepository = paymentsManager.getPastPaymentRepository();
         pastPaymentList.removeAll(pastPaymentList);
         openTabEvent();
         chartsTab.setDisable(false);
-        drawingClass = new DrawingClass(pastPaymentRepository.getRepo(),futurePaymentRepository.getRepo());
+        drawingClass = new DrawingClass(pastPaymentRepository.getPastPayments(),futurePaymentRepository.getFuturePayments());
     }
 
      public Controller() { }

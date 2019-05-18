@@ -21,10 +21,10 @@ public class PastPaymentRepositoryTest {
         pastPayment = new PastPayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne", date);
         pastPayment2 = new PastPayment("pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2", date2);
         pastPayment.setID(1);
-        pastPayment.setID(2);
+        pastPayment2.setID(2);
         this.pastRepo = new PastPaymentRepository();
-        pastRepo.AddToRepo(pastPayment);
-        pastRepo.AddToRepo(pastPayment2);
+        pastRepo.addToRepository(pastPayment);
+        pastRepo.addToRepository(pastPayment2);
     }
 
     @Test
@@ -34,19 +34,19 @@ public class PastPaymentRepositoryTest {
     }
 
     @Test
-    public void addToRepo() {
-        assertEquals(pastRepo.getRepo().size(), 2);
+    public void addToRepository() {
+        assertEquals(pastRepo.getPastPayments().size(), 2);
     }
 
     @Test
     public void deletePayment() {
-        pastRepo.DeletePayment(1);
+        pastRepo.deletePayment(1);
         assertEquals("2,pszne obiad2,14.1,Sprzet,bardzo pszne2,05/10/3918 00:00:00\n", pastRepo.toString());
     }
 
     @Test
     public void getRepo() {
-        assertEquals(pastRepo.getRepo().get(0), pastPayment);
-        assertEquals(pastRepo.getRepo().get(1), pastPayment2);
+        assertEquals(pastRepo.getPastPayments().get(0), pastPayment);
+        assertEquals(pastRepo.getPastPayments().get(1), pastPayment2);
     }
 }

@@ -3,24 +3,17 @@ package logic;
 import java.util.ArrayList;
 
 public class FuturePaymentRepository {
-	private ArrayList<FuturePayment> repo = new ArrayList<FuturePayment>();
 
-	@Override
-	public String toString()
+	private ArrayList<FuturePayment> futurePayments = new ArrayList<FuturePayment>();
+
+	public ArrayList<FuturePayment> getFuturePayments()
 	{
-		String temp = "";
-		
-		for(int i=0;i<repo.size();i++)
-		{
-			temp += repo.get(i).toString() + "\n";
-		}
-		
-		return temp;
+		return futurePayments;
 	}
 
-	public String AddToRepo(FuturePayment payment)
+	public String addToRepository(FuturePayment futurePayment)
 	{	
-		boolean result = repo.add(payment);
+		boolean result = futurePayments.add(futurePayment);
 		String info;
 		if (result == true) info = "Dodano wydatek do planu.";
 		else info = "Dodanie wydatku nie powiodlo sie.";
@@ -28,22 +21,16 @@ public class FuturePaymentRepository {
 		return info;
 	}
 
-	private void reloadID(){
-		for(FuturePayment fp:repo){
-			fp.setID(repo.indexOf(fp)+1);
-		}
-	}
-
-	public String DeletePayment(int ID)
+	public String deletePayment(int ID)
 	{
 		boolean result = false;
 		String info = "Nie odnaleziono wydatku o takim ID.";
 		
-		for (int i=0;i<repo.size();i++)
+		for (int i = 0; i < futurePayments.size(); i++)
 		{
-			if(repo.get(i).getPaymentID() == ID)
+			if (futurePayments.get(i).getPaymentID() == ID)
 			{
-				result = repo.remove(repo.get(i));
+				result = futurePayments.remove(futurePayments.get(i));
 			}
 		}
 		
@@ -52,11 +39,24 @@ public class FuturePaymentRepository {
 			info = "Usunieto wydatek";
 		}
 		return info;
-		
 	}
-	
-	public ArrayList<FuturePayment> getRepo() 
+
+	@Override
+	public String toString()
 	{
-		return repo;
+		String text = "";
+
+		for(int i = 0; i< futurePayments.size(); i++)
+		{
+			text += futurePayments.get(i).toString() + "\n";
+		}
+
+		return text;
+	}
+
+	private void reloadID(){
+		for(FuturePayment fp: futurePayments){
+			fp.setID(futurePayments.indexOf(fp)+1);
+		}
 	}
 }

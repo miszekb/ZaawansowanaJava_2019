@@ -22,15 +22,15 @@ public class PaymentsManagerTest {
         PastPayment pastPayment2 = new PastPayment("pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2", date2);
         pastPayment.setID(1);
         pastPayment2.setID(2);
-        paymentsManager.addToPastRepo(pastPayment);
-        paymentsManager.addToPastRepo(pastPayment2);
+        paymentsManager.addToPastPaymentRepository(pastPayment);
+        paymentsManager.addToPastPaymentRepository(pastPayment2);
 
         FuturePayment futurePayment = new FuturePayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne");
         FuturePayment futurePayment1 = new FuturePayment("pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2");
         futurePayment.setID(1);
         futurePayment.setID(2);
-        paymentsManager.addToFutureRepo(futurePayment);
-        paymentsManager.addToFutureRepo(futurePayment1);
+        paymentsManager.addToFuturePaymentRepository(futurePayment);
+        paymentsManager.addToFuturePaymentRepository(futurePayment1);
 
     }
 
@@ -43,14 +43,14 @@ public class PaymentsManagerTest {
     public void addToPastRepo() {
         PastPayment pp = new PastPayment("pszne obiad3",14.10f,Categories.Sprzet, "bardzo pszne2", new Date());
         pp.setID(3);
-        paymentsManager.addToPastRepo(pp);
+        paymentsManager.addToPastPaymentRepository(pp);
 
-        assertEquals(3, paymentsManager.getPastRepo().getRepo().size());
+        assertEquals(3, paymentsManager.getPastPaymentRepository().getPastPayments().size());
     }
 
     @Test
     public void getPastRepo() {
-        assertEquals(2, paymentsManager.getPastRepo().getRepo().size());
+        assertEquals(2, paymentsManager.getPastPaymentRepository().getPastPayments().size());
     }
 
     @Test
@@ -58,10 +58,10 @@ public class PaymentsManagerTest {
         PastPaymentRepository pastPaymentRepository = new PastPaymentRepository();
         PastPayment pastPayment = new PastPayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne", new Date());
         pastPayment.setID(1);
-        pastPaymentRepository.AddToRepo(pastPayment);
+        pastPaymentRepository.addToRepository(pastPayment);
 
-        paymentsManager.setPastRepo(pastPaymentRepository);
-        assertEquals(1, paymentsManager.getPastRepo().getRepo().size());
+        paymentsManager.setPastPaymentRepository(pastPaymentRepository);
+        assertEquals(1, paymentsManager.getPastPaymentRepository().getPastPayments().size());
     }
 
     @Test
@@ -75,13 +75,13 @@ public class PaymentsManagerTest {
     public void addToFutureRepo() {
         FuturePayment futurePayment = new FuturePayment("pszne obiad3",21.37f, Categories.Kosmetyki, "bardzo pszne");
         futurePayment.setID(3);
-        paymentsManager.addToFutureRepo(futurePayment);
-        assertEquals(3, paymentsManager.getFutureRepo().getRepo().size());
+        paymentsManager.addToFuturePaymentRepository(futurePayment);
+        assertEquals(3, paymentsManager.getFuturePaymentRepository().getFuturePayments().size());
     }
 
     @Test
     public void getFutureRepo() {
-        assertEquals(2, paymentsManager.getFutureRepo().getRepo().size());
+        assertEquals(2, paymentsManager.getFuturePaymentRepository().getFuturePayments().size());
     }
 
     @Test
@@ -91,11 +91,11 @@ public class PaymentsManagerTest {
         futurePayment.setID(1);
         FuturePayment futurePayment1 = new FuturePayment("pszne obiad2",14.10f,Categories.Sprzet, "bardzo pszne2");
         futurePayment1.setID(2);
-        futurePaymentRepository.AddToRepo(futurePayment);
-        futurePaymentRepository.AddToRepo(futurePayment1);
+        futurePaymentRepository.addToRepository(futurePayment);
+        futurePaymentRepository.addToRepository(futurePayment1);
 
-        paymentsManager.setFutureRepo(futurePaymentRepository);
-        assertEquals(2, paymentsManager.getFutureRepo().getRepo().size());
+        paymentsManager.setFuturePaymentRepository(futurePaymentRepository);
+        assertEquals(2, paymentsManager.getFuturePaymentRepository().getFuturePayments().size());
     }
 
     @Test
@@ -139,16 +139,16 @@ public class PaymentsManagerTest {
 
     @Test
     public void serializerFuture() {
-        paymentsManager.serializerFuture();
-        paymentsManager.deserializeFuture();
-        assertEquals(2, paymentsManager.getFutureRepo().getRepo().size());
+        paymentsManager.serializerFuturePaymentRepository();
+        paymentsManager.deserializeFuturePaymentRepository();
+        assertEquals(2, paymentsManager.getFuturePaymentRepository().getFuturePayments().size());
     }
 
     @Test
     public void deserializeFuture() {
-        paymentsManager.serializerFuture();
-        paymentsManager.deserializeFuture();
-        assertEquals(2, paymentsManager.getFutureRepo().getRepo().size());
+        paymentsManager.serializerFuturePaymentRepository();
+        paymentsManager.deserializeFuturePaymentRepository();
+        assertEquals(2, paymentsManager.getFuturePaymentRepository().getFuturePayments().size());
     }
 
     @Test

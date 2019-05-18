@@ -6,113 +6,107 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class DrawingClass {
-    private ArrayList<PastPayment> localList;
-    private ArrayList<FuturePayment> fpLocalList;
-    private int ID;
+    private ArrayList<PastPayment> pastPaymentsList;
+    private ArrayList<FuturePayment> futurePaymentsList;
+    private int id;
     private float price;
     private String description;
     private Date date;
 
     public DrawingClass(ArrayList<PastPayment> pastPayment, ArrayList<FuturePayment> futurePayments){
-        this.localList = pastPayment;
-        this.fpLocalList = futurePayments;
-    }
-
-    private ArrayList<PastPayment> returnPaymentsInMonth(int month){
-        ArrayList<PastPayment> turboLocalList = new ArrayList<PastPayment>();
-        for (PastPayment pp : localList){
-            if(pp.getPaymentDate().getMonth() == month)
-                turboLocalList.add(pp);
-        }
-        return turboLocalList;
+        this.pastPaymentsList = pastPayment;
+        this.futurePaymentsList = futurePayments;
     }
 
     public int countPaymentsBetweenDates(Categories num, int monthOne, int monthLast, int dayOne, int dayLast)
     {
-        ArrayList<PastPayment> turboLocalList = new ArrayList<PastPayment>();
-        for(PastPayment pp : localList){
+        ArrayList<PastPayment> temporaryPastPaymentsList = new ArrayList<PastPayment>();
+        for(PastPayment pp : pastPaymentsList){
             LocalDate date = pp.getPaymentDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             if(date.getMonthValue() >= monthOne && date.getMonthValue() <=monthLast && date.getDayOfMonth() >= dayOne && date.getDayOfMonth()  <= dayLast && pp.getType()==num)
-                turboLocalList.add(pp);
+                temporaryPastPaymentsList.add(pp);
         }
-        return turboLocalList.size();
+        return temporaryPastPaymentsList.size();
     }
 
     public float returnSumOfPaymentsBetweenDates(Categories num, int monthOne, int monthLast, int dayOne, int dayLast)
     {
-        ArrayList<PastPayment> turboLocalList = new ArrayList<PastPayment>();
-        for(PastPayment pp : localList){
+        ArrayList<PastPayment> temporaryPastPaymentsList = new ArrayList<PastPayment>();
+        for(PastPayment pp : pastPaymentsList){
             LocalDate date = pp.getPaymentDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             if(date.getMonthValue() >= monthOne && date.getMonthValue() <=monthLast && date.getDayOfMonth() >= dayOne && date.getDayOfMonth()  <= dayLast && pp.getType()==num)
-                turboLocalList.add(pp);
+                temporaryPastPaymentsList.add(pp);
         }
         float sum = 0;
-        for(PastPayment pp:turboLocalList){
+        for(PastPayment pp:temporaryPastPaymentsList){
             sum+=pp.getPaymentPrice();
         }
         return sum;
     }
 
-    public int ReturnTypePastPayments(Categories typeNum){
-        ArrayList<PastPayment> turboLocalList = new ArrayList<PastPayment>();
-        for(PastPayment pp : localList){
+    public int returnTypePastPayments(Categories typeNum){
+        ArrayList<PastPayment> temporaryPastPaymentsList = new ArrayList<PastPayment>();
+        for(PastPayment pp : pastPaymentsList){
             if(pp.getType() == typeNum){
-                turboLocalList.add(pp);
+                temporaryPastPaymentsList.add(pp);
             }
         }
-        return turboLocalList.size();
+        return temporaryPastPaymentsList.size();
     }
 
     public float returnSumOfPayments(Categories typeNum){
-        ArrayList<PastPayment> turboLocalList = new ArrayList<PastPayment>();
-        for(PastPayment pp : localList){
+        ArrayList<PastPayment> temporaryPastPaymentsList = new ArrayList<PastPayment>();
+        for(PastPayment pp : pastPaymentsList){
             if(pp.getType() == typeNum){
-                turboLocalList.add(pp);
+                temporaryPastPaymentsList.add(pp);
             }
         }
         float sum =0;
 
-        for(PastPayment pp: turboLocalList){
+        for(PastPayment pp: temporaryPastPaymentsList){
             sum+=pp.getPaymentPrice();
         }
         return sum;
     }
 
-
-    public int ReturnTypeFuturePayments(Categories typeNum){
-        ArrayList<FuturePayment> turboLocalList = new ArrayList<FuturePayment>();
-        for(FuturePayment pp : fpLocalList){
-            if(pp.getType() == typeNum){
-                turboLocalList.add(pp);
+    public int returnTypeFuturePayments(Categories typeNum){
+        ArrayList<FuturePayment> temporaryFuturePaymentsList = new ArrayList<FuturePayment>();
+        for(FuturePayment fp : futurePaymentsList){
+            if(fp.getType() == typeNum){
+                temporaryFuturePaymentsList.add(fp);
             }
         }
-        return turboLocalList.size();
+        return temporaryFuturePaymentsList.size();
     }
 
     public float returnSumOfFuturePayments(Categories typeNum){
-        ArrayList<FuturePayment> turboLocalList = new ArrayList<FuturePayment>();
-        for(FuturePayment pp : fpLocalList){
-            if(pp.getType() == typeNum){
-                turboLocalList.add(pp);
+        ArrayList<FuturePayment> temporaryFuturePaymentsList = new ArrayList<FuturePayment>();
+        for(FuturePayment fp : futurePaymentsList){
+            if(fp.getType() == typeNum){
+                temporaryFuturePaymentsList.add(fp);
             }
         }
         float sum =0;
 
-        for(FuturePayment pp: turboLocalList){
-            sum+=pp.getPaymentPrice();
+        for(FuturePayment fp: temporaryFuturePaymentsList){
+            sum+=fp.getPaymentPrice();
         }
         return sum;
     }
 
-
-    public void DebugPaymentsInMonth(int month){
-        ArrayList<PastPayment> pastPayments = new ArrayList<PastPayment>();
-        pastPayments = returnPaymentsInMonth(month);
-        for (PastPayment pp : pastPayments ) {
+    public void debugPaymentsInMonth(int month){
+        ArrayList<PastPayment> temporaryPastPaymentsList = returnPaymentsInMonth(month);
+        for (PastPayment pp : temporaryPastPaymentsList ) {
             System.out.println(pp.toString());
         }
     }
 
-
-
+    private ArrayList<PastPayment> returnPaymentsInMonth(int month){
+        ArrayList<PastPayment> temporaryPastPaymentsList = new ArrayList<PastPayment>();
+        for (PastPayment pp : pastPaymentsList){
+            if(pp.getPaymentDate().getMonth() == month)
+                temporaryPastPaymentsList.add(pp);
+        }
+        return temporaryPastPaymentsList;
+    }
 }

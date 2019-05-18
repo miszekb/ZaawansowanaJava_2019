@@ -4,55 +4,13 @@ import javax.persistence.*;
 import java.util.UUID;
 import static logic.PaymentsManager.getEntityManager;
 
-
 @Entity
 @Table(name = "future_payment_table")
-public class FuturePayment implements Payment{
-	public int getID() {
-		return ID;
-	}
-
-	public void setID(int ID) {
-		this.ID = ID;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public float getPrice() {
-		return price;
-	}
-
-	public void setPrice(float price) {
-		this.price = price;
-	}
-
-	public Categories getType() {
-		return type;
-	}
-
-	public void setType(Categories type) {
-		this.type = type;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	//TEGO NIE SERIALIZUJEMY !!!
-	private float priceInDifferentCurrency;
+public class FuturePayment implements Payment {
 
 	@Id
 	@Column(name = "id")
-	private int ID;
+	private int id;
 	@Column(name = "name")
 	private String name;
 	@Column(name = "price")
@@ -62,122 +20,113 @@ public class FuturePayment implements Payment{
 	@Column(name = "description")
 	private String description;
 
+	private float priceInDifferentCurrency;
 
 	public FuturePayment(String name, float price, Categories type, String description)
 	{
-		this.ID = Integer.parseInt((UUID.randomUUID().toString().replaceAll("[^0-9]", "")).substring(0,5));
-		System.out.println(ID);
+		this.id = Integer.parseInt((UUID.randomUUID().toString().replaceAll("[^0-9]", "")).substring(0,5));
 		this.name = name;
 		this.price = price;
 		this.type = type;
 		this.description = description;
 	}
 
-	public void setPriceInDifferentCurrency(float currency){
-		priceInDifferentCurrency = price/currency;
-	}
-
-	@Override
-	public String toString() 
+	public FuturePayment()
 	{
-		String info;
-		info = Integer.toString(ID) + "," +
-		name + "," +
-		Float.toString(price) + "," +
-		type.key + "," +
-		description;
-		
-		return info;
+		this.id = Integer.parseInt((UUID.randomUUID().toString().replaceAll("[^0-9]", "")).substring(0,5));
+		this.name = "";
+		this.price = 0;
+		this.type = Categories.Ubrania_Obuwie;
+		this.description = "";
 	}
 
-	public void saveFuturePayment(FuturePayment fp) {
-		EntityManager em = getEntityManager();
+	public void saveFuturePayment(FuturePayment futurePayment) {
+		EntityManager entityManager = getEntityManager();
 
-		em.getTransaction().begin();
+		entityManager.getTransaction().begin();
 
-		em.persist(fp);
-		em.getTransaction().commit();
+		entityManager.persist(futurePayment);
+		entityManager.getTransaction().commit();
 	}
 
-	public FuturePayment FuturePayment(int id) {
-		EntityManager em = getEntityManager();
-		FuturePayment futurePayment = em.find(FuturePayment.class,  id);
-		em.detach(futurePayment);
+	public FuturePayment futurePayment(int id) {
+		EntityManager entityManager = getEntityManager();
+		FuturePayment futurePayment = entityManager.find(FuturePayment.class,  id);
+		entityManager.detach(futurePayment);
 		return futurePayment;
 	}
 
 	@Override
-	public String archive() 
+	public int getPaymentID() { return id; }
+
+	@Override
+	public String getPaymentName() { return name; }
+
+	@Override
+	public float getPaymentPrice() { return price; }
+
+	@Override
+	public String getPaymentType() { return type.key; }
+
+	@Override
+	public String getPaymentDescription() { return description; }
+
+	public float getPriceInDifferentCurrency() { return priceInDifferentCurrency; }
+
+	public int getID() { return id; }
+
+	public String getName() { return name; }
+
+	public float getPrice() { return price; }
+
+	public Categories getType() { return type; }
+
+	public String getDescription() { return description; }
+
+
+	@Override
+	public void setPaymentID(int ID) { this.id = ID; }
+
+	@Override
+	public void setPaymentName(String name) { this.name = name; }
+
+	@Override
+	public void setPaymentPrice(float price) { this.price= price; }
+
+	@Override
+	public void setPaymentType(Categories type) { this.type = type; }
+
+	@Override
+	public void setPaymentDescription(String description) { this.description = description; }
+
+	public void setPriceInDifferentCurrency(float currency){ priceInDifferentCurrency = price/currency; }
+
+	public void setID(int ID) { this.id = ID; }
+
+	public void setName(String name) { this.name = name; }
+
+	public void setPrice(float price) { this.price = price; }
+
+	public void setType(Categories type) { this.type = type; }
+
+	public void setDescription(String description) { this.description = description; }
+
+	@Override
+	public String toString()
 	{
+		String info;
+		info = (id) + "," +
+				name + "," +
+				(price) + "," +
+				type.key + "," +
+				description;
+
+		return info;
+	}
+
+	@Override
+	public String archive() {
 		// TODO archiving implementation
 		return null;
-	}
-	
-	@Override
-	public int getPaymentID() 
-	{
-		return ID;
-	}
-	
-	@Override
-	public String getPaymentName() 
-	{
-		return name;
-	}
-	
-	@Override
-	public float getPaymentPrice() 
-	{
-		return price;
-	}
-	
-	@Override
-	public String getPaymentType()
-	{
-		return type.key;
-	}
-	
-	@Override
-	public String getPaymentDescription() 
-	{
-		return description;
-	}
-	
-	//[SETTERS]
-
-
-	@Override
-	public void setPaymentID(int ID) 
-	{
-		this.ID = ID;
-	}
-
-	@Override
-	public void setPaymentName(String name) 
-	{
-		this.name = name;
-	}
-
-	@Override
-	public void setPaymentPrice(float price) 
-	{
-		this.price= price;
-	}
-
-	@Override
-	public void setPaymentType(Categories type)
-	{
-		this.type = type;
-		
-	}
-
-	@Override
-	public void setPaymentDescription(String description) 
-	{
-		this.description = description;
-	}
-
-	public float getPriceInDifferentCurrency() {
-		return priceInDifferentCurrency;
 	}
 }

@@ -16,5 +16,4 @@ public interface Payment {
 	
 	public String archive();
 	public String toString();
-	
 }

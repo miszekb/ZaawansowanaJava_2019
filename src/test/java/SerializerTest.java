@@ -18,13 +18,13 @@ public class SerializerTest {
         pastPayment2.setID(2);
 
         PastPaymentRepository pastRepo = new PastPaymentRepository();
-        pastRepo.AddToRepo(pastPayment);
-        pastRepo.AddToRepo(pastPayment2);
+        pastRepo.addToRepository(pastPayment);
+        pastRepo.addToRepository(pastPayment2);
 
         Serializer serializer = new Serializer();
-        serializer.SerializePast(pastRepo);
+        serializer.serializePast(pastRepo);
 
-        PastPaymentRepository pastRepo2 = serializer.DeserializePast();
+        PastPaymentRepository pastRepo2 = serializer.deserializePast();
         assertEquals(pastRepo.toString(), pastRepo2.toString());
 
     }
@@ -38,13 +38,13 @@ public class SerializerTest {
 
         FuturePaymentRepository futureRepo = new FuturePaymentRepository();
 
-        futureRepo.AddToRepo(futurePayment);
-        futureRepo.AddToRepo(futurePayment2);
+        futureRepo.addToRepository(futurePayment);
+        futureRepo.addToRepository(futurePayment2);
 
         Serializer serializer = new Serializer();
-        serializer.SerializeFuture(futureRepo);
+        serializer.serializeFuture(futureRepo);
 
-        FuturePaymentRepository futureRepo2 = serializer.DeserializeFuture();
+        FuturePaymentRepository futureRepo2 = serializer.deserializeFuture();
         assertEquals(futureRepo.toString(), futureRepo2.toString());
 
     }

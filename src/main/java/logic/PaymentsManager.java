@@ -3,33 +3,40 @@ package logic;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.io.IOException;
 import java.util.Date;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class PaymentsManager {
 
-    private PastPaymentRepository pastRepo;
-    private FuturePaymentRepository futureRepo;
-    private MonthlyPaymentRepository monthlyRepo;
+    private static String myCurrency = "PLN";
+
+    private PastPaymentRepository pastPaymentRepository;
+    private FuturePaymentRepository futurePaymentRepository;
+    private MonthlyPaymentRepository monthlyPaymentRepository;
     private Serializer serializer;
     private CurrencyExchanger currencyExchanger;
 
-    private static String myCurrency = "PLN";
+    public static EntityManager getEntityManager() {
+        return emf.createEntityManager();
+    }
 
     private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("org.hibernate.tutorial.jpa");
 
-    public PaymentsManager() {
-        pastRepo = new PastPaymentRepository();
-        futureRepo = new FuturePaymentRepository();
-        monthlyRepo = new MonthlyPaymentRepository();
-        serializer = new Serializer();
-        currencyExchanger = new CurrencyExchanger();
+    private static float roundFloat(float value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        BigDecimal bd = new BigDecimal(Float.toString(value));
+        bd = bd.setScale(places, RoundingMode.HALF_EVEN);
+        return bd.floatValue();
     }
 
-    public static EntityManager getEntityManager() {
-        return emf.createEntityManager();
+    public PaymentsManager() {
+        pastPaymentRepository = new PastPaymentRepository();
+        futurePaymentRepository = new FuturePaymentRepository();
+        monthlyPaymentRepository = new MonthlyPaymentRepository();
+        serializer = new Serializer();
+        currencyExchanger = new CurrencyExchanger();
     }
 
     public String getMyCurrency()
@@ -37,30 +44,41 @@ public class PaymentsManager {
         return myCurrency;
     }
 
-    //---------------------- PAST PAYMENTS METHODS ----------------------
-
-    public void addToPastRepo(PastPayment pastPayment)
+    public PastPaymentRepository getPastPaymentRepository()
     {
-        pastRepo.AddToRepo(pastPayment);
+        return pastPaymentRepository;
     }
 
-
-    public PastPaymentRepository getPastRepo()
+    public FuturePaymentRepository getFuturePaymentRepository()
     {
-        return pastRepo;
+        return futurePaymentRepository;
     }
 
-    public void setPastRepo(PastPaymentRepository pastRepo)
+    public MonthlyPaymentRepository getMonthlyPaymentRepository()
     {
-        this.pastRepo = pastRepo;
+        return monthlyPaymentRepository;
     }
 
+    public FuturePayment getSpecificFuturePayment(int ID)
+    {
+        FuturePayment futurePayment = null;
+
+        for(FuturePayment payment: futurePaymentRepository.getFuturePayments())
+        {
+            if(payment.getID() == ID)
+            {
+                futurePayment = payment;
+            }
+        }
+
+        return futurePayment;
+    }
 
     public PastPayment getSpecificPastPayment(int ID)
     {
         PastPayment pastPayment = null;
 
-        for(PastPayment payment: pastRepo.getRepo())
+        for(PastPayment payment: pastPaymentRepository.getPastPayments())
         {
             if(payment.getID() == ID)
             {
@@ -71,59 +89,11 @@ public class PaymentsManager {
         return pastPayment;
     }
 
-    //---------------------- FUTURE PAYMENTS METHODS ----------------------
-    public void addToFutureRepo(FuturePayment futurePayment)
-    {
-        futureRepo.AddToRepo(futurePayment);
-    }
-
-    public FuturePaymentRepository getFutureRepo()
-    {
-        return futureRepo;
-    }
-
-    public void setFutureRepo(FuturePaymentRepository futureRepo)
-    {
-        this.futureRepo = futureRepo;
-    }
-
-
-    public FuturePayment getSpecificFuturePayment(int ID)
-    {
-        FuturePayment futurePayment = null;
-
-        for(FuturePayment payment: futureRepo.getRepo())
-        {
-            if(payment.getID() == ID)
-            {
-                futurePayment = payment;
-            }
-        }
-
-        return futurePayment;
-    }
-    //---------------------- MONTHLY PAYMENTS METHODS ----------------------
-
-    public void addToMonthlyRepo(MonthlyPayment monthlyPayment)
-    {
-        monthlyRepo.AddToRepo(monthlyPayment);
-    }
-
-    public MonthlyPaymentRepository getMonthlyRepo()
-    {
-        return monthlyRepo;
-    }
-
-    public void setMonthlyRepo(MonthlyPaymentRepository monthlyRepo)
-    {
-        this.monthlyRepo = monthlyRepo;
-    }
-
     public MonthlyPayment getSpecificMonthlyPayment(int ID)
     {
         MonthlyPayment monthlyPayment = null;
 
-        for(MonthlyPayment payment: monthlyRepo.getRepo())
+        for(MonthlyPayment payment: monthlyPaymentRepository.getMonthlyPayments())
         {
             if(payment.getPaymentID() == ID)
             {
@@ -134,104 +104,79 @@ public class PaymentsManager {
         return monthlyPayment;
     }
 
+    public float getChosenCurrencyRate(String currencyCode)
+    {
+        float rate = CurrencyExchanger.getCurrencyRate(currencyCode);
+        float current = CurrencyExchanger.getCurrencyRate(myCurrency);
+
+        return rate/current;
+    }
+
+    public void setPastPaymentRepository(PastPaymentRepository pastPaymentRepository) { this.pastPaymentRepository = pastPaymentRepository; }
+
+    public void setFuturePaymentRepository(FuturePaymentRepository futurePaymentRepository) { this.futurePaymentRepository = futurePaymentRepository; }
+
+    public void setMonthlyPaymentRepository(MonthlyPaymentRepository monthlyPaymentRepository) { this.monthlyPaymentRepository = monthlyPaymentRepository; }
+
+
+    public void addToPastPaymentRepository(PastPayment pastPayment) { pastPaymentRepository.addToRepository(pastPayment); }
+
+    public void addToFuturePaymentRepository(FuturePayment futurePayment) { futurePaymentRepository.addToRepository(futurePayment); }
+
+    public void addToMonthlyPaymentRepository(MonthlyPayment monthlyPayment) { monthlyPaymentRepository.addToRepository(monthlyPayment); }
+
     public void update() {
-        for(MonthlyPayment payment: monthlyRepo.getRepo()) {
+        for(MonthlyPayment payment: monthlyPaymentRepository.getMonthlyPayments()) {
             if (!payment.getMonthList().get(new Date().getMonth() + 1).booleanValue()) {
-                futureRepo.AddToRepo(new FuturePayment(payment.getPaymentName(), payment.getPaymentPrice(),
+                futurePaymentRepository.addToRepository(new FuturePayment(payment.getPaymentName(), payment.getPaymentPrice(),
                         Categories.valueOf(payment.getPaymentType()),
                         payment.getPaymentDescription()));
             }
-
         }
     }
 
-
-    //---------------------- XML SERIALIZING METHODS ----------------------
-
-    public void serializePast()
+    public void serializePastPaymentRepository()
     {
-       serializer.SerializePast(pastRepo);
+       serializer.serializePast(pastPaymentRepository);
     }
 
-    public void deserializerPast()
+    public void deserializerPastPaymentRepository()
     {
-        this.pastRepo = serializer.DeserializePast();
+        this.pastPaymentRepository = serializer.deserializePast();
     }
 
-    public void serializerFuture(){ serializer.SerializeFuture(futureRepo); }
+    public void serializerFuturePaymentRepository(){ serializer.serializeFuture(futurePaymentRepository); }
 
-    public void deserializeFuture()
+    public void deserializeFuturePaymentRepository()
     {
-        this.futureRepo = serializer.DeserializeFuture();
+        this.futurePaymentRepository = serializer.deserializeFuture();
     }
 
     public void serializeAll()
     {
-        serializer.SerializeAll(pastRepo, futureRepo, monthlyRepo);
+        serializer.serializeAll(pastPaymentRepository, futurePaymentRepository, monthlyPaymentRepository);
     }
-
-    // ----------------------SQL DATABASE METHODS ----------------------
-
-   //TODO: METHODS FOR DATABASE HANDLING
-
-    //---------------------- CURRENCY API METHODS ----------------------
 
     public void convertEveryPrice(String currencyCode)
     {
-        float currentRate = 0.0f;
-        try
-        {
-            currentRate = currencyExchanger.GetCurrencyRate(currencyCode)/
-                          currencyExchanger.GetCurrencyRate("PLN");
-        }
-        catch(IOException exception)
-        {
-            System.out.println(exception.getMessage());
-        }
+        float currentRate  = currencyExchanger.getCurrencyRate(currencyCode)/
+                          currencyExchanger.getCurrencyRate("PLN");
 
-        for(PastPayment payment: pastRepo.getRepo())
+        for(PastPayment payment: pastPaymentRepository.getPastPayments())
         {
             payment.setPriceInDifferentCurrency(roundFloat((currentRate), 2));
         }
 
-        for(FuturePayment payment: futureRepo.getRepo())
+        for(FuturePayment payment: futurePaymentRepository.getFuturePayments())
         {
             payment.setPriceInDifferentCurrency(roundFloat((currentRate), 2));
         }
 
-        for(MonthlyPayment payment: monthlyRepo.getRepo())
+        for(MonthlyPayment payment: monthlyPaymentRepository.getMonthlyPayments())
         {
             payment.setPriceInDifferentCurrency(roundFloat((currentRate), 2));
         }
 
         this.myCurrency = currencyCode;
     }
-
-    public float getChosenCurrencyRate(String currencyCode)
-    {
-        float rate= 0.0f;
-        float current = 0.0f;
-
-        try
-        {
-            rate = CurrencyExchanger.GetCurrencyRate(currencyCode);
-            current = CurrencyExchanger.GetCurrencyRate(myCurrency);
-        }
-        catch (Exception exception)
-        {
-           System.out.println(exception.getMessage());
-        }
-
-        return rate/current;
-    }
-
-    private static float roundFloat(float value, int places) {
-        if (places < 0) throw new IllegalArgumentException();
-
-        BigDecimal bd = new BigDecimal(Float.toString(value));
-        bd = bd.setScale(places, RoundingMode.HALF_EVEN);
-        return bd.floatValue();
-    }
-
-
 }

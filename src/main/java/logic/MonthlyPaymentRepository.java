@@ -1,28 +1,34 @@
 package logic;
 
-import javafx.util.Pair;
-
 import java.util.ArrayList;
 import java.util.Date;
 
 public class MonthlyPaymentRepository {
 
-    private ArrayList<MonthlyPayment> monthlyRepo = new ArrayList<MonthlyPayment>();
+    private ArrayList<MonthlyPayment> monthlyPayments = new ArrayList<MonthlyPayment>();
 
-    public void AddToRepo(MonthlyPayment payment) {
-        monthlyRepo.add(payment);
+    public void addToRepository(MonthlyPayment payment) {
+        monthlyPayments.add(payment);
+    }
+
+    public ArrayList<MonthlyPayment> getMonthlyPayments() {
+        return monthlyPayments;
+    }
+
+    public void setMonthlyPayments(ArrayList<MonthlyPayment> payments) {
+        monthlyPayments = payments;
     }
 
     public void DeletePayment(int ID) {
-        for(MonthlyPayment payment : monthlyRepo) {
+        for(MonthlyPayment payment : monthlyPayments) {
             if(payment.getPaymentID() == ID) {
-                monthlyRepo.remove(payment);
+                monthlyPayments.remove(payment);
             }
         }
     }
 
     public MonthlyPayment getSpecificPayment(int ID) {
-        for(MonthlyPayment payment : monthlyRepo) {
+        for(MonthlyPayment payment : monthlyPayments) {
             if(payment.getPaymentID() == ID) {
                return payment;
             }
@@ -30,28 +36,19 @@ public class MonthlyPaymentRepository {
         return null;
     }
 
-    public ArrayList<MonthlyPayment> getRepo() {
-        return monthlyRepo;
-    }
-
-    public void setMonthlyRepo(ArrayList<MonthlyPayment> payments) {
-        monthlyRepo = payments;
-    }
-
-    //These will be added to Future Payments
     public ArrayList<MonthlyPayment> getUnpaidThisMonth() {
         ArrayList<MonthlyPayment> temp = new ArrayList<MonthlyPayment>();
-        for (MonthlyPayment m_payment : monthlyRepo){
+        for (MonthlyPayment m_payment : monthlyPayments){
             if(!m_payment.getMonthList().get(new Date().getMonth()+1)) {
                 temp.add(m_payment);
             }
         }
         return temp;
     }
-    //These will be added to Past Payments
+
     public ArrayList<MonthlyPayment> getAllPaid(){
         ArrayList<MonthlyPayment> temp = new ArrayList<MonthlyPayment>();
-        for (MonthlyPayment m_payment : monthlyRepo){
+        for (MonthlyPayment m_payment : monthlyPayments){
             for(int i=1; i<13; i++){
                 if(m_payment.getMonthList().get(i)) {
                     temp.add(m_payment);

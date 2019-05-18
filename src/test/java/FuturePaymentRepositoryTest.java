@@ -19,8 +19,8 @@ public class FuturePaymentRepositoryTest {
         futurePayment.setID(1);
         futurePayment2.setID(2);
         this.futureRepo = new FuturePaymentRepository();
-        futureRepo.AddToRepo(futurePayment);
-        futureRepo.AddToRepo(futurePayment2);
+        futureRepo.addToRepository(futurePayment);
+        futureRepo.addToRepository(futurePayment2);
     }
 
     @Test
@@ -30,21 +30,20 @@ public class FuturePaymentRepositoryTest {
     }
 
     @Test
-    public void addToRepo() {
+    public void addToRepository() {
         assertEquals("1,pszne obiad,21.37,Kosmetyki,bardzo pszne\n" +
                 "2,pszne obiad2,14.1,Sprzet,bardzo pszne2\n", futureRepo.toString());
     }
 
     @Test
     public void deletePayment() {
-        futureRepo.DeletePayment(2);
-        assertEquals(1, futureRepo.getRepo().size());
+        futureRepo.deletePayment(2);
+        assertEquals(1, futureRepo.getFuturePayments().size());
     }
 
     @Test
-    public void getRepo() {
-        assertEquals(futurePayment, futureRepo.getRepo().get(0));
-        assertEquals(futurePayment2, futureRepo.getRepo().get(1));
-
+    public void getFuturePayments() {
+        assertEquals(futurePayment, futureRepo.getFuturePayments().get(0));
+        assertEquals(futurePayment2, futureRepo.getFuturePayments().get(1));
     }
 }

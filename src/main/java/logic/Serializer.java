@@ -2,7 +2,6 @@ package logic;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -10,74 +9,74 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 
-
 public class Serializer {
 
-    //SERIALIZATION METHODS
-
-    public void SerializePast(PastPaymentRepository pastRepo)
+    public void serializePast(PastPaymentRepository pastPaymentRepository)
     {
         try {
             FileOutputStream outStream = new FileOutputStream("PAST.xml");
             XStream xStream = new XStream(new DomDriver());
-            xStream.toXML(pastRepo.getRepo(), outStream);
+            xStream.toXML(pastPaymentRepository.getPastPayments(), outStream);
         }
-        catch(IOException ex) {}
+        catch(IOException exception) {
+            System.out.println(exception.getMessage());
+        }
     }
 
-    public void SerializeFuture(FuturePaymentRepository futureRepo)
+    public void serializeFuture(FuturePaymentRepository futurePaymentRepository)
     {
         try {
             FileOutputStream outStream = new FileOutputStream("FUTURE.xml");
             XStream xStream = new XStream(new DomDriver());
-            xStream.toXML(futureRepo.getRepo(), outStream);
+            xStream.toXML(futurePaymentRepository.getFuturePayments(), outStream);
         }
-        catch(IOException ex) {}
+        catch(IOException exception) {
+            System.out.println(exception.getMessage());
+        }
     }
 
 
-    public void SerializeMonth(MonthlyPaymentRepository monthrepo)
+    public void serializeMonth(MonthlyPaymentRepository monthlyPaymentRepository)
     {
         try {
             FileOutputStream outStream = new FileOutputStream("MONTHLY.xml");
             XStream xStream = new XStream(new DomDriver());
-            xStream.toXML(monthrepo.getRepo(), outStream);
+            xStream.toXML(monthlyPaymentRepository.getMonthlyPayments(), outStream);
         }
-        catch(IOException ex) {}
+        catch(IOException exception) {
+            System.out.println(exception.getMessage());
+        }
     }
 
-
-    public void SerializeAll(PastPaymentRepository pastRepo,
-                             FuturePaymentRepository futureRepo,
-                             MonthlyPaymentRepository monthlyRepo)
+    public void serializeAll(PastPaymentRepository pastPaymentRepository,
+                             FuturePaymentRepository futurePaymentRepository,
+                             MonthlyPaymentRepository monthlyPaymentRepository)
     {
-        SerializePast(pastRepo);
-        SerializeFuture(futureRepo);
-        SerializeMonth(monthlyRepo);
+        serializePast(pastPaymentRepository);
+        serializeFuture(futurePaymentRepository);
+        serializeMonth(monthlyPaymentRepository);
     }
 
-    //DESERIALIZATION METHODS
-
-    public PastPaymentRepository DeserializePast()
+    public PastPaymentRepository deserializePast()
     {
-        PastPaymentRepository pastRepo = new PastPaymentRepository();
+        PastPaymentRepository pastPaymentRepository = new PastPaymentRepository();
 
         try {
             File xmlFile = new File("PAST.xml");
             XStream xStream = new XStream(new DomDriver());
 
             for (PastPayment e : (ArrayList<PastPayment>) xStream.fromXML(new FileInputStream(xmlFile))) {
-                pastRepo.AddToRepo(e);
+                pastPaymentRepository.addToRepository(e);
             }
+        } catch(IOException exception) {
+            System.out.println(exception.getMessage());
         }
-
-        catch(IOException ex) {}
-        return pastRepo;
+        return pastPaymentRepository;
     }
 
-    public FuturePaymentRepository DeserializeFuture()
+    public FuturePaymentRepository deserializeFuture()
     {
-        FuturePaymentRepository futureRepo = new FuturePaymentRepository();
+        FuturePaymentRepository futurePaymentRepository = new FuturePaymentRepository();
 
         try {
             File xmlFile = new File("FUTURE.xml");
@@ -85,28 +84,29 @@ public class Serializer {
             xStream.allowTypeHierarchy(Collection.class);
 
             for (FuturePayment e : (ArrayList<FuturePayment>) xStream.fromXML(new FileInputStream(xmlFile))) {
-                futureRepo.AddToRepo(e);
+                futurePaymentRepository.addToRepository(e);
             }
+        } catch(IOException exception) {
+            System.out.println(exception.getMessage());
         }
-        catch(IOException ex) {}
-        return futureRepo;
+        return futurePaymentRepository;
     }
 
 
-    public MonthlyPaymentRepository DeserializeMonth()
+    public MonthlyPaymentRepository deserializeMonth()
     {
-        MonthlyPaymentRepository monthRepo = new MonthlyPaymentRepository();
+        MonthlyPaymentRepository monthlyPaymentRepository = new MonthlyPaymentRepository();
 
         try {
             File xmlFile = new File("MONTHLY.xml");
             XStream xStream = new XStream(new DomDriver());
 
             for (MonthlyPayment e : (ArrayList<MonthlyPayment>) xStream.fromXML(new FileInputStream(xmlFile))) {
-                monthRepo.AddToRepo(e);
+                monthlyPaymentRepository.addToRepository(e);
             }
+        } catch(IOException exception) {
+            System.out.println(exception.getMessage());
         }
-
-        catch(IOException ex) {}
-        return monthRepo;
+        return monthlyPaymentRepository;
     }
 }
