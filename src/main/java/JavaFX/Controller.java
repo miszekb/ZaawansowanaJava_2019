@@ -98,6 +98,8 @@ public class Controller {
     @FXML
     private PieChart pieChart;
 
+    @FXML CheckBox cyclicCheckBox;
+
     @FXML
     void deslectCheckBoxes(){
         if(!chartsTab.isSelected()) {
@@ -466,8 +468,14 @@ public class Controller {
         if(choiceBoxResult != null && nameTextField.getText() != null && priceTextField.getText() != null && descTextField.getText() != null){
         FuturePayment futurePayment = new FuturePayment(nameTextField.getText(), Float.parseFloat(priceTextField.getText()),
                 choiceBoxResult,descTextField.getText());
+        if(cyclicCheckBox.isSelected()){
+            LocalDate localDate = LocalDate.now();
+            futurePayment.setDescription(Integer.toString(localDate.getMonth().getValue()));
+            futurePayment.setName(futurePayment.getPaymentName() + " (cykliczna)");
+            futurePayment.setCyclic(true);
+        }
         futurePaymentRepository.addToRepository(futurePayment);
-        nameTextField.clear();priceTextField.clear();descTextField.clear();choiceBox.setValue(null);
+        nameTextField.clear();priceTextField.clear();descTextField.clear();choiceBox.setValue(null);cyclicCheckBox.setSelected(false);
         chartsTab.setDisable(false);
         openMainTabEvent();
         }
@@ -485,8 +493,17 @@ public class Controller {
             else{
                 pastPayment = new PastPayment(temp.getName(), temp.getPrice(),temp.getType(),temp.getDescription(),date);
             }
+            if(temp.getCyclic() == true){
+                int desc = Integer.parseInt(temp.getDescription()) +1 ;
+                if (desc == 13) desc = 1;
+                pastPayment.setDescription(pastPayment.getPaymentDescription()+" opłacono dla :"+Integer.parseInt(temp.getDescription()) );
+
+                temp.setDescription(Integer.toString(desc));
+            }
+
             pastPaymentRepository.addToRepository(pastPayment);
             futurePaymentRepository.deletePayment(temp.getID());
+            futurePaymentsList.removeAll(futurePaymentsList);
             openMainTabEvent();
             finalDescTextField.clear();
             datePicker.getEditor().clear();

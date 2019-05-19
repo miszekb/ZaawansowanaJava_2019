@@ -30,7 +30,11 @@ public class FuturePaymentRepository {
 		{
 			if (futurePayments.get(i).getPaymentID() == ID)
 			{
+				if(futurePayments.get(i).getCyclic() == false)
 				result = futurePayments.remove(futurePayments.get(i));
+				else{
+
+				}
 			}
 		}
 		
