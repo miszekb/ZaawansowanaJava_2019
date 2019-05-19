@@ -17,6 +17,9 @@ public class Serializer {
             FileOutputStream outStream = new FileOutputStream("PAST.xml");
             XStream xStream = new XStream(new DomDriver());
             xStream.toXML(pastPaymentRepository.getPastPayments(), outStream);
+            for(PastPayment pp:pastPaymentRepository.getPastPayments()){
+                pp.savePastPayment();
+            }
         }
         catch(IOException exception) {
             System.out.println(exception.getMessage());
@@ -29,6 +32,10 @@ public class Serializer {
             FileOutputStream outStream = new FileOutputStream("FUTURE.xml");
             XStream xStream = new XStream(new DomDriver());
             xStream.toXML(futurePaymentRepository.getFuturePayments(), outStream);
+
+            for(FuturePayment fp:futurePaymentRepository.getFuturePayments()){
+                fp.saveFuturePayment();
+            }
         }
         catch(IOException exception) {
             System.out.println(exception.getMessage());
