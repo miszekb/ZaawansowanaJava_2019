@@ -45,7 +45,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -112,18 +112,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane" />
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="GradlePaymentsManager" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="GradlePaymentsManager" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -134,7 +124,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557820455320" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ZaawansowanaJava_2019 — kopia" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -278,6 +268,7 @@
       <workItem from="1557776840423" duration="1462000" />
       <workItem from="1557820155916" duration="430000" />
       <workItem from="1557840906005" duration="619000" />
+      <workItem from="1558262853548" duration="23000" />
     </task>
     <servers />
   </component>
@@ -314,12 +305,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33227000" />
+    <option name="totallyTimeSpent" value="33250000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="3222" height="1762" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12364217" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12440381" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -361,286 +352,37 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/JavaFX/Controller.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/JavaFX/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/DrawingClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="45" column="169" selection-start-line="45" selection-start-column="169" selection-end-line="45" selection-end-column="169" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/PastPaymentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/PaymentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/RandomBaseGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/FuturePayment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="46" column="27" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="27" />
-          <folding>
-            <element signature="e#83#84#0" expanded="true" />
-            <element signature="e#99#100#0" expanded="true" />
-            <element signature="e#129#130#0" expanded="true" />
-            <element signature="e#148#149#0" expanded="true" />
-            <element signature="e#176#177#0" expanded="true" />
-            <element signature="e#194#195#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#478#479#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/FuturePaymentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/JsonReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Categories.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Payment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/PastPayment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="76" column="13" lean-forward="true" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/DrawingClass.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/PastPaymentRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/PaymentRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/RandomBaseGenerator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/FuturePayment.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/FuturePaymentRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/JsonReader.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Categories.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Payment.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/MainClass.java" />
+    <entry file="file://$PROJECT_DIR$/build.gradle" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/PastPayment.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/logic/PaymentsManagerTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/MonthlyPayment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding>
-            <element signature="e#1081#1082#0" expanded="true" />
-            <element signature="e#1113#1114#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-            <element signature="e#1363#1364#0" expanded="true" />
-            <element signature="e#1415#1416#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1526#1527#0" expanded="true" />
-            <element signature="e#1585#1586#0" expanded="true" />
-            <element signature="e#1619#1620#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1701#1702#0" expanded="true" />
-            <element signature="e#1762#1763#0" expanded="true" />
-            <element signature="e#1794#1795#0" expanded="true" />
-            <element signature="e#1856#1857#0" expanded="true" />
-            <element signature="e#1890#1891#0" expanded="true" />
-            <element signature="e#1955#1956#0" expanded="true" />
-            <element signature="e#1987#1988#0" expanded="true" />
-            <element signature="e#2062#2063#0" expanded="true" />
-            <element signature="e#2108#2109#0" expanded="true" />
-            <element signature="e#2153#2154#0" expanded="true" />
-            <element signature="e#2180#2181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/MonthlyPayment.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/MonthlyPaymentTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/CurrencyExchangerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PaymentsManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="110" column="5" lean-forward="true" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/CurrencyExchanger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="70" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/JsonReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/PaymentsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="163" column="5" lean-forward="true" selection-start-line="163" selection-start-column="5" selection-end-line="163" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3604#3605#0" expanded="true" />
-            <element signature="e#3706#3707#0" expanded="true" />
-            <element signature="e#3840#3841#0" expanded="true" />
-            <element signature="e#3947#3948#0" expanded="true" />
-            <element signature="e#3993#3994#0" expanded="true" />
-            <element signature="e#4054#4055#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/MonthlyPaymentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PastPaymentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MainClassTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SerializerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Serializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FuturePaymentRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PastPaymentRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FuturePaymentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JavaFX/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="368" column="35" selection-start-line="368" selection-start-column="35" selection-end-line="368" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JavaFX/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/JavaFX/sample.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CurrencyExchangerTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/PaymentsManagerTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/CurrencyExchanger.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/JsonReaderTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/PaymentsManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/MonthlyPaymentRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/PastPaymentTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/MainClassTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/SerializerTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Serializer.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/FuturePaymentRepositoryTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/PastPaymentRepositoryTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/FuturePaymentTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/JavaFX/Controller.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/JavaFX/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/JavaFX/sample.fxml" />
     <entry file="file://$PROJECT_DIR$/out/production/classes/logic/Client.class" />
     <entry file="file://$PROJECT_DIR$/out/production/classes/logic/PaymentRepository.class" />
     <entry file="file://$PROJECT_DIR$/out/production/classes/logic/FuturePaymentRepository.class" />

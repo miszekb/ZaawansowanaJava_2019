@@ -40,16 +40,16 @@ public class FuturePayment implements Payment {
 		this.description = "";
 	}
 
-	public void saveFuturePayment(FuturePayment futurePayment) {
+	public void saveFuturePayment() {
 		EntityManager entityManager = getEntityManager();
 
 		entityManager.getTransaction().begin();
 
-		entityManager.persist(futurePayment);
+		entityManager.persist(this);
 		entityManager.getTransaction().commit();
 	}
 
-	public FuturePayment futurePayment(int id) {
+	public FuturePayment getFuturePayment(int id) {
 		EntityManager entityManager = getEntityManager();
 		FuturePayment futurePayment = entityManager.find(FuturePayment.class,  id);
 		entityManager.detach(futurePayment);
