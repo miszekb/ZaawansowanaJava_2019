@@ -21,6 +21,7 @@ public class FuturePayment implements Payment {
 	private String description;
 
 	private float priceInDifferentCurrency;
+	private boolean isCyclic = false;
 
 	public FuturePayment(String name, float price, Categories type, String description)
 	{
@@ -110,6 +111,15 @@ public class FuturePayment implements Payment {
 	public void setType(Categories type) { this.type = type; }
 
 	public void setDescription(String description) { this.description = description; }
+
+	public void setCyclic(boolean status){
+		isCyclic = status;
+	}
+
+	public boolean getCyclic(){
+		return isCyclic;
+	}
+
 
 	@Override
 	public String toString()

@@ -13,7 +13,6 @@ public class PaymentsManager {
 
     private PastPaymentRepository pastPaymentRepository;
     private FuturePaymentRepository futurePaymentRepository;
-    private MonthlyPaymentRepository monthlyPaymentRepository;
     private Serializer serializer;
     private CurrencyExchanger currencyExchanger;
 
@@ -34,7 +33,6 @@ public class PaymentsManager {
     public PaymentsManager() {
         pastPaymentRepository = new PastPaymentRepository();
         futurePaymentRepository = new FuturePaymentRepository();
-        monthlyPaymentRepository = new MonthlyPaymentRepository();
         serializer = new Serializer();
         currencyExchanger = new CurrencyExchanger();
     }
@@ -54,10 +52,6 @@ public class PaymentsManager {
         return futurePaymentRepository;
     }
 
-    public MonthlyPaymentRepository getMonthlyPaymentRepository()
-    {
-        return monthlyPaymentRepository;
-    }
 
     public FuturePayment getSpecificFuturePayment(int ID)
     {
@@ -89,20 +83,6 @@ public class PaymentsManager {
         return pastPayment;
     }
 
-    public MonthlyPayment getSpecificMonthlyPayment(int ID)
-    {
-        MonthlyPayment monthlyPayment = null;
-
-        for(MonthlyPayment payment: monthlyPaymentRepository.getMonthlyPayments())
-        {
-            if(payment.getPaymentID() == ID)
-            {
-                monthlyPayment = payment;
-            }
-        }
-
-        return monthlyPayment;
-    }
 
     public float getChosenCurrencyRate(String currencyCode)
     {
@@ -116,24 +96,11 @@ public class PaymentsManager {
 
     public void setFuturePaymentRepository(FuturePaymentRepository futurePaymentRepository) { this.futurePaymentRepository = futurePaymentRepository; }
 
-    public void setMonthlyPaymentRepository(MonthlyPaymentRepository monthlyPaymentRepository) { this.monthlyPaymentRepository = monthlyPaymentRepository; }
-
 
     public void addToPastPaymentRepository(PastPayment pastPayment) { pastPaymentRepository.addToRepository(pastPayment); }
 
     public void addToFuturePaymentRepository(FuturePayment futurePayment) { futurePaymentRepository.addToRepository(futurePayment); }
 
-    public void addToMonthlyPaymentRepository(MonthlyPayment monthlyPayment) { monthlyPaymentRepository.addToRepository(monthlyPayment); }
-
-    public void update() {
-        for(MonthlyPayment payment: monthlyPaymentRepository.getMonthlyPayments()) {
-            if (!payment.getMonthList().get(new Date().getMonth() + 1).booleanValue()) {
-                futurePaymentRepository.addToRepository(new FuturePayment(payment.getPaymentName(), payment.getPaymentPrice(),
-                        Categories.valueOf(payment.getPaymentType()),
-                        payment.getPaymentDescription()));
-            }
-        }
-    }
 
     public void serializePastPaymentRepository()
     {
@@ -154,7 +121,7 @@ public class PaymentsManager {
 
     public void serializeAll()
     {
-        serializer.serializeAll(pastPaymentRepository, futurePaymentRepository, monthlyPaymentRepository);
+        serializer.serializeAll(pastPaymentRepository, futurePaymentRepository);
     }
 
     public void convertEveryPrice(String currencyCode)
@@ -168,11 +135,6 @@ public class PaymentsManager {
         }
 
         for(FuturePayment payment: futurePaymentRepository.getFuturePayments())
-        {
-            payment.setPriceInDifferentCurrency(roundFloat((currentRate), 2));
-        }
-
-        for(MonthlyPayment payment: monthlyPaymentRepository.getMonthlyPayments())
         {
             payment.setPriceInDifferentCurrency(roundFloat((currentRate), 2));
         }
