@@ -57,6 +57,15 @@ public class FuturePayment implements Payment {
 		return futurePayment;
 	}
 
+    public void reomoveFuturePayment(int id) {
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+        FuturePayment futurePayment = entityManager.find(FuturePayment.class,  id);
+        entityManager.remove(futurePayment);
+        entityManager.getTransaction().commit();
+    }
+
+
 	@Override
 	public int getPaymentID() { return id; }
 

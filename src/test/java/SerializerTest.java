@@ -1,6 +1,7 @@
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import logic.*;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,23 +18,30 @@ public class SerializerTest {
     FuturePaymentRepository futurePaymentRepository;
     XStream xStream;
     Serializer serializer;
+    PastPayment pastPayment;
+    PastPayment pastPayment2;
+
+    FuturePayment futurePayment;
+    FuturePayment futurePayment2;
+    FuturePayment futurePayment3;
+    FuturePayment futurePayment4;
 
     @Before
     public void setUp() {
         Date date = new Date(2019, 3, 12);
         Date date2 = new Date(2018, 4, 10);
-        PastPayment pastPayment = new PastPayment( "pszne obiad", 21.37f, Categories.Zywnosc, "bardzo pszne", date);
-        PastPayment pastPayment2 = new PastPayment( "pszne obiad2", 14.10f, Categories.Ubrania_Obuwie, "bardzo pszne2", date2);
+        pastPayment = new PastPayment( "pszne obiad", 21.37f, Categories.Zywnosc, "bardzo pszne", date);
+        pastPayment2 = new PastPayment( "pszne obiad2", 14.10f, Categories.Ubrania_Obuwie, "bardzo pszne2", date2);
         pastPayment.setID(10);
         pastPayment2.setID(20);
         pastPaymentRepository = new PastPaymentRepository();
         pastPaymentRepository.addToRepository(pastPayment);
         pastPaymentRepository.addToRepository(pastPayment2);
 
-        FuturePayment futurePayment = new FuturePayment( "usluga1", 10.21f, Categories.Rozrywka, "nothinghere1");
-        FuturePayment futurePayment2 = new FuturePayment( "usluga2", 15.22f, Categories.Transport, "nothinghere2");
-        FuturePayment futurePayment3 = new FuturePayment( "usluga3", 20.23f, Categories.Chemia_SrodkiCzystosci, "nothinghere3");
-        FuturePayment futurePayment4 = new FuturePayment( "usluga4", 25.24f, Categories.Uzywki, "nothinghere4");
+        futurePayment = new FuturePayment( "usluga1", 10.21f, Categories.Rozrywka, "nothinghere1");
+        futurePayment2 = new FuturePayment( "usluga2", 15.22f, Categories.Transport, "nothinghere2");
+        futurePayment3 = new FuturePayment( "usluga3", 20.23f, Categories.Chemia_SrodkiCzystosci, "nothinghere3");
+        futurePayment4 = new FuturePayment( "usluga4", 25.24f, Categories.Uzywki, "nothinghere4");
         futurePayment.setID(50);
         futurePayment2.setID(60);
         futurePayment3.setID(70);
@@ -99,5 +107,13 @@ public class SerializerTest {
     public void deserializeFuture() {
         FuturePaymentRepository futurePaymentRepository2 = serializer.deserializeFuture();
         assertEquals(futurePaymentRepository.toString(), futurePaymentRepository2.toString());
+    }
+
+    @After
+    public void exti() {
+        futurePayment.reomoveFuturePayment(futurePayment.getID());
+        futurePayment2.reomoveFuturePayment(futurePayment2.getID());
+        futurePayment3.reomoveFuturePayment(futurePayment3.getID());
+        futurePayment4.reomoveFuturePayment(futurePayment4.getID());
     }
 }
