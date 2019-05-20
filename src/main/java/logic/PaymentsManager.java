@@ -119,6 +119,20 @@ public class PaymentsManager {
         this.futurePaymentRepository = serializer.deserializeFuture();
     }
 
+    public  void deserializeFromDB(){
+        FuturePayment fp = new FuturePayment();
+        for(int i=0;i<fp.allEntries().size();i++){
+            this.futurePaymentRepository.addToRepository(fp.getFuturePayment(fp.allEntries().get(i)));
+        }
+    }
+
+    public  void deserializePastFromDB(){
+        PastPayment fp = new PastPayment();
+        for(int i=0;i<fp.allEntries().size();i++){
+            this.pastPaymentRepository.addToRepository(fp.getPastPayment(fp.allEntries().get(i)));
+        }
+    }
+
     public void serializeAll()
     {
         serializer.serializeAll(pastPaymentRepository, futurePaymentRepository);

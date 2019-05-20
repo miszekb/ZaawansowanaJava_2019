@@ -526,8 +526,30 @@ public class Controller {
         drawingClass = new DrawingClass(pastPaymentRepository.getPastPayments(),futurePaymentRepository.getFuturePayments());
     }
 
+    @FXML void deserializeFutureDB(){
+        paymentsManager.deserializeFromDB();
+        futurePaymentRepository = paymentsManager.getFuturePaymentRepository();
+        if (futurePaymentsList != null)
+            futurePaymentsList.removeAll(futurePaymentsList);
+        openMainTabEvent();
+        chartsTab.setDisable(false);
+        drawingClass = new DrawingClass(pastPaymentRepository.getPastPayments(),futurePaymentRepository.getFuturePayments());
+    }
+
+
+
     @FXML void deserializePast(){
         paymentsManager.deserializerPastPaymentRepository();
+        pastPaymentRepository = paymentsManager.getPastPaymentRepository();
+        if (pastPaymentList != null)
+            pastPaymentList.removeAll(pastPaymentList);
+        openTabEvent();
+        chartsTab.setDisable(false);
+        drawingClass = new DrawingClass(pastPaymentRepository.getPastPayments(),futurePaymentRepository.getFuturePayments());
+    }
+
+    @FXML void deserializePastDB(){
+        paymentsManager.deserializePastFromDB();
         pastPaymentRepository = paymentsManager.getPastPaymentRepository();
         if (pastPaymentList != null)
             pastPaymentList.removeAll(pastPaymentList);
