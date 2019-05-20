@@ -1,6 +1,9 @@
 package logic;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 import static logic.PaymentsManager.getEntityManager;
 
@@ -146,5 +149,16 @@ public class FuturePayment implements Payment {
 	public String archive() {
 		// TODO archiving implementation
 		return null;
+	}
+
+	public List<Integer> allEntries() {
+		EntityManager em = getEntityManager();
+		em.getTransaction().begin();
+		List<Integer> listPersons = em.createNativeQuery(
+				"SELECT id FROM future_payment_table ").getResultList();
+		em.getTransaction().commit();
+		em.close();
+
+		return  listPersons;
 	}
 }

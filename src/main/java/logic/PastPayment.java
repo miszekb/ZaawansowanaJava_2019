@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import static logic.PaymentsManager.getEntityManager;
@@ -204,5 +205,16 @@ public class PastPayment implements Payment{
 				description +"," + reportDate;
 
 		return info;
+	}
+
+	public List<Integer> allEntries() {
+		EntityManager em = getEntityManager();
+		em.getTransaction().begin();
+		List<Integer> listPersons = em.createNativeQuery(
+				"SELECT id FROM past_payment_table ").getResultList();
+		em.getTransaction().commit();
+		em.close();
+
+		return  listPersons;
 	}
 }

@@ -201,8 +201,10 @@
                   </Label>
                   <Circle layoutX="290.0" layoutY="337.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
                   <Button layoutX="285.0" layoutY="388.0" mnemonicParsing="false" onAction="#serialize" prefHeight="108.0" prefWidth="168.0" text="Serializuj dane" />
-                  <Button layoutX="469.0" layoutY="388.0" mnemonicParsing="false" onAction="#deserializeFuture" prefHeight="15.0" prefWidth="303.0" text="Deserializuj opłaty zaplanowane" />
-                  <Button layoutX="470.0" layoutY="455.0" mnemonicParsing="false" onAction="#deserializePast" prefHeight="16.0" prefWidth="302.0" text="Deserializuj zrealizowane opłaty" />
+                  <Button layoutX="469.0" layoutY="388.0" mnemonicParsing="false" onAction="#deserializeFuture" prefHeight="49.0" prefWidth="346.0" text="Deserializuj opłaty zaplanowane(XML)" />
+                  <Button layoutX="470.0" layoutY="455.0" mnemonicParsing="false" onAction="#deserializePast" prefHeight="49.0" prefWidth="345.0" text="Deserializuj zrealizowane opłaty(XML)" />
+                  <Button layoutX="825.0" layoutY="388.0" mnemonicParsing="false" onAction="#deserializeFutureDB" prefHeight="49.0" prefWidth="67.0" text="DB" />
+                  <Button layoutX="825.0" layoutY="455.0" mnemonicParsing="false" onAction="#deserializePastDB" prefHeight="49.0" prefWidth="67.0" text="DB" />
                </children>
             </AnchorPane>
         </content>
