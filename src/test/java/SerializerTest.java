@@ -57,6 +57,14 @@ public class SerializerTest {
         xStream.alias("PastPayment", PastPayment.class);
 
         serializer = new Serializer();
+
+        /*futurePayment.removeFuturePayment(futurePayment.getID());
+        futurePayment2.removeFuturePayment(futurePayment2.getID());
+        futurePayment3.removeFuturePayment(futurePayment3.getID());
+        futurePayment4.removeFuturePayment(futurePayment4.getID());
+
+        pastPayment.removePastPayment(pastPayment.getID());
+        pastPayment2.removePastPayment(pastPayment2.getID());*/
     }
 
     @Test
@@ -110,10 +118,13 @@ public class SerializerTest {
     }
 
     @After
-    public void exti() {
-        futurePayment.reomoveFuturePayment(futurePayment.getID());
-        futurePayment2.reomoveFuturePayment(futurePayment2.getID());
-        futurePayment3.reomoveFuturePayment(futurePayment3.getID());
-        futurePayment4.reomoveFuturePayment(futurePayment4.getID());
+    public void exit() {
+        futurePayment.removeFuturePayment();
+        futurePayment2.removeFuturePayment();
+        futurePayment3.removeFuturePayment();
+        futurePayment4.removeFuturePayment();
+
+        pastPayment.removePastPayment();
+        pastPayment2.removePastPayment();
     }
 }

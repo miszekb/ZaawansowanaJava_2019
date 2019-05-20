@@ -64,6 +64,13 @@ public class PastPayment implements Payment{
 		return pastPayment;
 	}
 
+	public void removePastPayment() {
+		EntityManager entityManager = getEntityManager();
+		entityManager.getTransaction().begin();
+		entityManager.remove(entityManager.contains(this) ? this : entityManager.merge(this));
+		entityManager.getTransaction().commit();
+	}
+
 	@Override
 	public int getPaymentID() {
 		return id;
