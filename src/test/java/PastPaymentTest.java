@@ -40,7 +40,7 @@ public class PastPaymentTest {
 
     @Test
     public void getPaymentType() {
-        assertEquals("Transport", pastPayment.getPaymentType());
+        assertEquals(Categories.Transport, pastPayment.getPaymentType());
     }
 
     @Test
@@ -69,7 +69,7 @@ public class PastPaymentTest {
     @Test
     public void setPaymentType() {
         pastPayment.setPaymentType(Categories.Sprzet);
-        assertEquals("Sprzet", pastPayment.getPaymentType());
+        assertEquals(Categories.Sprzet, pastPayment.getPaymentType());
     }
 
     @Test

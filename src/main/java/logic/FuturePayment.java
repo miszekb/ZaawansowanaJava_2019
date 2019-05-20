@@ -67,7 +67,7 @@ public class FuturePayment implements Payment {
 	public float getPaymentPrice() { return price; }
 
 	@Override
-	public String getPaymentType() { return type.key; }
+	public Categories getPaymentType() { return type; }
 
 	@Override
 	public String getPaymentDescription() { return description; }
@@ -83,6 +83,10 @@ public class FuturePayment implements Payment {
 	public Categories getType() { return type; }
 
 	public String getDescription() { return description; }
+
+	public boolean getCyclic(){
+		return isCyclic;
+	}
 
 
 	@Override
@@ -114,10 +118,6 @@ public class FuturePayment implements Payment {
 
 	public void setCyclic(boolean status){
 		isCyclic = status;
-	}
-
-	public boolean getCyclic(){
-		return isCyclic;
 	}
 
 

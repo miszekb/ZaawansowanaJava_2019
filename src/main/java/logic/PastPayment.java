@@ -80,8 +80,8 @@ public class PastPayment implements Payment{
 	}
 	
 	@Override
-	public String getPaymentType() {
-		return type.key;
+	public Categories getPaymentType() {
+		return type;
 	}
 	
 	@Override
@@ -199,9 +199,3 @@ public class PastPayment implements Payment{
 		return info;
 	}
 }
-	
-	
-
-	
-	
-

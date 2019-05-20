@@ -1,18 +1,38 @@
 <list>
-  <logic.FuturePayment>
-    <id>2</id>
-    <name>pszne obiad</name>
-    <price>21.37</price>
+  <FuturePayment>
+    <id>50</id>
+    <name>usluga1</name>
+    <price>10.21</price>
+    <type>Rozrywka</type>
+    <description>nothinghere1</description>
+    <priceInDifferentCurrency>0.0</priceInDifferentCurrency>
+    <isCyclic>false</isCyclic>
+  </FuturePayment>
+  <FuturePayment>
+    <id>60</id>
+    <name>usluga2</name>
+    <price>15.22</price>
     <type>Transport</type>
-    <description>bardzo pszne</description>
+    <description>nothinghere2</description>
     <priceInDifferentCurrency>0.0</priceInDifferentCurrency>
-  </logic.FuturePayment>
-  <logic.FuturePayment>
-    <id>75132</id>
-    <name>pszne obiad2</name>
-    <price>14.1</price>
-    <type>Kosmetyki</type>
-    <description>bardzo pszne2</description>
+    <isCyclic>false</isCyclic>
+  </FuturePayment>
+  <FuturePayment>
+    <id>70</id>
+    <name>usluga3</name>
+    <price>20.23</price>
+    <type>Chemia_SrodkiCzystosci</type>
+    <description>nothinghere3</description>
     <priceInDifferentCurrency>0.0</priceInDifferentCurrency>
-  </logic.FuturePayment>
+    <isCyclic>false</isCyclic>
+  </FuturePayment>
+  <FuturePayment>
+    <id>80</id>
+    <name>usluga4</name>
+    <price>25.24</price>
+    <type>Uzywki</type>
+    <description>nothinghere4</description>
+    <priceInDifferentCurrency>0.0</priceInDifferentCurrency>
+    <isCyclic>false</isCyclic>
+  </FuturePayment>
 </list>

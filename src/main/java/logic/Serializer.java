@@ -16,6 +16,8 @@ public class Serializer {
         try {
             FileOutputStream outStream = new FileOutputStream("PAST.xml");
             XStream xStream = new XStream(new DomDriver());
+            xStream.alias("PastPayment", PastPayment.class);
+            xStream.allowTypeHierarchy(Collection.class);
             xStream.toXML(pastPaymentRepository.getPastPayments(), outStream);
             for(PastPayment pp:pastPaymentRepository.getPastPayments()){
                 pp.savePastPayment();
@@ -31,8 +33,9 @@ public class Serializer {
         try {
             FileOutputStream outStream = new FileOutputStream("FUTURE.xml");
             XStream xStream = new XStream(new DomDriver());
+            xStream.alias("FuturePayment", FuturePayment.class);
+            xStream.allowTypeHierarchy(Collection.class);
             xStream.toXML(futurePaymentRepository.getFuturePayments(), outStream);
-
             for(FuturePayment fp:futurePaymentRepository.getFuturePayments()){
                 fp.saveFuturePayment();
             }
@@ -54,16 +57,10 @@ public class Serializer {
     {
         PastPaymentRepository pastPaymentRepository = new PastPaymentRepository();
 
-        try {
-            File xmlFile = new File("PAST.xml");
-            XStream xStream = new XStream(new DomDriver());
-
-            for (PastPayment e : (ArrayList<PastPayment>) xStream.fromXML(new FileInputStream(xmlFile))) {
-                pastPaymentRepository.addToRepository(e);
-            }
-        } catch(IOException exception) {
-            System.out.println(exception.getMessage());
+        for (Payment pay : readFromFile("PAST.xml")) {
+            pastPaymentRepository.addToRepository((PastPayment) pay);
         }
+
         return pastPaymentRepository;
     }
 
@@ -71,18 +68,32 @@ public class Serializer {
     {
         FuturePaymentRepository futurePaymentRepository = new FuturePaymentRepository();
 
+        for (Payment pay : readFromFile("FUTURE.xml")) {
+            futurePaymentRepository.addToRepository((FuturePayment) pay);
+        }
+
+        return futurePaymentRepository;
+    }
+
+    private ArrayList<Payment> readFromFile(String path){
+
+        ArrayList<Payment> payments = new ArrayList<>();
+
         try {
-            File xmlFile = new File("FUTURE.xml");
+            File xmlFile = new File(path);
             XStream xStream = new XStream(new DomDriver());
+
+            xStream.alias("FuturePayment", FuturePayment.class);
+            xStream.alias("PastPayment", PastPayment.class);
             xStream.allowTypeHierarchy(Collection.class);
 
-            for (FuturePayment e : (ArrayList<FuturePayment>) xStream.fromXML(new FileInputStream(xmlFile))) {
-                futurePaymentRepository.addToRepository(e);
-            }
+            payments = (ArrayList<Payment>)xStream.fromXML(new FileInputStream(xmlFile));
+
         } catch(IOException exception) {
             System.out.println(exception.getMessage());
         }
-        return futurePaymentRepository;
+
+        return payments;
     }
 
 }

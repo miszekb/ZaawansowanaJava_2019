@@ -23,7 +23,7 @@ public class DrawingClass {
         ArrayList<PastPayment> temporaryPastPaymentsList = new ArrayList<PastPayment>();
         for(PastPayment pp : pastPaymentsList){
             LocalDate date = pp.getPaymentDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            if(date.getMonthValue() >= monthOne && date.getMonthValue() <=monthLast && date.getDayOfMonth() >= dayOne && date.getDayOfMonth()  <= dayLast && pp.getType()==num)
+            if(date.getMonthValue() >= monthOne && date.getMonthValue() <=monthLast && date.getDayOfMonth() >= dayOne && date.getDayOfMonth()  <= dayLast && pp.getPaymentType()==num)
                 temporaryPastPaymentsList.add(pp);
         }
         return temporaryPastPaymentsList.size();
@@ -34,7 +34,7 @@ public class DrawingClass {
         ArrayList<PastPayment> temporaryPastPaymentsList = new ArrayList<PastPayment>();
         for(PastPayment pp : pastPaymentsList){
             LocalDate date = pp.getPaymentDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            if(date.getMonthValue() >= monthOne && date.getMonthValue() <=monthLast && date.getDayOfMonth() >= dayOne && date.getDayOfMonth()  <= dayLast && pp.getType()==num)
+            if(date.getMonthValue() >= monthOne && date.getMonthValue() <=monthLast && date.getDayOfMonth() >= dayOne && date.getDayOfMonth()  <= dayLast && pp.getPaymentType()==num)
                 temporaryPastPaymentsList.add(pp);
         }
         float sum = 0;
@@ -47,7 +47,7 @@ public class DrawingClass {
     public int returnTypePastPayments(Categories typeNum){
         ArrayList<PastPayment> temporaryPastPaymentsList = new ArrayList<PastPayment>();
         for(PastPayment pp : pastPaymentsList){
-            if(pp.getType() == typeNum){
+            if(pp.getPaymentType() == typeNum){
                 temporaryPastPaymentsList.add(pp);
             }
         }
@@ -57,7 +57,7 @@ public class DrawingClass {
     public float returnSumOfPayments(Categories typeNum){
         ArrayList<PastPayment> temporaryPastPaymentsList = new ArrayList<PastPayment>();
         for(PastPayment pp : pastPaymentsList){
-            if(pp.getType() == typeNum){
+            if(pp.getPaymentType() == typeNum){
                 temporaryPastPaymentsList.add(pp);
             }
         }
@@ -72,7 +72,7 @@ public class DrawingClass {
     public int returnTypeFuturePayments(Categories typeNum){
         ArrayList<FuturePayment> temporaryFuturePaymentsList = new ArrayList<FuturePayment>();
         for(FuturePayment fp : futurePaymentsList){
-            if(fp.getType() == typeNum){
+            if(fp.getPaymentType() == typeNum){
                 temporaryFuturePaymentsList.add(fp);
             }
         }
@@ -82,7 +82,7 @@ public class DrawingClass {
     public float returnSumOfFuturePayments(Categories typeNum){
         ArrayList<FuturePayment> temporaryFuturePaymentsList = new ArrayList<FuturePayment>();
         for(FuturePayment fp : futurePaymentsList){
-            if(fp.getType() == typeNum){
+            if(fp.getPaymentType() == typeNum){
                 temporaryFuturePaymentsList.add(fp);
             }
         }

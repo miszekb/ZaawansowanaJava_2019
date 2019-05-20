@@ -5,7 +5,7 @@ public interface Payment {
 	public int getPaymentID();
 	public String getPaymentName();
 	public float getPaymentPrice();
-	public String getPaymentType();
+	public Categories getPaymentType();
 	public String getPaymentDescription();
 	
 	public void setPaymentID(int ID);

@@ -436,7 +436,8 @@ public class Controller {
                 if(choiceBox1.getValue().toString() == "JPY") paymentsManager.convertEveryPrice("JPY");
                 if(choiceBox1.getValue().toString() == "MXN") paymentsManager.convertEveryPrice("MXN");
                 if(choiceBox1.getValue().toString() == "RUB") paymentsManager.convertEveryPrice("RUB");
-                futurePaymentsList.removeAll(futurePaymentsList);
+                if (futurePaymentsList != null)
+                    futurePaymentsList.removeAll(futurePaymentsList);
                 openMainTabEvent();
     }
 
@@ -448,7 +449,8 @@ public class Controller {
                 if(choiceBox2.getValue().toString() == "JPY") paymentsManager.convertEveryPrice("JPY");
                 if(choiceBox2.getValue().toString() == "MXN") paymentsManager.convertEveryPrice("MXN");
                 if(choiceBox2.getValue().toString() == "RUB") paymentsManager.convertEveryPrice("RUB");
-                pastPaymentList.removeAll(pastPaymentList);
+                if (pastPaymentList != null)
+                    pastPaymentList.removeAll(pastPaymentList);
                 openTabEvent();
     }
 
@@ -517,16 +519,18 @@ public class Controller {
     @FXML void deserializeFuture(){
         paymentsManager.deserializeFuturePaymentRepository();
         futurePaymentRepository = paymentsManager.getFuturePaymentRepository();
-        futurePaymentsList.removeAll(futurePaymentsList);
+        if (futurePaymentsList != null)
+            futurePaymentsList.removeAll(futurePaymentsList);
         openMainTabEvent();
         chartsTab.setDisable(false);
         drawingClass = new DrawingClass(pastPaymentRepository.getPastPayments(),futurePaymentRepository.getFuturePayments());
     }
 
     @FXML void deserializePast(){
-        paymentsManager.deserializeFuturePaymentRepository();
+        paymentsManager.deserializerPastPaymentRepository();
         pastPaymentRepository = paymentsManager.getPastPaymentRepository();
-        pastPaymentList.removeAll(pastPaymentList);
+        if (pastPaymentList != null)
+            pastPaymentList.removeAll(pastPaymentList);
         openTabEvent();
         chartsTab.setDisable(false);
         drawingClass = new DrawingClass(pastPaymentRepository.getPastPayments(),futurePaymentRepository.getFuturePayments());

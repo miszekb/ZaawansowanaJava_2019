@@ -2,7 +2,6 @@ import logic.Categories;
 import logic.FuturePayment;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
@@ -41,7 +40,7 @@ public class FuturePaymentTest {
 
     @Test
     public void getPaymentType() {
-        assertEquals("Rachunki", futurePayment.getPaymentType());
+        assertEquals(Categories.Rachunki, futurePayment.getPaymentType());
     }
 
     @Test
@@ -70,7 +69,7 @@ public class FuturePaymentTest {
     @Test
     public void setPaymentType() {
         futurePayment.setPaymentType(Categories.Chemia_SrodkiCzystosci);
-        assertEquals("Chemia_SrodkiCzystosci", futurePayment.getPaymentType());
+        assertEquals(Categories.Chemia_SrodkiCzystosci, futurePayment.getPaymentType());
     }
 
     @Test

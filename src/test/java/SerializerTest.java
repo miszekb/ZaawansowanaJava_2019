@@ -1,52 +1,103 @@
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 import logic.*;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 
 public class SerializerTest {
+    PastPaymentRepository pastPaymentRepository;
+    FuturePaymentRepository futurePaymentRepository;
+    XStream xStream;
+    Serializer serializer;
 
+    @Before
+    public void setUp() {
+        Date date = new Date(2019, 3, 12);
+        Date date2 = new Date(2018, 4, 10);
+        PastPayment pastPayment = new PastPayment( "pszne obiad", 21.37f, Categories.Zywnosc, "bardzo pszne", date);
+        PastPayment pastPayment2 = new PastPayment( "pszne obiad2", 14.10f, Categories.Ubrania_Obuwie, "bardzo pszne2", date2);
+        pastPayment.setID(10);
+        pastPayment2.setID(20);
+        pastPaymentRepository = new PastPaymentRepository();
+        pastPaymentRepository.addToRepository(pastPayment);
+        pastPaymentRepository.addToRepository(pastPayment2);
+
+        FuturePayment futurePayment = new FuturePayment( "usluga1", 10.21f, Categories.Rozrywka, "nothinghere1");
+        FuturePayment futurePayment2 = new FuturePayment( "usluga2", 15.22f, Categories.Transport, "nothinghere2");
+        FuturePayment futurePayment3 = new FuturePayment( "usluga3", 20.23f, Categories.Chemia_SrodkiCzystosci, "nothinghere3");
+        FuturePayment futurePayment4 = new FuturePayment( "usluga4", 25.24f, Categories.Uzywki, "nothinghere4");
+        futurePayment.setID(50);
+        futurePayment2.setID(60);
+        futurePayment3.setID(70);
+        futurePayment4.setID(80);
+        futurePaymentRepository = new FuturePaymentRepository();
+        futurePaymentRepository.addToRepository(futurePayment);
+        futurePaymentRepository.addToRepository(futurePayment2);
+        futurePaymentRepository.addToRepository(futurePayment3);
+        futurePaymentRepository.addToRepository(futurePayment4);
+
+        xStream = new XStream(new DomDriver());
+        xStream.alias("FuturePayment", FuturePayment.class);
+        xStream.alias("PastPayment", PastPayment.class);
+
+        serializer = new Serializer();
+    }
 
     @Test
     public void serializePast() {
-        Date date = new Date(2019, 3, 12);
-        Date date2 = new Date(2018, 4, 10);
-        PastPayment pastPayment = new PastPayment( "pszne obiad", 21.37f, Categories.Transport, "bardzo pszne", date);
-        PastPayment pastPayment2 = new PastPayment( "pszne obiad2", 14.10f, Categories.Kosmetyki, "bardzo pszne2", date2);
-        pastPayment.setID(1);
-        pastPayment2.setID(2);
+        serializer.serializePast(pastPaymentRepository);
 
-        PastPaymentRepository pastRepo = new PastPaymentRepository();
-        pastRepo.addToRepository(pastPayment);
-        pastRepo.addToRepository(pastPayment2);
+        PastPaymentRepository pastPaymentRepository2 = new PastPaymentRepository();
 
-        Serializer serializer = new Serializer();
-        serializer.serializePast(pastRepo);
+        try {
+            File xmlFile = new File("PAST.xml");
 
-        PastPaymentRepository pastRepo2 = serializer.deserializePast();
-        assertEquals(pastRepo.toString(), pastRepo2.toString());
+            for (PastPayment e : (ArrayList<PastPayment>) xStream.fromXML(new FileInputStream(xmlFile))) {
+                pastPaymentRepository2.addToRepository(e);
+            }
+        } catch(IOException exception) {
+            System.out.println(exception.getMessage());
+        }
 
+        assertEquals(pastPaymentRepository.toString(), pastPaymentRepository2.toString());
     }
 
     @Test
     public void serializeFuture() {
-        FuturePayment futurePayment = new FuturePayment( "pszne obiad", 21.37f, Categories.Transport, "bardzo pszne");
-        FuturePayment futurePayment2 = new FuturePayment( "pszne obiad2", 14.10f, Categories.Kosmetyki, "bardzo pszne2");
-        futurePayment.setID(1);
-        futurePayment.setID(2);
+        serializer.serializeFuture(futurePaymentRepository);
 
-        FuturePaymentRepository futureRepo = new FuturePaymentRepository();
+        FuturePaymentRepository futurePaymentRepository2 = new FuturePaymentRepository();
 
-        futureRepo.addToRepository(futurePayment);
-        futureRepo.addToRepository(futurePayment2);
+        try {
+            File xmlFile = new File("FUTURE.xml");
 
-        Serializer serializer = new Serializer();
-        serializer.serializeFuture(futureRepo);
+            for (FuturePayment e : (ArrayList<FuturePayment>) xStream.fromXML(new FileInputStream(xmlFile))) {
+                futurePaymentRepository2.addToRepository(e);
+            }
+        } catch(IOException exception) {
+            System.out.println(exception.getMessage());
+        }
 
-        FuturePaymentRepository futureRepo2 = serializer.deserializeFuture();
-        assertEquals(futureRepo.toString(), futureRepo2.toString());
-
+        assertEquals(futurePaymentRepository.toString(), futurePaymentRepository2.toString());
     }
 
+    @Test
+    public void deserializePast() {
+        PastPaymentRepository pastPaymentRepository2 = serializer.deserializePast();
+        assertEquals(pastPaymentRepository.toString(), pastPaymentRepository2.toString());
+    }
+
+    @Test
+    public void deserializeFuture() {
+        FuturePaymentRepository futurePaymentRepository2 = serializer.deserializeFuture();
+        assertEquals(futurePaymentRepository.toString(), futurePaymentRepository2.toString());
+    }
 }

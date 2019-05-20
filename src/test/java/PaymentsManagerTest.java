@@ -11,9 +11,8 @@ public class PaymentsManagerTest {
     private PaymentsManager paymentsManager;
     private Date date;
 
-
     @Before
-    public void setUp() throws Exception {
+    public void setUp(){
         paymentsManager = new PaymentsManager();
 
         date = new Date(2019,3,12);
@@ -100,64 +99,22 @@ public class PaymentsManagerTest {
 
     @Test
     public void getSpecificFuturePayment() {
-        //FuturePayment futurePayment = new FuturePayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne");
-        //futurePayment.setID(1);
-        //assertEquals(futurePayment.toString(), paymentsManager.getSpecificFuturePayment(1).toString());
-    }
-
-    // TODO: tests for monthly payments
-    @Test
-    public void addToMonthlyRepo() {
-    }
-
-    @Test
-    public void getMonthlyRepo() {
-    }
-
-    @Test
-    public void setMonthlyRepo() {
-
-    }
-
-    @Test
-    public void getSpecificMonthlyPayment() {
-    }
-
-    @Test
-    public void serializePast() {
-       // paymentsManager.serializePast(paymentsManager.getPastRepo());
-        //paymentsManager.deserializerPast();
-       // assertEquals(2, paymentsManager.getPastRepo().getRepo().size());
-    }
-
-    @Test
-    public void deserializerPast() {
-        //paymentsManager.serializePast(paymentsManager.getPastRepo());
-        //paymentsManager.deserializerPast();
-       // assertEquals(2, paymentsManager.getPastRepo().getRepo().size());
-    }
-
-    @Test
-    public void serializerFuture() {
-        paymentsManager.serializerFuturePaymentRepository();
-        paymentsManager.deserializeFuturePaymentRepository();
-        assertEquals(2, paymentsManager.getFuturePaymentRepository().getFuturePayments().size());
-    }
-
-    @Test
-    public void deserializeFuture() {
-        paymentsManager.serializerFuturePaymentRepository();
-        paymentsManager.deserializeFuturePaymentRepository();
-        assertEquals(2, paymentsManager.getFuturePaymentRepository().getFuturePayments().size());
-    }
-
-    @Test
-    public void serializeAll() {
+        FuturePayment futurePayment = new FuturePayment("pszne obiad",21.37f, Categories.Kosmetyki, "bardzo pszne");
+        futurePayment.setID(15);
+        paymentsManager.addToFuturePaymentRepository(futurePayment);
+        assertEquals(futurePayment.toString(), paymentsManager.getSpecificFuturePayment(15).toString());
     }
 
     @Test
     public void convertEveryPrice() {
-        //TODO:currently have not good idea how to test that
+        paymentsManager.convertEveryPrice("USD");
+        float getCurrency = 0;
+        for(FuturePayment payment: paymentsManager.getFuturePaymentRepository().getFuturePayments())
+        {
+            getCurrency = payment.getPriceInDifferentCurrency();
+        }
+        boolean checkCurrency =  (getCurrency > 0);
+        assertEquals(true, checkCurrency);
     }
 
     @Test
@@ -165,6 +122,4 @@ public class PaymentsManagerTest {
         float rateUSD = paymentsManager.getChosenCurrencyRate("USD");
         assertNotEquals(null, rateUSD);
     }
-
-
 }
