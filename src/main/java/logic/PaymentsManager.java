@@ -129,15 +129,8 @@ public class PaymentsManager {
         float currentRate  = currencyExchanger.getCurrencyRate(currencyCode)/
                           currencyExchanger.getCurrencyRate("PLN");
 
-        for(PastPayment payment: pastPaymentRepository.getPastPayments())
-        {
-            payment.setPriceInDifferentCurrency(roundFloat((currentRate), 2));
-        }
-
-        for(FuturePayment payment: futurePaymentRepository.getFuturePayments())
-        {
-            payment.setPriceInDifferentCurrency(roundFloat((currentRate), 2));
-        }
+        pastPaymentRepository.getPastPayments().forEach((pastPayment) -> pastPayment.setPriceInDifferentCurrency(roundFloat(currentRate, 2)));
+        futurePaymentRepository.getFuturePayments().forEach((futurePayment) -> futurePayment.setPriceInDifferentCurrency(roundFloat(currentRate, 2)));
 
         this.myCurrency = currencyCode;
     }
