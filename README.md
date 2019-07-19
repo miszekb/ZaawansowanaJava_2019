@@ -1,6 +1,6 @@
 # Java Personal Budget App
-![Build Status](https://travis-ci.org/miszekb/ZaawansowanaJava_2019.svg?branch=master
-)
+![Build Status](https://travis-ci.org/miszekb/ZaawansowanaJava_2019.svg?branch=master)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 This app allows user to control personal budget, plan future transactions and view some stats about past spendings.
 This project contains:
 - JavaFX GUI
